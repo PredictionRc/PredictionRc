@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -24,8 +25,10 @@ if(isset($_POST['login_email']) && isset($_POST['login_password'])){
         $row = $result->fetch_assoc();
         if (password_verify($login_password, $row['password'])) {
             echo "Login successful!";
-            header("Location: nitro_page.html");
             // You can set session variables here to maintain login state
+            $_SESSION['login_email'] = $_POST['login_email'];
+            $_SESSION['loggedin'] = true;
+            header("Location: event_page.html");
         } else {
             echo "Incorrect password!";
             echo "<br><a href='javascript:history.go(-1)'>Go back</a>";

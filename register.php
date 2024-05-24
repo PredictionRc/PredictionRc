@@ -21,7 +21,7 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
     // Check if email already exists
     $check_email_sql = "SELECT * FROM users WHERE email='$email'";
     $check_email_result = $conn->query($check_email_sql);
-    
+
     // Check if username already exists
     $check_username_sql = "SELECT * FROM users WHERE username='$username'";
     $check_username_result = $conn->query($check_username_sql);
@@ -36,7 +36,7 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
         $insert_sql = "INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$password')";
         if ($conn->query($insert_sql) === TRUE) {
             // Registration successful, redirect to another page
-            header("Location: nitro_page.html");
+            header("Location: index.html");
             exit();
         } else {
             echo "Error: " . $insert_sql . "<br>" . $conn->error;
