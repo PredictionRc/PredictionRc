@@ -30,10 +30,10 @@ if ($conn->connect_error) {
 // Check if the user is logged in
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     // Redirect to login page
-    header("Location: noSignIn.html");
+    echo "<script>alert('You are not logged in. Please log back in');</script>";
+    echo "<script>window.location.href = 'index.html'</script>";
     exit(); // Ensure script execution stops after redirection
 }
-
 // Check if email submission already exists for this user
 $user_email = $_SESSION['login_email'];
 $check_query = "SELECT * FROM nitro WHERE login_email=? LIMIT 1";
