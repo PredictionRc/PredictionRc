@@ -1,18 +1,6 @@
 <?php
-
-// Check if the user is logged in
-// if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-//     // Redirect to login page
-//     header("Location: noSignIn.html");
-//     exit(); // Ensure script execution stops after redirection
-// }
-
-// // Proceed with form submission or other actions if the user is logged in
-// if ($_SERVER["REQUEST_METHOD"] == "POST") {
-//     // Process form submission
-//     // Add your form processing logic here
-// }
 session_start();
+
 // Database connection
 $servername = "localhost";
 $username = "root";
@@ -34,6 +22,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     echo "<script>window.location.href = 'index.html'</script>";
     exit(); // Ensure script execution stops after redirection
 }
+
 // Check if email submission already exists for this user
 $user_email = $_SESSION['login_email'];
 $check_query = "SELECT * FROM nitro WHERE login_email=? LIMIT 1";
@@ -44,14 +33,13 @@ $result = $check_stmt->get_result();
 
 if ($result->num_rows > 0) {
     // email submission already exists for this user
-    echo "You have already submitted an entry.";
-    echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
+    echo "<script>alert('You already submitted an entry');</script>";
+    echo "<script>window.location.href = 'event_page.html'</script>";
     exit();
 }
 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
-
     // Get form data
     $login_email = $_SESSION["login_email"];
     $nbFirst = $_POST['nbFirst'];
@@ -75,13 +63,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     // Prepare SQL statement
     $sql = "INSERT INTO nitro (login_email, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, ntFirst, ntSecond, ntThird, ntFourth, ntFifth, nbLap15, ntLap15, nbLap12, nbTime12, ntLap12, ntTime12) VALUES ('$login_email', '$nbFirst', '$nbSecond', '$nbThird', '$nbFourth', '$nbFifth', '$ntFirst', '$ntSecond', '$ntThird', '$ntFourth', '$ntFifth', '$nbLap15', '$ntLap15', '$nbLap12', '$nbTime12', '$ntLap12', '$ntTime12')";
 
-    // Execute SQL statement
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-        header("Location: submission.html");
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-        echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
+// Execute SQL statement
+if ($conn->query($sql) === TRUE) {
+    echo "<script>alert('Your Prediction has been submitted. GOOD LUCK!');</script>";
+    echo "<script>window.location.href = 'event_page.html'</script>";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
     }
 }
 
