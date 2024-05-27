@@ -64,115 +64,75 @@ td {
   <a href="logout.php">Logout</a>
 </div>
 
-<div>  
+<div>
   <table style="width:100%">
     <tr>
-      <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer"> 
+      <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer">
     </tr>
   </table>
 </div>
 
 <p class="p1">top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. </p>
 
-<form action="lockedIn.php" method="GET">
+<form action="nitro_page.php" method="post">
 
-<p class="p2">1/8th SCALE Predictions</p>        
+<p class="p2">1/8th SCALE Predictions</p>
 
-<table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 20% 20% 20% 20% 20%; width:100%">
-  <caption style="grid-column: span 5;">Pro Buggy Class</caption>
+<table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
+  <caption style="grid-column: span 5;">Pro Nitro Class</caption>
     <tr>
       <th></th>
       <th>Nitro Buggy</th>
-      <th>Elec Buggy</th>
-    </tr>
-    <tr>
-      <td>1st</td>
-      <td><input name="First_Place" type="text" id ="firstPlace" placeholder="Racer First & Last Name" required></td>
-      <td><input name="First_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-    </tr>
-    <tr>
-      <td>2nd</td>
-      <td><input name="Second_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-      <td><input name="Second_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-    </tr>
-    <tr>
-      <td>3rd</td>
-      <td><input name="Third_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-      <td><input name="Third_Place" type="text" id ="thirdPlace" placeholder="Racer First and Last Name" required></td>
-    </tr>
-    <tr>
-      <td>4th</td>
-      <td><input name="Fourth_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-      <td><input name="Fourth_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-    </tr>
-    <tr>
-      <td>5th</td>
-      <td><input name="Fifth_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-      <td><input name="Fifth_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>    
-    </tr>
-</table>
-
-<br>  <br>  <br>  
-
-<table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 20% 20% 20% 20% 20%; width:100%">
-  <caption style="grid-column: span 5;">Pro Truggy Class</caption>
-    <tr>
-      <th></th>
       <th>Nitro Truggy</th>
-      <th>Elec Truggy</th>
     </tr>
     <tr>
       <td>1st</td>
-      <td><input name="First_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-      <td><input name="First_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
+      <td><input name="nbFirst" type="text" id ="nbFirst" placeholder="Racer First & Last Name" ></td>
+      <td><input name="ntFirst" type="text" id ="ntFirst" placeholder="Racer First and Last Name" ></td>
     </tr>
     <tr>
       <td>2nd</td>
-      <td><input name="Second_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-      <td><input name="Second_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
+      <td><input name="nbSecond" type="text" id ="nbSecond" placeholder="Racer First and Last Name" ></td>
+      <td><input name="ntSecond" type="text" id ="ntSecond" placeholder="Racer First and Last Name" ></td>
     </tr>
     <tr>
       <td>3rd</td>
-      <td><input name="Third_Place" type="text" id ="thirdPlace" placeholder="Racer First and Last Name" required></td>
-      <td><input name="Third_Place" type="text" id ="thirdPlace" placeholder="Racer First and Last Name" required></td>
+      <td><input name="nbThird" type="text" id ="nbThird" placeholder="Racer First and Last Name" ></td>
+      <td><input name="ntThird" type="text" id ="ntThird" placeholder="Racer First and Last Name" ></td>
     </tr>
     <tr>
       <td>4th</td>
-      <td><input name="Fourth_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-      <td><input name="Fourth_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
+      <td><input name="nbFourth" type="text" id ="nbFourth" placeholder="Racer First and Last Name" ></td>
+      <td><input name="ntFourth" type="text" id ="ntFourth" placeholder="Racer First and Last Name" ></td>
     </tr>
     <tr>
       <td>5th</td>
-      <td><input name="Fifth_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>
-      <td><input name="Fifth_Place" type="text" id ="firstPlace" placeholder="Racer First and Last Name" required></td>    
+      <td><input name="nbFifth" type="text" id ="nbFifth" placeholder="Racer First and Last Name" ></td>
+      <td><input name="ntFifth" type="text" id ="ntFifth" placeholder="Racer First and Last Name" ></td>
+    </tr>
+    </tr>
+    <tr>
+      <td>Lap Difference 1st-5th</td>
+      <td><input name="nbLap15" type="number" id ="nbLap15" min="0" max="1000" step="1" placeholder="Lap"></td></td>
+      <td><input name="ntLap15" type="number" id ="ntLap15" min="0" max="1000" step="1" placeholder="Lap"></td></td>
+    </tr>
+    <tr>
+      <td>Lap/Time Difference 1st - 2nd</td>
+      <td>
+        <input name="nbLap12" type="number" id ="nbLap12" min="0" max="1000" step="1" placeholder="Lap">
+        <input name="nbTime12" type="number" id ="nbTime12" min="0" max="1000" step=".01" placeholder="Time"></td>
+      <td>
+        <input name="ntLap12" type="number" id ="ntLap12" min="0" max="1000" step="1" placeholder="Lap">
+        <input name="ntTime12" type="number" id ="ntTime12" min="0" max="1000" step=".01" placeholder="Time"></td>
     </tr>
 </table>
 
-<br>  <br>  <br>  
-
-<table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 20% 20% 20% 20% 20%; width:100%">
-  <caption style="grid-column: span 5;">Tie Breaker - Pro Nitro Buggy</caption>
-    <tr>
-      <td>Lap differenc 1st-5th</td>
-      <td><input name="Lap_Difference" type="number" id ="lapDifference" placeholder="Lap Difference" required></td>
-    </tr>
-    <tr>
-      <td>Time Difference 1st - 2nd</td>
-      <td><input name="First_Second_Place_Difference" type="number" id ="timeDifferenceFirst" placeholder="Time Difference" step=".01" required></td>
-    </tr>
-    <tr>
-      <td>Time difference 2nd - 3rd</td>
-      <td><input name="Second_Third_Place_Difference" type="number" id ="timeDifferenceSecibd" placeholder="Time Difference" step=".01" required></td>
-    </tr>
-</table>
-
-<br>  <br>  <br>  
-            
+<br>
 
 <div class="divcenter">
   <input type="reset" value="Reset">
-  <button type="submit">Submit</button>
-</div> 
+  <button type="submit" value="submit">Submit</button>
+</div>
 </form>
 
 <table style="width:100%">
