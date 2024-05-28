@@ -1,11 +1,8 @@
 <?php
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "predictionrc";
-
-$conn = new mysqli($servername, $username, $password, $database);
+require __DIR__ . "/vendor/autoload.php";
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+$conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
 
 // Check connection
 if ($conn->connect_error) {
@@ -36,7 +33,8 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
         $insert_sql = "INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$password')";
         if ($conn->query($insert_sql) === TRUE) {
             // Registration successful, redirect to another page
-            header("Location: index.html");
+            echo "<script>alert('You have successfully created a login. Start your prediction GOOD LUCK!');</script>";
+            echo "<script>window.location.href = 'event_page.html'</script>";
             exit();
         } else {
             echo "Error: " . $insert_sql . "<br>" . $conn->error;
