@@ -33,8 +33,8 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
         $insert_sql = "INSERT INTO users (email, username, password) VALUES ('$email', '$username', '$password')";
         if ($conn->query($insert_sql) === TRUE) {
             // Registration successful, redirect to another page
-            echo "<script>alert('You have successfully created a login. Start your prediction GOOD LUCK!');</script>";
-            echo "<script>window.location.href = 'event_page.html'</script>";
+            echo "<script>alert('You have successfully created a login. Please log in and start your prediction GOOD LUCK!');</script>";
+            echo "<script>window.location.href = 'index.html'</script>";
             exit();
         } else {
             echo "Error: " . $insert_sql . "<br>" . $conn->error;
