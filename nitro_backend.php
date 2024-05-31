@@ -60,8 +60,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
 
 // Execute SQL statement
 if ($conn->query($sql) === TRUE) {
-    echo "<script>alert('Your Prediction has been submitted. GOOD LUCK!');</script>";
-    echo "<script>window.location.href = 'event_page.html'</script>";
+   echo "<script>alert('Your Prediction has been submitted. GOOD LUCK!');</script>";
+   echo "<script>window.location.href = 'event_page.html'</script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
