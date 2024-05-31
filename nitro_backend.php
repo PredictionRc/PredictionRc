@@ -20,7 +20,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 // Check if email submission already exists for this user
 $user_email = $_SESSION['login_email'];
-$check_query = "SELECT * FROM nitro WHERE login_email=? LIMIT 1";
+$check_query = "SELECT * FROM nitro_entry WHERE login_email=? LIMIT 1";
 $check_stmt = $conn->prepare($check_query);
 $check_stmt->bind_param("s", $user_email);
 $check_stmt->execute();
