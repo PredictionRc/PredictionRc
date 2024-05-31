@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     $ntTime12 = $_POST['ntTime12'];
 
     // Prepare SQL statement
-    $sql = "INSERT INTO nitro (login_email, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, ntFirst, ntSecond, ntThird, ntFourth, ntFifth, nbLap15, ntLap15, nbLap12, nbTime12, ntLap12, ntTime12) VALUES ('$login_email', '$nbFirst', '$nbSecond', '$nbThird', '$nbFourth', '$nbFifth', '$ntFirst', '$ntSecond', '$ntThird', '$ntFourth', '$ntFifth', '$nbLap15', '$ntLap15', '$nbLap12', '$nbTime12', '$ntLap12', '$ntTime12')";
+    $sql = "INSERT INTO nitro_entry (login_email, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, ntFirst, ntSecond, ntThird, ntFourth, ntFifth, nbLap15, ntLap15, nbLap12, nbTime12, ntLap12, ntTime12) VALUES ('$login_email', '$nbFirst', '$nbSecond', '$nbThird', '$nbFourth', '$nbFifth', '$ntFirst', '$ntSecond', '$ntThird', '$ntFourth', '$ntFifth', '$nbLap15', '$ntLap15', '$nbLap12', '$nbTime12', '$ntLap12', '$ntTime12')";
 
 // Execute SQL statement
 if ($conn->query($sql) === TRUE) {
