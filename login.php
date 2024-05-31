@@ -27,14 +27,12 @@ if(isset($_POST['login_email']) && isset($_POST['login_password'])){
             $_SESSION['loggedin'] = true;
             header("Location: event_page.html");
         } else {
-            echo "Incorrect password!";
-            echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
-
+            echo "<script>alert('Incorrect Password, If you forgot you password Please reset it.');</script>";
+            echo "<script>window.location.href = 'index.html'</script>";
         }
     } else {
-        echo "User not found!";
-        echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
-
+        echo "<script>alert('User not found. Please use the email you registered with.');</script>";
+        echo "<script>window.location.href = 'index.html'</script>";
     }
 }
 
