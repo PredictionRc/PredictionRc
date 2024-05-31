@@ -90,19 +90,20 @@ td {
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'nitro_buggyRacers.php';
+            $options = include 'nitro_buggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
             ?>
-        </select></td>
+        </select>
+      </td>
 
       <td>
         <select name="ntFirst" id="ntFirst">
           <option value="">Select an option</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'nitro_truggyRacers.php';
+            $options = include 'nitro_truggy.php';
             foreach ($options as $option) {
             echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -117,7 +118,7 @@ td {
         <option value="">Select an option</option>
           <?php
           // Include dropdown data and populate dropdown
-          $options = include 'nitro_buggyRacers.php';
+          $options = include 'nitro_buggy.php';
           foreach ($options as $option) {
               echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
           }
@@ -129,7 +130,7 @@ td {
           <option value="">Select an option</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'nitro_truggyRacers.php';
+            $options = include 'nitro_truggy.php';
             foreach ($options as $option) {
             echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -144,7 +145,7 @@ td {
         <option value="">Select an option</option>
           <?php
           // Include dropdown data and populate dropdown
-          $options = include 'nitro_buggyRacers.php';
+          $options = include 'nitro_buggy.php';
           foreach ($options as $option) {
               echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
           }
@@ -156,7 +157,7 @@ td {
           <option value="">Select an option</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'nitro_truggyRacers.php';
+            $options = include 'nitro_truggy.php';
             foreach ($options as $option) {
             echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -171,7 +172,7 @@ td {
         <option value="">Select an option</option>
           <?php
           // Include dropdown data and populate dropdown
-          $options = include 'nitro_buggyRacers.php';
+          $options = include 'nitro_buggy.php';
           foreach ($options as $option) {
               echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
           }
@@ -183,7 +184,7 @@ td {
         <option value="">Select an option</option>
           <?php
           // Include dropdown data and populate dropdown
-          $options = include 'nitro_truggyRacers.php';
+          $options = include 'nitro_truggy.php';
           foreach ($options as $option) {
               echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
           }
@@ -198,7 +199,7 @@ td {
         <option value="">Select an option</option>
           <?php
           // Include dropdown data and populate dropdown
-          $options = include 'nitro_buggyRacers.php';
+          $options = include 'nitro_buggy.php';
           foreach ($options as $option) {
               echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
           }
@@ -210,7 +211,7 @@ td {
         <option value="">Select an option</option>
           <?php
           // Include dropdown data and populate dropdown
-          $options = include 'nitro_truggyRacers.php';
+          $options = include 'nitro_truggy.php';
           foreach ($options as $option) {
               echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
           }
