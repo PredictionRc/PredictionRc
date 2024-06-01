@@ -61,7 +61,17 @@ td {
 
 <div class="divcenter">
   <img src="image/indexLogo.jpg" alt="Avatar"  class="avatar">
-  <a href="logout.php">Logout</a>
+  <?php
+  session_start();
+  // Check if the user is logged in
+  if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+      // If logged in, display logout link
+      echo '<a href="logout.php">Logout</a>';
+  } else {
+      // If not logged in, display login link
+      echo '<a href="index.html">Login</a>';
+  }
+  ?>
 </div>
 
 <div>
