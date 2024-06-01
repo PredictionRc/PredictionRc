@@ -1,14 +1,9 @@
 <?php
 session_start();
-
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "predictionrc";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+require __DIR__ . "/vendor/autoload.php";
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+$conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
 
 // Check connection
 if ($conn->connect_error) {
@@ -23,18 +18,19 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit(); // Ensure script execution stops after redirection
 }
 
-// Check if email submission already exists for this user
+// Check if email submission already exists for this user and event
 $user_email = $_SESSION['login_email'];
-$check_query = "SELECT * FROM nitro WHERE login_email=? LIMIT 1";
+$event_name = $_POST["eventName"];
+$check_query = "SELECT * FROM entry_off_nitro WHERE login_email=? AND event_name=? LIMIT 1";
 $check_stmt = $conn->prepare($check_query);
-$check_stmt->bind_param("s", $user_email);
+$check_stmt->bind_param("ss", $user_email, $event_name);
 $check_stmt->execute();
 $result = $check_stmt->get_result();
 
 if ($result->num_rows > 0) {
     // email submission already exists for this user
-    echo "<script>alert('You already submitted an entry');</script>";
-    echo "<script>window.location.href = 'event_page.html'</script>";
+    echo "<script>alert('You already submitted an entry for the selected event');</script>";
+    echo "<script>window.location.href = 'race_class.html'</script>";
     exit();
 }
 
@@ -42,6 +38,7 @@ if ($result->num_rows > 0) {
 if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     // Get form data
     $login_email = $_SESSION["login_email"];
+    $event_name = $_POST["eventName"];
     $nbFirst = $_POST['nbFirst'];
     $nbSecond = $_POST['nbSecond'];
     $nbThird = $_POST['nbThird'];
@@ -61,12 +58,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     $ntTime12 = $_POST['ntTime12'];
 
     // Prepare SQL statement
-    $sql = "INSERT INTO nitro (login_email, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, ntFirst, ntSecond, ntThird, ntFourth, ntFifth, nbLap15, ntLap15, nbLap12, nbTime12, ntLap12, ntTime12) VALUES ('$login_email', '$nbFirst', '$nbSecond', '$nbThird', '$nbFourth', '$nbFifth', '$ntFirst', '$ntSecond', '$ntThird', '$ntFourth', '$ntFifth', '$nbLap15', '$ntLap15', '$nbLap12', '$nbTime12', '$ntLap12', '$ntTime12')";
+    $sql = "INSERT INTO entry_off_nitro (login_email, event_name, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, ntFirst, ntSecond, ntThird, ntFourth, ntFifth, nbLap15, ntLap15, nbLap12, nbTime12, ntLap12, ntTime12, submission_time) VALUES ('$login_email', '$event_name', '$nbFirst', '$nbSecond', '$nbThird', '$nbFourth', '$nbFifth', '$ntFirst', '$ntSecond', '$ntThird', '$ntFourth', '$ntFifth', '$nbLap15', '$ntLap15', '$nbLap12', '$nbTime12', '$ntLap12', '$ntTime12', CURRENT_TIMESTAMP)";
 
 // Execute SQL statement
 if ($conn->query($sql) === TRUE) {
-    echo "<script>alert('Your Prediction has been submitted. GOOD LUCK!');</script>";
-    echo "<script>window.location.href = 'event_page.html'</script>";
+   echo "<script>alert('Your Prediction has been submitted. GOOD LUCK!');</script>";
+   echo "<script>window.location.href = 'race_class.html'</script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     echo "<br><a href='javascript:history.go(-1)'>Go back</a>";

@@ -1,12 +1,9 @@
 <?php
 session_start();
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "predictionrc";
-
-$conn = new mysqli($servername, $username, $password, $database);
+require __DIR__ . "/vendor/autoload.php";
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+$conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
 
 // Check connection
 if ($conn->connect_error) {
@@ -28,16 +25,14 @@ if(isset($_POST['login_email']) && isset($_POST['login_password'])){
             // You can set session variables here to maintain login state
             $_SESSION['login_email'] = $_POST['login_email'];
             $_SESSION['loggedin'] = true;
-            header("Location: event_page.html");
+            header("Location: race_class.html");
         } else {
-            echo "Incorrect password!";
-            echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
-
+            echo "<script>alert('Incorrect Password, If you forgot you password Please reset it.');</script>";
+            echo "<script>window.location.href = 'index.html'</script>";
         }
     } else {
-        echo "User not found!";
-        echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
-
+        echo "<script>alert('User not found. Please use the email you registered with.');</script>";
+        echo "<script>window.location.href = 'index.html'</script>";
     }
 }
 

@@ -1,16 +1,12 @@
 <?php
-// Database connection
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "predictionrc";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+require __DIR__ . "/vendor/autoload.php";
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+$conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
 
 // Check connection
 if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
+    die("Connection failed: " . $conn->connect_error);
 }
 
 // Get form data
@@ -24,8 +20,8 @@ $sql = "INSERT INTO contact_form (name, email, business_name, subject) VALUES ('
 
 // Execute SQL statement
 if ($conn->query($sql) === TRUE) {
-  echo "New record created successfully";
-  echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
+  echo "<script>alert('Thank you for contacting us. A team member will contact you back through email.');</script>";
+  echo "<script>window.location.href = 'index.html'</script>";
 } else {
   echo "Error: " . $sql . "<br>" . $conn->error;
   echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
@@ -33,4 +29,4 @@ if ($conn->query($sql) === TRUE) {
 
 // Close connection
 $conn->close();
-?>
+
