@@ -79,7 +79,18 @@ td {
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
   <caption style="grid-column: span 5;">Pro Nitro Class</caption>
     <tr>
-      <th></th>
+      <th>
+      <select name="eventName" id="eventName">
+        <option value="">Select event</option>
+          <?php
+          // Include dropdown data and populate dropdown
+          $options = include 'events.php';
+          foreach ($options as $option) {
+          echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+          }
+          ?>
+       </select>
+      </th>
       <th>Nitro Buggy</th>
       <th>Nitro Truggy</th>
     </tr>
@@ -87,7 +98,7 @@ td {
       <td>1st</td>
       <td>
         <select name="nbFirst" id="nbFirst">
-          <option value="">Select 1st</option>
+          <option value="">Select racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'nitro_buggy.php';
@@ -100,7 +111,7 @@ td {
 
       <td>
         <select name="ntFirst" id="ntFirst">
-          <option value="">Select an option</option>
+          <option value="">Select racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'nitro_truggy.php';
@@ -115,7 +126,7 @@ td {
       <td>2nd</td>
       <td>
       <select name="nbSecond" id="nbSecond">
-        <option value="">Select an option</option>
+        <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'nitro_buggy.php';
@@ -127,7 +138,7 @@ td {
       </td>
       <td>
       <select name="ntSecond" id="ntSecond">
-          <option value="">Select an option</option>
+          <option value="">Select racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'nitro_truggy.php';
@@ -142,7 +153,7 @@ td {
       <td>3rd</td>
       <td>
       <select name="nbThird" id="nbThird">
-        <option value="">Select an option</option>
+        <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'nitro_buggy.php';
@@ -154,7 +165,7 @@ td {
       </td>
       <td>
       <select name="ntThird" id="ntThird">
-          <option value="">Select an option</option>
+          <option value="">Select racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'nitro_truggy.php';
@@ -169,7 +180,7 @@ td {
       <td>4th</td>
       <td>
       <select name="nbFourth" id="nbFourth">
-        <option value="">Select an option</option>
+        <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'nitro_buggy.php';
@@ -181,7 +192,7 @@ td {
       </td>
       <td>
       <select name="ntFourth" id="ntFourth">
-        <option value="">Select an option</option>
+        <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'nitro_truggy.php';
@@ -196,7 +207,7 @@ td {
       <td>5th</td>
       <td>
       <select name="nbFifth" id="nbFifth">
-        <option value="">Select an option</option>
+        <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'nitro_buggy.php';
@@ -208,7 +219,7 @@ td {
       </td>
       <td>
       <select name="ntFifth" id="ntFifth">
-        <option value="">Select an option</option>
+        <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'nitro_truggy.php';

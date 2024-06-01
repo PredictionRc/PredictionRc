@@ -21,7 +21,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 // Check if email submission already exists for this user and event
 $user_email = $_SESSION['login_email'];
 $event_name = $_POST["eventName"];
-$check_query = "SELECT * FROM nitro_entry WHERE login_email=? AND event_name=? LIMIT 1";
+$check_query = "SELECT * FROM mod_entry WHERE login_email=? AND event_name=? LIMIT 1";
 $check_stmt = $conn->prepare($check_query);
 $check_stmt->bind_param("ss", $user_email, $event_name);
 $check_stmt->execute();
@@ -39,31 +39,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     // Get form data
     $login_email = $_SESSION["login_email"];
     $event_name = $_POST["eventName"];
-    $nbFirst = $_POST['nbFirst'];
-    $nbSecond = $_POST['nbSecond'];
-    $nbThird = $_POST['nbThird'];
-    $nbFourth = $_POST['nbFourth'];
-    $nbFifth = $_POST['nbFifth'];
-    $ntFirst = $_POST['ntFirst'];
-    $ntSecond = $_POST['ntSecond'];
-    $ntThird = $_POST['ntThird'];
-    $ntFourth = $_POST['ntFourth'];
-    $ntFifth = $_POST['ntFifth'];
-    $nbLap15 = $_POST['nbLap15'];
-    $ntLap15 = $_POST['ntLap15'];
+    $twoWDFirst = $_POST['twoWDFirst'];
+    $twoWDSecond = $_POST['twoWDSecond'];
+    $twoWDThird = $_POST['twoWDThird'];
+    $twoWDFourth = $_POST['twoWDFourth'];
+    $twoWDFifth = $_POST['twoWDFifth'];
+    $fourWDFirst = $_POST['fourWDFirst'];
+    $fourWDSecond = $_POST['fourWDSecond'];
+    $fourWDThird = $_POST['fourWDThird'];
+    $fourWDFourth = $_POST['fourWDFourth'];
+    $fourWDFifth = $_POST['fourWDFifth'];
+    $twoWDLap15 = $_POST['twoWDLap15'];
+    $fourWDLap15 = $_POST['fourWDLap15'];
 
-    $nbLap12 = $_POST['nbLap12'];
-    $nbTime12 = $_POST['nbTime12'];
-    $ntLap12 = $_POST['ntLap12'];
-    $ntTime12 = $_POST['ntTime12'];
+    $twoWDLap12 = $_POST['twoWDLap12'];
+    $twoWDTime12 = $_POST['twoWDTime12'];
+    $fourWDLap12 = $_POST['fourWDLap12'];
+    $fourWDTime12 = $_POST['fourWDTime12'];
 
     // Prepare SQL statement
-    $sql = "INSERT INTO nitro_entry (login_email, event_name, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, ntFirst, ntSecond, ntThird, ntFourth, ntFifth, nbLap15, ntLap15, nbLap12, nbTime12, ntLap12, ntTime12) VALUES ('$login_email', '$event_name', '$nbFirst', '$nbSecond', '$nbThird', '$nbFourth', '$nbFifth', '$ntFirst', '$ntSecond', '$ntThird', '$ntFourth', '$ntFifth', '$nbLap15', '$ntLap15', '$nbLap12', '$nbTime12', '$ntLap12', '$ntTime12')";
+    $sql = "INSERT INTO mod_entry (login_email, event_Name, twoWDFirst, twoWDSecond, twoWDThird, twoWDFourth, twoWDFifth, fourWDFirst, fourWDSecond, fourWDThird, fourWDFourth, fourWDFifth, twoWDLap15, fourWDLap15, twoWDLap12, twoWDTime12, fourWDLap12, fourWDTime12) VALUES ('$login_email', '$event_name', '$twoWDFirst', '$twoWDSecond', '$twoWDThird', '$twoWDFourth', '$twoWDFifth', '$fourWDFirst', '$fourWDSecond', '$fourWDThird', '$fourWDFourth', '$fourWDFifth', '$twoWDLap15', '$fourWDLap15', '$twoWDLap12', '$twoWDTime12', '$fourWDLap12', '$fourWDTime12')";
 
 // Execute SQL statement
 if ($conn->query($sql) === TRUE) {
-   echo "<script>alert('Your Prediction has been submitted. GOOD LUCK!');</script>";
-   echo "<script>window.location.href = 'race_class.html'</script>";
+    echo "<script>alert('Your Prediction has been submitted. GOOD LUCK!');</script>";
+    echo "<script>window.location.href = 'race_class.html'</script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     echo "<br><a href='javascript:history.go(-1)'>Go back</a>";

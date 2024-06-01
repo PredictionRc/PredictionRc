@@ -25,7 +25,7 @@ if(isset($_POST['login_email']) && isset($_POST['login_password'])){
             // You can set session variables here to maintain login state
             $_SESSION['login_email'] = $_POST['login_email'];
             $_SESSION['loggedin'] = true;
-            header("Location: event_page.html");
+            header("Location: race_class.html");
         } else {
             echo "<script>alert('Incorrect Password, If you forgot you password Please reset it.');</script>";
             echo "<script>window.location.href = 'index.html'</script>";
