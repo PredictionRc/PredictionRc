@@ -11,7 +11,7 @@
         }
 
         // Step 3: Retrieve data from the database
-        $sql = "SELECT racer_name FROM mod_2wd";
+        $sql = "SELECT racer_name FROM driver_mod_4wd";
         $result = $conn->query($sql);
 
         // Step 4: Display options in the dropdown
