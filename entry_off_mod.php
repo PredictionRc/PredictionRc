@@ -84,7 +84,7 @@ td {
         <option value="">Select event</option>
           <?php
           // Include dropdown data and populate dropdown
-          $options = include 'events.php';
+          $options = include 'backend_events.php';
           foreach ($options as $option) {
           echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
           }
