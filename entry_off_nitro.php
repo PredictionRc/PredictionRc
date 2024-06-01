@@ -67,7 +67,7 @@ td {
 <div>
   <table style="width:100%">
     <tr>
-      <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer">
+      <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
     </tr>
   </table>
 </div>
@@ -257,20 +257,14 @@ td {
 
 <table style="width:100%">
   <tr>
-    <td><img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-  </tr>
-  <tr>
-    <td>
-      <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer">
-    </td>
-    <td>
-      <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer">
-    </td>
+    <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
   </tr>
 </table>
 
-<script>
+<script src="imageRotation.js">
 
 </script>
 
