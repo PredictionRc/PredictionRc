@@ -1,7 +1,10 @@
 <?php
 // Connect to the database
-require __DIR__ . "/vendor/autoload.php";
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// Adjust the path to include the root directory
+require __DIR__ . "/../vendor/autoload.php";
+
+// Specify the path to the .env file relative to the root directory
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
 $dotenv->load();
 
 $conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
@@ -11,8 +14,8 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Query to fetch data from the table
-$sql = "SELECT * FROM driver_mod_2wd";
+// Query to fetch data from the table, including the active field
+$sql = "SELECT id, racer_name, active FROM driver_nitro_truggy";
 $result = $conn->query($sql);
 
 // Close the connection

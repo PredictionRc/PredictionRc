@@ -11,7 +11,7 @@
         }
 
         // Step 3: Retrieve data from the database
-        $sql = "SELECT racer_name FROM driver_nitro_truggy";
+        $sql = "SELECT racer_name FROM driver_nitro_truggy where active = 1";
         $result = $conn->query($sql);
 
         // Step 4: Display options in the dropdown

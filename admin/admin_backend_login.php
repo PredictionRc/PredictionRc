@@ -1,7 +1,10 @@
 <?php
 session_start();
-require __DIR__ . "/vendor/autoload.php";
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// Adjust the path to include the root directory
+require __DIR__ . "/../vendor/autoload.php";
+
+// Specify the path to the .env file relative to the root directory
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
 $dotenv->load();
 
 // Check if form is submitted

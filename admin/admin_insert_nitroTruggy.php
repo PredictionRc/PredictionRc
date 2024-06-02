@@ -1,7 +1,10 @@
 <?php
 session_start();
-require __DIR__ . "/vendor/autoload.php";
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+// Adjust the path to include the root directory
+require __DIR__ . "/../vendor/autoload.php";
+
+// Specify the path to the .env file relative to the root directory
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
 $dotenv->load();
 $conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
 
@@ -19,7 +22,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 // Check if racer name already exists
 $racer_name = $_POST['racer_name'];
-$sql_check = "SELECT COUNT(*) AS count FROM driver_mod_2wd WHERE racer_name = ?";
+$sql_check = "SELECT COUNT(*) AS count FROM driver_nitro_truggy WHERE racer_name = ?";
 $stmt_check = $conn->prepare($sql_check);
 $stmt_check->bind_param("s", $racer_name);
 $stmt_check->execute();
@@ -34,7 +37,7 @@ if ($count > 0) {
 }
 
 // Prepare and bind parameters
-$stmt_insert = $conn->prepare("INSERT INTO driver_mod_2wd (racer_name) VALUES (?)");
+$stmt_insert = $conn->prepare("INSERT INTO driver_nitro_truggy (racer_name) VALUES (?)");
 $stmt_insert->bind_param("s", $racer_name);
 
 // Execute insert statement
