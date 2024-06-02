@@ -11,7 +11,7 @@
         }
 
         // Step 3: Retrieve data from the database
-        $sql = "SELECT racer_name FROM driver_mod_2wd";
+        $sql = "SELECT racer_name FROM driver_mod_2wd where active = 1 ORDER BY racer_name asc";
         $result = $conn->query($sql);
 
         // Step 4: Display options in the dropdown

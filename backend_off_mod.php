@@ -30,7 +30,7 @@ $result = $check_stmt->get_result();
 if ($result->num_rows > 0) {
     // email submission already exists for this user
     echo "<script>alert('You already submitted an entry for the selected event');</script>";
-    echo "<script>window.location.href = 'race_class.html'</script>";
+    echo "<script>window.location.href = 'race_class.php'</script>";
     exit();
 }
 
@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
 // Execute SQL statement
 if ($conn->query($sql) === TRUE) {
     echo "<script>alert('Your Prediction has been submitted. GOOD LUCK!');</script>";
-    echo "<script>window.location.href = 'race_class.html'</script>";
+    echo "<script>window.location.href = 'race_class.php'</script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     echo "<br><a href='javascript:history.go(-1)'>Go back</a>";

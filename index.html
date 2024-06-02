@@ -175,23 +175,25 @@ input[type=email], select, textarea {
   </div>
 
 <div class="divcenter">
-  <p class="p1">Welcome to Prediction RC. This is to see who can guess what the TOP 5 finishers are. As of now we will only have PRO/MOD Classes and could extend to Expert classes as time goes on.</p>
-  <button onclick="document.getElementById('signUpModal').style.display='block'" style="width:auto;">Sign Up</button>
+  <p class="p1">Welcome to Prediction RC.</p>
+  <table style="width:100%">
+    <tr>
+      <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+    </tr>
+  </table>
+  <button onclick="document.getElementById('rules').style.display='block'" style="width:auto;">Rules</button>
   <button onclick="document.getElementById('contactModal').style.display='block'" style="width:auto;"> Contact Us</button>
 </div>
 
 <div class="divcenter">
+  <button onclick="document.getElementById('signUpModal').style.display='block'" style="width:auto;">Sign Up</button>
   <button onclick="document.getElementById('loginModal').style.display='block'" style="width:auto;">Login</button>
 </div>
 
-<table style="width:100%">
-  <tr>
-    <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-  </tr>
-</table>
+
 
 <div id="contactModal" class="modal">
   <form class="modal-content animate" action="contact_form.php" method="post">
@@ -225,6 +227,21 @@ input[type=email], select, textarea {
   </form>
 </div>
 
+<div id="rules" class="modal">
+  <form class="modal-content animate" action="login.php" method="post">
+    <div class="divcenter">
+      <h3>Free To Play!</h3>
+      <h5>Race Event Choices</h5>
+      <p>Choose which event you want to cast your Predictions on from the dropdown list.</p>
+      <h5>Submitting Entry</h5>
+      <p>You will only have 1 Submission per race event. Please make sure your input is correct before clicking on the submit button.</p>
+
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('rules').style.display='none'" class="cancelbtn">UNDERSTOOD!</button>
+    </div>
+  </form>
+</div>
 
 <div id="loginModal" class="modal">
   <form class="modal-content animate" action="login.php" method="post">
@@ -293,8 +310,8 @@ input[type=email], select, textarea {
       </script>
 
       <div class="clearfix">
-        <button type="button" onclick="document.getElementById('signUpModal').style.display='none'" class="cancelbtn">Cancel</button>
         <button id= "register" type="submit" class="signupbtn" value="Register">Register</button>
+        <button type="button" onclick="document.getElementById('signUpModal').style.display='none'" class="cancelbtn">Cancel</button>
       </div>
     </div>
   </form>

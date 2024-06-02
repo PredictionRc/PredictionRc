@@ -11,7 +11,7 @@
         }
 
         // Step 3: Retrieve data from the database
-        $sql = "SELECT event_name FROM events";
+        $sql = "SELECT event_name FROM events where active = 1 ORDER BY event_name asc";
         $result = $conn->query($sql);
 
         // Step 4: Display options in the dropdown
