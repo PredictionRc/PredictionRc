@@ -163,18 +163,22 @@ input[type=email], select, textarea {
 </head>
 <body class="bg">
   <div class="divcenter">
-    <img src="image/indexLogo.jpg" alt="Avatar"  class="avatar">
+    <img src="image/indexLogo.jpg" alt="Avatar"  class="avatar"> <br>
     <?php
-  session_start();
-  // Check if the user is logged in
-  if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-      // If logged in, display logout link
-      echo '<a href="logout.php">Logout</a>';
-  } else {
-      // If not logged in, display login link
-      echo '<a href="index.html">Login</a>';
-  }
-  ?>
+session_start();
+// Check if the user is logged in
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    // If logged in, display logout link and username
+    if(isset($_SESSION['username'])) {
+        echo 'Welcome, ' . $_SESSION['username'];
+        echo '<br><a href="logout.php">Logout</a>';
+    }
+} else {
+    // If not logged in, display login link
+    echo '<a href="index.html">Login</a>';
+}
+?>
+
   </div>
 
   <div>

@@ -60,13 +60,17 @@ td {
 <body class="bg">
 
 <div class="divcenter">
-  <img src="image/indexLogo.jpg" alt="Avatar"  class="avatar">
+  <img src="image/indexLogo.jpg" alt="Avatar"  class="avatar"> <br>
   <?php
   session_start();
   // Check if the user is logged in
   if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-      // If logged in, display logout link
-      echo '<a href="logout.php">Logout</a>';
+      // If logged in, display logout link and username
+      if(isset($_SESSION['username'])) {
+          echo 'Welcome, ' . $_SESSION['username'];
+          echo '<br><a href="logout.php">Logout</a>';
+          echo '<br><a href="race_class.php">Race Events</a>';
+      }
   } else {
       // If not logged in, display login link
       echo '<a href="index.html">Login</a>';
@@ -82,7 +86,7 @@ td {
   </table>
 </div>
 
-<p class="p1">top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. top 5 add verbiage here. </p>
+<p class="p1">Submit Your MOD Entry!</p>
 
 <form action="backend_off_mod.php" method="post">
 
@@ -256,6 +260,14 @@ td {
     </tr>
 </table>
 <br>
+<table style="width:100%">
+  <tr>
+    <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+  </tr>
+</table>
 
 <div class="divcenter">
   <input type="reset" value="Reset">
@@ -269,17 +281,7 @@ td {
   <?php endif; ?>
 </div>
 
-</form>
-
-<table style="width:100%">
-  <tr>
-    <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-  </tr>
-</table>
-
+  </form>
 <script src="imageRotation.js">
 
 </script>

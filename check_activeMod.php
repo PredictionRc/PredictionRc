@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch active status from the database
-$sql = "SELECT active FROM check_active WHERE field_name = 'submitButtonMod'";
+$sql = "SELECT active FROM check_active WHERE field_name = 'modEvent'";
 $result = $conn->query($sql);
 
 // Check if record exists

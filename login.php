@@ -25,6 +25,7 @@ if(isset($_POST['login_email']) && isset($_POST['login_password'])){
             // You can set session variables here to maintain login state
             $_SESSION['login_email'] = $_POST['login_email'];
             $_SESSION['loggedin'] = true;
+            $_SESSION['username'] = $row['username']; // Assuming 'username' is the field in your database
             header("Location: race_class.php");
         } else {
             echo "<script>alert('Incorrect Password, If you forgot you password Please reset it.');</script>";
@@ -34,6 +35,15 @@ if(isset($_POST['login_email']) && isset($_POST['login_password'])){
         echo "<script>alert('User not found. Please use the email you registered with.');</script>";
         echo "<script>window.location.href = 'index.html'</script>";
     }
+}
+
+// Check if the user is logged in
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+    // If logged in, display logout link and username
+    echo 'Welcome, ' . $_SESSION['username'] . ' | <a href="logout.php">Logout</a>';
+} else {
+    // If not logged in, display login link
+    echo '<a href="index.html">Login</a>';
 }
 
 $conn->close();
