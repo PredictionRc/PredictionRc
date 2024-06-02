@@ -24,13 +24,15 @@
         }
         ?>
 
-    <h1>UPDATE DRIVERS</h1>
+    <h1>UPDATE DRIVERS/EVENTS</h1>
     <h4>Off road 1/10th drivers</h4>
     <button onclick="redirectToMod2wdPage()">Update Mod 2wd drivers</button>
     <button onclick="redirectToMod4wdPage()">Update Mod 4wd drivers</button> <br><br>
     <h4>Off road 1/8th drivers</h4>
     <button onclick="redirectToNitroBuggyPage()">Update Pro buggy drivers</button>
     <button onclick="redirectToNitroTruggyPage()">Update Pro truggy drivers</button> <br><br>
+    <h4>EVENTS</h4>
+    <button onclick="redirectToEventPage()">Update Events</button>
     </div>
 </body>
 <script>
@@ -45,6 +47,9 @@
     }
     function redirectToNitroTruggyPage() {
         window.location.href = 'admin_page_nitroTruggy.php';
+    }
+    function redirectToEventPage() {
+        window.location.href = 'admin_page_events.php';
     }
 </script>
 </html>
