@@ -261,7 +261,14 @@ td {
 
 <div class="divcenter">
   <input type="reset" value="Reset">
-  <button type="submit" value="submit">Submit</button>
+  <!-- Include the PHP file containing the variable $active -->
+  <?php include 'check_activeNitro.php'; ?>
+  <!-- Embed PHP code to decide whether to enable or disable the submit button -->
+  <?php if ($active == 1): ?>
+    <button type="submit" value="submit" id="submitButtonNitro">Submit</button>
+  <?php else: ?>
+    <button type="submit" value="submit" id="submitButtonNitro" disabled>Submit</button>
+  <?php endif; ?>
 </div>
 </form>
 

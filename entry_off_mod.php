@@ -259,8 +259,16 @@ td {
 
 <div class="divcenter">
   <input type="reset" value="Reset">
-  <button type="submit" value="submit">Submit</button>
+  <!-- Include the PHP file containing the variable $active -->
+  <?php include 'check_activeMod.php'; ?>
+  <!-- Embed PHP code to decide whether to enable or disable the submit button -->
+  <?php if ($active == 1): ?>
+    <button type="submit" value="submit" id="submitButton">Submit</button>
+  <?php else: ?>
+    <button type="submit" value="submit" id="submitButton" disabled>Submit</button>
+  <?php endif; ?>
 </div>
+
 </form>
 
 <table style="width:100%">
