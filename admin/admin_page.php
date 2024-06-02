@@ -41,7 +41,7 @@
         window.location.href = 'admin_page_mod4wd.php';
     }
     function redirectToNitroBuggyPage() {
-        window.location.href = 'admin_nitroBuggy_page.php';
+        window.location.href = 'admin_page_nitroBuggy.php';
     }
     function redirectToNitroTruggyPage() {
         window.location.href = 'admin_page_nitroTruggy.php';

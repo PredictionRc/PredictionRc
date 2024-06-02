@@ -37,7 +37,7 @@
         ?><br>
         <a href="admin_page.php">Admin Page Return</a>
 
-        <h2>NITRO TRUGGY DRIVERS</h2>
+        <h2>MOD 2WD DRIVERS</h2>
         <table id="driver-table">
         <thead>
             <tr>
@@ -59,7 +59,7 @@
 
     <script>
     // Fetch data from PHP script
-    fetch('admin_display_nitroTruggy.php')
+    fetch('admin_display_mod2wd.php')
         .then(response => response.json())
         .then(data => {
         // Append data to table
@@ -79,7 +79,7 @@
         event.preventDefault(); // Prevent default form submission
         const formData = new FormData(this); // Create FormData object from form data
         // Send form data to PHP script using Fetch API
-        fetch('admin_insert_nitroTruggy.php', {
+        fetch('admin_insert_mod2wd.php', {
             method: 'POST',
             body: formData
         })
@@ -106,7 +106,7 @@
         const driverId = event.target.dataset.id;
         const isChecked = document.querySelector(`.active-checkbox[data-id="${driverId}"]`).checked;
         // Send AJAX request to update active status
-        fetch(`admin_update_nitroTruggy.php?id=${driverId}&active=${isChecked ? 1 : 0}`, {
+        fetch(`admin_update_mod2wd.php?id=${driverId}&active=${isChecked ? 1 : 0}`, {
             method: 'GET'
         })
         .then(response => {
