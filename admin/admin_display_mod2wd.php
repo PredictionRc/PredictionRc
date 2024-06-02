@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 
 // Query to fetch data from the table, including the active field
-$sql = "SELECT id, racer_name, active FROM driver_mod_2wd";
+$sql = "SELECT id, racer_name, active FROM driver_mod_2wd ORDER BY racer_name asc";
 $result = $conn->query($sql);
 
 // Close the connection

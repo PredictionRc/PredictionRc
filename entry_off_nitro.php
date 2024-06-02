@@ -90,7 +90,7 @@ td {
   <caption style="grid-column: span 5;">Pro Nitro Class</caption>
     <tr>
       <th>
-      <select name="eventName" id="eventName">
+      <select name="eventName" id="eventName" required>
         <option value="">Select event</option>
           <?php
           // Include dropdown data and populate dropdown
@@ -107,7 +107,7 @@ td {
     <tr>
       <td>1st</td>
       <td>
-        <select name="nbFirst" id="nbFirst">
+        <select name="nbFirst" id="nbFirst" required>
           <option value="">Select racer</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -120,7 +120,7 @@ td {
       </td>
 
       <td>
-        <select name="ntFirst" id="ntFirst">
+        <select name="ntFirst" id="ntFirst" required>
           <option value="">Select racer</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -135,7 +135,7 @@ td {
     <tr>
       <td>2nd</td>
       <td>
-      <select name="nbSecond" id="nbSecond">
+      <select name="nbSecond" id="nbSecond" required>
         <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
@@ -147,7 +147,7 @@ td {
       </select>
       </td>
       <td>
-      <select name="ntSecond" id="ntSecond">
+      <select name="ntSecond" id="ntSecond" required>
           <option value="">Select racer</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -162,7 +162,7 @@ td {
     <tr>
       <td>3rd</td>
       <td>
-      <select name="nbThird" id="nbThird">
+      <select name="nbThird" id="nbThird" required>
         <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
@@ -174,7 +174,7 @@ td {
       </select>
       </td>
       <td>
-      <select name="ntThird" id="ntThird">
+      <select name="ntThird" id="ntThird" required>
           <option value="">Select racer</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -189,7 +189,7 @@ td {
     <tr>
       <td>4th</td>
       <td>
-      <select name="nbFourth" id="nbFourth">
+      <select name="nbFourth" id="nbFourth" required>
         <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
@@ -201,7 +201,7 @@ td {
       </select>
       </td>
       <td>
-      <select name="ntFourth" id="ntFourth">
+      <select name="ntFourth" id="ntFourth" required>
         <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
@@ -216,7 +216,7 @@ td {
     <tr>
       <td>5th</td>
       <td>
-      <select name="nbFifth" id="nbFifth">
+      <select name="nbFifth" id="nbFifth" required>
         <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
@@ -228,7 +228,7 @@ td {
       </select>
       </td>
       <td>
-      <select name="ntFifth" id="ntFifth">
+      <select name="ntFifth" id="ntFifth" required>
         <option value="">Select racer</option>
           <?php
           // Include dropdown data and populate dropdown
@@ -243,17 +243,17 @@ td {
     </tr>
     <tr>
       <td>Lap Difference 1st-5th</td>
-      <td><input name="nbLap15" type="number" id ="nbLap15" min="0" max="1000" step="1" placeholder="Lap"></td></td>
-      <td><input name="ntLap15" type="number" id ="ntLap15" min="0" max="1000" step="1" placeholder="Lap"></td></td>
+      <td><input name="nbLap15" type="number" id ="nbLap15" min="0" max="1000" step="1" placeholder="Lap" required></td></td>
+      <td><input name="ntLap15" type="number" id ="ntLap15" min="0" max="1000" step="1" placeholder="Lap" required></td></td>
     </tr>
     <tr>
       <td>Lap/Time Difference 1st - 2nd</td>
       <td>
-        <input name="nbLap12" type="number" id ="nbLap12" min="0" max="1000" step="1" placeholder="Lap">
-        <input name="nbTime12" type="number" id ="nbTime12" min="0" max="1000" step=".01" placeholder="Time"></td>
+        <input name="nbLap12" type="number" id ="nbLap12" min="0" max="1000" step="1" placeholder="Lap" required>
+        <input name="nbTime12" type="number" id ="nbTime12" min="0" max="1000" step=".01" placeholder="Time" required></td>
       <td>
-        <input name="ntLap12" type="number" id ="ntLap12" min="0" max="1000" step="1" placeholder="Lap">
-        <input name="ntTime12" type="number" id ="ntTime12" min="0" max="1000" step=".01" placeholder="Time"></td>
+        <input name="ntLap12" type="number" id ="ntLap12" min="0" max="1000" step="1" placeholder="Lap" required>
+        <input name="ntTime12" type="number" id ="ntTime12" min="0" max="1000" step=".01" placeholder="Time" required></td>
     </tr>
 </table>
 

@@ -90,7 +90,7 @@ td {
   <caption style="grid-column: span 5;">Mod Class</caption>
     <tr>
       <th>
-        <select name="eventName" id="eventName">
+        <select name="eventName" id="eventName" required>
         <option value="">Select event</option>
           <?php
           // Include dropdown data and populate dropdown
@@ -107,7 +107,7 @@ td {
     <tr>
       <td>1st</td>
       <td>
-        <select name="twoWDFirst" id="twoWDFirst">
+        <select name="twoWDFirst" id="twoWDFirst" required>
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -119,7 +119,7 @@ td {
         </select>
       </td>
       <td>
-        <select name="fourWDFirst" id="fourWDFirst">
+        <select name="fourWDFirst" id="fourWDFirst" required>
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -134,7 +134,7 @@ td {
     <tr>
       <td>2nd</td>
       <td>
-        <select name="twoWDSecond" id="twoWDSecond">
+        <select name="twoWDSecond" id="twoWDSecond" required>
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -146,7 +146,7 @@ td {
         </select>
       </td>
       <td>
-      <select name="fourWDSecond" id="fourWDSecond">
+      <select name="fourWDSecond" id="fourWDSecond" required>
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -161,7 +161,7 @@ td {
     <tr>
       <td>3rd</td>
       <td>
-        <select name="twoWDThird" id="twoWDThird">
+        <select name="twoWDThird" id="twoWDThird" required>
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -173,7 +173,7 @@ td {
         </select>
       </td>
       <td>
-        <select name="fourWDThird" id="fourWDThird">
+        <select name="fourWDThird" id="fourWDThird" required>
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -188,7 +188,7 @@ td {
     <tr>
       <td>4th</td>
       <td>
-        <select name="twoWDFourth" id="twoWDFourth">
+        <select name="twoWDFourth" id="twoWDFourth" required>
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -200,7 +200,7 @@ td {
         </select>
       </td>
       <td>
-        <select name="fourWDFourth" id="fourWDFourth">
+        <select name="fourWDFourth" id="fourWDFourth" required>
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -215,7 +215,7 @@ td {
     <tr>
       <td>5th</td>
       <td>
-      <select name="twoWDFifth" id="twoWDFifth">
+      <select name="twoWDFifth" id="twoWDFifth" required>
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -227,7 +227,7 @@ td {
         </select>
       </td>
       <td>
-        <select name="fourWDFifth" id="fourWDFifth">
+        <select name="fourWDFifth" id="fourWDFifth" required>
           <option value="">Select 1st</option>
             <?php
             // Include dropdown data and populate dropdown
@@ -242,17 +242,17 @@ td {
     </tr>
     <tr>
       <td>Lap Difference 1st-5th</td>
-      <td><input name="twoWDLap15" type="number" id ="twoWDLap15" min="0" max="1000" step="1" placeholder="Lap"></td></td>
-      <td><input name="fourWDLap15" type="number" id ="fourWDLap15" min="0" max="1000" step="1" placeholder="Lap"></td></td>
+      <td><input name="twoWDLap15" type="number" id ="twoWDLap15" min="0" max="1000" step="1" placeholder="Lap" required></td></td>
+      <td><input name="fourWDLap15" type="number" id ="fourWDLap15" min="0" max="1000" step="1" placeholder="Lap" required></td></td>
     </tr>
     <tr>
       <td>Lap/Time Difference 1st - 2nd</td>
       <td>
-        <input name="twoWDLap12" type="number" id ="twoWDLap12" min="0" max="1000" step="1" placeholder="Lap">
-        <input name="twoWDTime12" type="number" id ="twoWDTime12" min="0" max="1000" step=".01" placeholder="Time"></td>
+        <input name="twoWDLap12" type="number" id ="twoWDLap12" min="0" max="1000" step="1" placeholder="Lap" required>
+        <input name="twoWDTime12" type="number" id ="twoWDTime12" min="0" max="1000" step=".01" placeholder="Time" required></td>
       <td>
-        <input name="fourWDLap12" type="number" id ="fourWDLap12" min="0" max="1000" step="1" placeholder="Lap">
-        <input name="fourWDTime12" type="number" id ="fourWDTime12" min="0" max="1000" step=".01" placeholder="Time"></td>
+        <input name="fourWDLap12" type="number" id ="fourWDLap12" min="0" max="1000" step="1" placeholder="Lap" required>
+        <input name="fourWDTime12" type="number" id ="fourWDTime12" min="0" max="1000" step=".01" placeholder="Time" required></td>
     </tr>
 </table>
 <br>

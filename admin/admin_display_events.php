@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 }
 
 // Query to fetch data from the table, including the active field
-$sql = "SELECT id, event_name, active FROM events";
+$sql = "SELECT id, event_name, active FROM events ORDER BY event_name asc";
 $result = $conn->query($sql);
 
 // Close the connection
