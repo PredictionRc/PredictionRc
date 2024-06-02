@@ -31,8 +31,10 @@
     <h4>Off road 1/8th drivers</h4>
     <button onclick="redirectToNitroBuggyPage()">Update Pro buggy drivers</button>
     <button onclick="redirectToNitroTruggyPage()">Update Pro truggy drivers</button> <br><br>
-    <h4>EVENTS</h4>
-    <button onclick="redirectToEventPage()">Update Events</button>
+    <h4>Event List</h4>
+    <button onclick="redirectToEventPage()">Update Events</button> <br><br>
+    <h4>Enable Disable Submit button</h4>
+    <button onclick="redirectToButtonActivePage()">Event Enabled/Disabled</button>
     </div>
 </body>
 <script>
@@ -50,6 +52,9 @@
     }
     function redirectToEventPage() {
         window.location.href = 'admin_page_events.php';
+    }
+    function redirectToButtonActivePage() {
+        window.location.href = 'admin_page_submitButtons.php';
     }
 </script>
 </html>
