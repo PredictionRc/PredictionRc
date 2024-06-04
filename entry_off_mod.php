@@ -42,7 +42,7 @@
     <tr>
       <th>
         <select name="eventName" id="eventName" required>
-        <option value="">Select event</option>
+        <option value="">Select Event</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'backend_events.php';
@@ -59,7 +59,7 @@
       <td>1st</td>
       <td>
         <select name="twoWDFirst" id="twoWDFirst" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_2wd.php';
@@ -71,7 +71,7 @@
       </td>
       <td>
         <select name="fourWDFirst" id="fourWDFirst" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_4wd.php';
@@ -86,7 +86,7 @@
       <td>2nd</td>
       <td>
         <select name="twoWDSecond" id="twoWDSecond" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_2wd.php';
@@ -98,7 +98,7 @@
       </td>
       <td>
       <select name="fourWDSecond" id="fourWDSecond" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_4wd.php';
@@ -113,7 +113,7 @@
       <td>3rd</td>
       <td>
         <select name="twoWDThird" id="twoWDThird" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_2wd.php';
@@ -125,7 +125,7 @@
       </td>
       <td>
         <select name="fourWDThird" id="fourWDThird" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_4wd.php';
@@ -140,7 +140,7 @@
       <td>4th</td>
       <td>
         <select name="twoWDFourth" id="twoWDFourth" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_2wd.php';
@@ -152,7 +152,7 @@
       </td>
       <td>
         <select name="fourWDFourth" id="fourWDFourth" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_4wd.php';
@@ -167,7 +167,7 @@
       <td>5th</td>
       <td>
       <select name="twoWDFifth" id="twoWDFifth" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_2wd.php';
@@ -179,7 +179,7 @@
       </td>
       <td>
         <select name="fourWDFifth" id="fourWDFifth" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_4wd.php';
@@ -200,10 +200,10 @@
       <td>Lap/Time Difference 1st - 2nd</td>
       <td>
         <input name="twoWDLap12" type="number" id ="twoWDLap12" min="0" max="1000" step="1" placeholder="Lap" required>
-        <input name="twoWDTime12" type="number" id ="twoWDTime12" min="0" max="1000" step=".01" placeholder="Time" required></td>
+        <input name="twoWDTime12" type="number" id ="twoWDTime12" min="0" max="1000" step=".01" placeholder="00.00" required></td>
       <td>
         <input name="fourWDLap12" type="number" id ="fourWDLap12" min="0" max="1000" step="1" placeholder="Lap" required>
-        <input name="fourWDTime12" type="number" id ="fourWDTime12" min="0" max="1000" step=".01" placeholder="Time" required></td>
+        <input name="fourWDTime12" type="number" id ="fourWDTime12" min="0" max="1000" step=".01" placeholder="00.00" required></td>
     </tr>
 </table>
 <br>

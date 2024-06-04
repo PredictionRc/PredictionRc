@@ -42,7 +42,7 @@
     <tr>
       <th>
       <select name="eventName" id="eventName" required>
-        <option value="">Select event</option>
+        <option value="">Select Event</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'backend_events.php';
@@ -59,7 +59,7 @@
       <td>1st</td>
       <td>
         <select name="nbFirst" id="nbFirst" required>
-          <option value="">Select racer</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_nitro_buggy.php';
@@ -72,7 +72,7 @@
 
       <td>
         <select name="ntFirst" id="ntFirst" required>
-          <option value="">Select racer</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_nitro_truggy.php';
@@ -87,7 +87,7 @@
       <td>2nd</td>
       <td>
       <select name="nbSecond" id="nbSecond" required>
-        <option value="">Select racer</option>
+        <option value="">Select Racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'driver_nitro_buggy.php';
@@ -99,7 +99,7 @@
       </td>
       <td>
       <select name="ntSecond" id="ntSecond" required>
-          <option value="">Select racer</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_nitro_truggy.php';
@@ -114,7 +114,7 @@
       <td>3rd</td>
       <td>
       <select name="nbThird" id="nbThird" required>
-        <option value="">Select racer</option>
+        <option value="">Select Racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'driver_nitro_buggy.php';
@@ -126,7 +126,7 @@
       </td>
       <td>
       <select name="ntThird" id="ntThird" required>
-          <option value="">Select racer</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_nitro_truggy.php';
@@ -141,7 +141,7 @@
       <td>4th</td>
       <td>
       <select name="nbFourth" id="nbFourth" required>
-        <option value="">Select racer</option>
+        <option value="">Select Racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'driver_nitro_buggy.php';
@@ -153,7 +153,7 @@
       </td>
       <td>
       <select name="ntFourth" id="ntFourth" required>
-        <option value="">Select racer</option>
+        <option value="">Select Racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'driver_nitro_truggy.php';
@@ -168,7 +168,7 @@
       <td>5th</td>
       <td>
       <select name="nbFifth" id="nbFifth" required>
-        <option value="">Select racer</option>
+        <option value="">Select Racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'driver_nitro_buggy.php';
@@ -180,7 +180,7 @@
       </td>
       <td>
       <select name="ntFifth" id="ntFifth" required>
-        <option value="">Select racer</option>
+        <option value="">Select Racer</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'driver_nitro_truggy.php';
@@ -201,10 +201,10 @@
       <td>Lap/Time Difference 1st - 2nd</td>
       <td>
         <input name="nbLap12" type="number" id ="nbLap12" min="0" max="1000" step="1" placeholder="Lap" required>
-        <input name="nbTime12" type="number" id ="nbTime12" min="0" max="1000" step=".01" placeholder="Time" required></td>
+        <input name="nbTime12" type="number" id ="nbTime12" min="0" max="1000" step=".01" placeholder="00.00" required></td>
       <td>
         <input name="ntLap12" type="number" id ="ntLap12" min="0" max="1000" step="1" placeholder="Lap" required>
-        <input name="ntTime12" type="number" id ="ntTime12" min="0" max="1000" step=".01" placeholder="Time" required></td>
+        <input name="ntTime12" type="number" id ="ntTime12" min="0" max="1000" step=".01" placeholder="00.00" required></td>
     </tr>
 </table>
 <br>
