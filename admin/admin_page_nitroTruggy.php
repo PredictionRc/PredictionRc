@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ADMIN</title>
+    <title>PRO TRUGGY</title>
     <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="icon" href="data:, ">
 </head>
 <body>
     <div class="divcenter">

@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ADMIN</title>
+    <title>PRO BUGGY</title>
     <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="icon" href="data:, ">
 </head>
 <body>
     <div class="divcenter">
-        <h2>NITRO BUGGY DRIVERS</h2>
+        <h2>PRO NITRO BUGGY DRIVERS</h2>
         <table id="driver-table">
         <thead>
             <tr>
