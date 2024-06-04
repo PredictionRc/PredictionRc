@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
-<link rel="stylesheet" type="text/css" href="style.css">
-<title>Prediction RC</title>
-<link rel="icon" href="data:, ">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Prediction RC</title>
+    <link rel="icon" href="data:, ">
 <style>
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -49,7 +49,6 @@ input[type=email], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-
 </style>
 </head>
 <body class="bg">
@@ -65,61 +64,55 @@ input[type=email], select, textarea {
     </table>
   </div>
 
-<div class="divcenter">
-  <p class="p1">Welcome to Prediction RC.</p>
-  <table style="width:100%">
-    <tr>
-      <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-    </tr>
-  </table>
-</div>
+  <div class="divcenter">
+    <p class="p1">Welcome to Prediction RC.</p>
+    <table style="width:100%">
+      <tr>
+        <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+      </tr>
+    </table>
+  </div>
 
-<div class="divcenter">
-  <button onclick="document.getElementById('rules').style.display='block'" style="width:auto;">Rules</button>
-  <button onclick="document.getElementById('contactModal').style.display='block'" style="width:auto;"> Contact Us</button>
-  <button onclick="document.getElementById('signUpModal').style.display='block'" style="width:auto;">Sign Up</button>
-</div>
-<div class="divcenter">
-  <button onclick="document.getElementById('loginModal').style.display='block'" style="width:auto;" class="buttonGreen">Login</button>
-</div>
+  <div class="divcenter">
+    <button onclick="document.getElementById('rules').style.display='block'" style="width:auto;">Rules</button>
+    <button onclick="document.getElementById('contactModal').style.display='block'" style="width:auto;"> Contact Us</button>
+    <button onclick="document.getElementById('signUpModal').style.display='block'" style="width:auto;">Sign Up</button>
+  </div>
 
+  <div class="divcenter">
+    <button onclick="document.getElementById('loginModal').style.display='block'" style="width:auto;" class="buttonGreen">Login</button>
+  </div>
 
-
+<!--CONTACT POP UP-->
 <div id="contactModal" class="modal">
   <form class="modal-content animate" action="contact_form.php" method="post">
     <div class="divcenter">
       <span onclick="document.getElementById('contactModal').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
-
     <div class="divcenter">
     <h3>CONTACT US</h3>
     </div>
-
     <div class="container">
     <label for="name"><b>Name:</b></label>
     <input type="text" id="name" name="name" placeholder="Your name.." required>
-
     <label for="email"><b>Email:</b></label>
     <input type="email" id="email" name="email" placeholder="Enter Email" required>
-
     <label for="business_name"><b>Business Name</b></label>
     <input type="text" id="business_name" name="business_name" placeholder="Enter Business Name">
-
     <label for="subject"><b>Subject</b></label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
-
     <input type="submit" value="Submit">
     </div>
-
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('contactModal').style.display='none'" class="cancelbtn">Cancel</button>
     </div>
   </form>
 </div>
 
+<!--RULES POP UP-->
 <div id="rules" class="modal">
   <form class="modal-content animate" action="login.php" method="post">
     <div class="divcenter">
@@ -138,16 +131,15 @@ input[type=email], select, textarea {
   </form>
 </div>
 
+<!--LOGIN POP UP-->
 <div id="loginModal" class="modal">
   <form class="modal-content animate" action="login.php" method="post">
     <div class="divcenter">
       <span onclick="document.getElementById('loginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
-
     <div class="divcenter">
       <h3>Let's Predict!</h3>
     </div>
-
     <div class="container">
       <label for="login_email">Email:</label>
       <input type="email" id="login_email" name="login_email" placeholder="Enter Your Email" required>
@@ -155,7 +147,6 @@ input[type=email], select, textarea {
       <input type="password" id="login_password" name="login_password" placeholder="Enter Your Password" required>
       <button type="submit" value="Login">Login</button>
     </div>
-
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('loginModal').style.display='none'" class="cancelbtn">Cancel</button>
       <span class="psw">Forgot <a href="forgot_password.php">password?</a></span>
@@ -163,29 +154,23 @@ input[type=email], select, textarea {
   </form>
 </div>
 
+<!--SIGNUP POP UP-->
 <div id="signUpModal" class="modal">
   <form class="modal-content" action="register.php" method="post">
     <div class="divcenter">
       <span onclick="document.getElementById('signUpModal').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
-
-
     <div class="divcenter">
       <h3>Register</h3>
     </div>
-
     <div class="container">
       <label for="username">First/Last Name:</label>
       <input type="text" id="username" name="username" placeholder="Enter Name" required>
-
       <label for="email">Email:</label>
       <input type="email" id="email" name="email" placeholder="Enter Email" required>
-
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" placeholder="Enter Password" required>
-
       <p>By creating an account you agree to our <a href="#" onclick="return openTermsPrivacy();" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
       <script>
         function openTermsPrivacy() {
             var popup = window.open('', 'Terms & Privacy', 'width=600,height=600');
@@ -201,9 +186,7 @@ input[type=email], select, textarea {
             popup.document.write(content);
             return false; // Prevents the default behavior of the link
         }
-
       </script>
-
       <div class="clearfix">
         <button id= "register" type="submit" class="signupbtn" value="Register">Register</button>
         <button type="button" onclick="document.getElementById('signUpModal').style.display='none'" class="cancelbtn">Cancel</button>
@@ -212,30 +195,24 @@ input[type=email], select, textarea {
   </form>
 </div>
 
-
+<!--JAVASCRIPT-->
 <script src="imageRotation.js">
 // Get the modal
 var modal = document.getElementById('loginModal');
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
-
 var modal = document.getElementById('signUpModal');
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
-
-
 var modal = document.getElementById('contactModal');
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -243,6 +220,5 @@ window.onclick = function(event) {
   }
 }
 </script>
-
 </body>
 </html>
