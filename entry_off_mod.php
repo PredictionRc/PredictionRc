@@ -225,18 +225,48 @@
 </div>
 
 <div class="divcenter">
-<button type="reset">reset</button>
-  <!-- Include the PHP file containing the variable $active -->
-  <?php include 'check_activeMod.php'; ?>
-  <!-- Embed PHP code to decide whether to enable or disable the submit button -->
-  <?php if ($active == 1): ?>
-    <button type="submit" value="submit" id="submitButton" class="buttonGreen">Submit</button>
-  <?php else: ?>
-    <button type="submit" value="submit" id="submitButton" class="buttonRed" disabled>Submit-Disabled</button>
-  <?php endif; ?>
+  <button type="reset">reset</button>
+  <button onclick="checkActiveStatus();" type="submit" value="submit" id="submitButtonMod" class="buttonRed" disabled>Submit-Disabled</button>
 </div>
+</form>
+<script>
+  // Function to fetch the active status using AJAX
+  function checkActiveStatus() {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "check_entry_mod.php", true);
+    xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        var activeStr = xhr.responseText.trim(); // Remove whitespace
 
-  </form>
+        // Check if response text is "bool(true)" or "bool(false)"
+        var active = activeStr === "bool(true)";
+
+        // Update button name based on active status
+        var button = document.getElementById("submitButtonMod");
+        if (active) {
+          button.innerHTML = "Submit"; // Change button name
+          button.classList.remove("buttonRed");
+          button.classList.add("buttonGreen");
+          button.disabled = false;
+        } else {
+          button.innerHTML = "Disabled"; // Change button name
+          button.classList.remove("buttonGreen");
+          button.classList.add("buttonRed");
+          button.disabled = true;
+        }
+      }
+    };
+    xhr.send();
+  }
+
+  // Call the function initially
+  checkActiveStatus();
+
+  // Set interval to call the function every 60 second
+  setInterval(checkActiveStatus, 60000);
+</script>
+
+
 <script src="imageRotation.js">
 
 </script>

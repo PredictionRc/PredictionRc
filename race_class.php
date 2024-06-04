@@ -36,7 +36,7 @@
 <div class="divcenter">
   <p class="p1"><u>Off Road Events</u></p>
   <!-- This is the button for nitro events -->
-  <?php include 'check_activeNitro.php'; ?>
+  <?php include 'check_active_nitro.php'; ?>
   <!-- Embed PHP code to decide whether to enable or disable the submit button -->
   <?php if ($active == 1): ?>
     <form action="entry_off_nitro.php" class="inline">
@@ -47,7 +47,7 @@
   <?php endif; ?>
 <br>
   <!-- This is the buttone for Mod events -->
-  <?php include 'check_activeMod.php'; ?>
+  <?php include 'check_active_mod.php'; ?>
   <!-- Embed PHP code to decide whether to enable or disable the submit button -->
   <?php if ($active == 1): ?>
     <form action="entry_off_mod.php" class="inline">
