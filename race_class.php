@@ -45,8 +45,10 @@
   <?php else: ?>
     <button type="submit" value="submit" id="submitButtonNitro" class="buttonRed" disabled>1/8 Nitro-Disabled</button>
   <?php endif; ?>
-<br>
-  <!-- This is the buttone for Mod events -->
+
+  <br>
+
+  <!-- This is the button for Mod events -->
   <?php include 'check_active_mod.php'; ?>
   <!-- Embed PHP code to decide whether to enable or disable the submit button -->
   <?php if ($active == 1): ?>
@@ -59,34 +61,25 @@
 </div>
 
 <div class="divcenter">
-<p class="p1"><u>On Road Events</u></p>
-<form action="" class="inline">
-    <button class="buttonRed" >Future Development</button>
-</form>
+  <p class="p1"><u>On Road Events</u></p>
+  <form action="" class="inline">
+      <button class="buttonRed" >Future Development</button>
+  </form>
 </div>
 
 <div class ="divcenter">
-<table style="width:100%">
-  <tr>
-    <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-    <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-  </tr>
-</table>
+  <table style="width:100%">
+    <tr>
+      <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+    </tr>
+  </table>
 </div>
-
-<script src="imageRotation.js">
-    function redirectToMod4wdPage() {
-        window.location.href = 'entry_off_mod.php';
-    }
-    function nitroPage() {
-        window.location.href = 'entry_off_nitro.php';
-    }
-</script>
 </body>
 </html>
