@@ -2,60 +2,7 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-.divcenter {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.adcontainer {
-  height: 100px;
-  width: 100%;
-}
-
-.bg {
-  /* The image used */
-  background-color: #727171;
-  /* Full height */
-  height: 100%;
-  width: 100%;
-
-}
-
-.p1 {
-  font-family: "Fantasy", "Courier New", monospace;
-  font-weight: bold;
-  max-width: 100%;
-  margin: 10px;
-  word-wrap: break-word;
-}
-
-.p2 {
-  font-family: "Fantasy", "Courier New", monospace;
-  font-weight: bold;
-  font-size: 25px;
-  max-width: 100%;
-  margin: 10px;
-  word-wrap: break-word;
-  text-align: center;
-}
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-td {
-  text-align: center;
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body class="bg">
 
@@ -78,7 +25,7 @@ td {
   ?>
 </div>
 
-<div>
+<div class="divcenter">
   <table style="width:100%">
     <tr>
       <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
@@ -86,12 +33,10 @@ td {
   </table>
 </div>
 
-<p class="p1">Submit Your MOD Entry!</p>
-
+<div class="divcenter">
+<h2>MOD Entry Form</h2>
 <form action="backend_off_mod.php" method="post">
-
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
-  <caption style="grid-column: span 5;">Mod Class</caption>
     <tr>
       <th>
         <select name="eventName" id="eventName" required>
@@ -260,24 +205,32 @@ td {
     </tr>
 </table>
 <br>
+</div>
+
+<div class="divcenter">
 <table style="width:100%">
   <tr>
     <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
     <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
     <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
     <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
   </tr>
 </table>
+</div>
 
 <div class="divcenter">
-  <input type="reset" value="Reset">
+<button type="reset">reset</button>
   <!-- Include the PHP file containing the variable $active -->
   <?php include 'check_activeMod.php'; ?>
   <!-- Embed PHP code to decide whether to enable or disable the submit button -->
   <?php if ($active == 1): ?>
-    <button type="submit" value="submit" id="submitButton">Submit</button>
+    <button type="submit" value="submit" id="submitButton" class="buttonGreen">Submit</button>
   <?php else: ?>
-    <button type="submit" value="submit" id="submitButton" disabled>Submit</button>
+    <button type="submit" value="submit" id="submitButton" class="buttonRed" disabled>Submit-Disabled</button>
   <?php endif; ?>
 </div>
 
