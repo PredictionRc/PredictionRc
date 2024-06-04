@@ -3,6 +3,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" type="text/css" href="style.css">
+<title>PRC Race Events</title>
+<link rel="icon" href="data:, ">
 </head>
 <body class="bg">
   <div class="divcenter">
@@ -43,7 +45,7 @@
   <?php else: ?>
     <button type="submit" value="submit" id="submitButtonNitro" class="buttonRed" disabled>1/8 Nitro-Disabled</button>
   <?php endif; ?>
-
+<br>
   <!-- This is the buttone for Mod events -->
   <?php include 'check_activeMod.php'; ?>
   <!-- Embed PHP code to decide whether to enable or disable the submit button -->
