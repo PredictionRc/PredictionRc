@@ -51,7 +51,7 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
                 $mail->isHTML(true);
                 $mail->Subject = 'Welcome to PredictionRC - Verify Your Email';
                 $mail->Body = "Hello $username,<br><br>Thank you for registering with us.
-                 Please click the following link to to start playing: <a href='http://predidctionrc.com'>LETS GO!</a><br><br>Best regards,<br>Prediction Rc Team";
+                 Please click the following link to to start playing: <a href='http://predictionrc.com'>LETS GO!</a><br><br>Best regards,<br>Prediction Rc Team";
 
                 // Send email
                 $mail->send();
