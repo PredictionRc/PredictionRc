@@ -7,18 +7,18 @@ session_start();
 // $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
 // $dotenv->load();
 
+// // Database connection
+// $servername = "localhost";
+// $username = "root";
+// $password = "llam1ma";
+// $dbname = "predictionrc";
+
+
 // Database connection
 $servername = "localhost";
-$username = "root";
-$password = "llamma";
-$dbname = "predictionrc";
-
-
-// Database connection
-// $servername = "localhost";
-// $username = "u188794709_admin";
-// $password = "Teamass0!";
-// $dbname = "u188794709_predictionrc";
+$username = "u188794709_admin";
+$password = "Teamass0!";
+$dbname = "u188794709_predictionrc";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
