@@ -52,7 +52,7 @@ if ($result->num_rows == 0) {
             // Email content
             $mail->isHTML(true);
             $mail->Subject = 'Password Reset';
-            $mail->Body = "Click the following link to reset your password: http://localhost/update_password.php?token=" . urlencode($token) . "&email=" . urlencode($_POST['email']);
+            $mail->Body = "Click the following link to reset your password: http://predictionrc.com/update_password.php?token=" . urlencode($token) . "&email=" . urlencode($_POST['email']);
 
             // Send email
             $mail->send();
