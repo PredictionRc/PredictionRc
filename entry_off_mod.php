@@ -2,60 +2,9 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-.divcenter {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-.adcontainer {
-  height: 100px;
-  width: 100%;
-}
-
-.bg {
-  /* The image used */
-  background-color: #727171;
-  /* Full height */
-  height: 100%;
-  width: 100%;
-
-}
-
-.p1 {
-  font-family: "Fantasy", "Courier New", monospace;
-  font-weight: bold;
-  max-width: 100%;
-  margin: 10px;
-  word-wrap: break-word;
-}
-
-.p2 {
-  font-family: "Fantasy", "Courier New", monospace;
-  font-weight: bold;
-  font-size: 25px;
-  max-width: 100%;
-  margin: 10px;
-  word-wrap: break-word;
-  text-align: center;
-}
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-td {
-  text-align: center;
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>PRC MOD</title>
+<link rel="icon" href="data:, ">
 </head>
 <body class="bg">
 
@@ -78,7 +27,7 @@ td {
   ?>
 </div>
 
-<div>
+<div class="divcenter">
   <table style="width:100%">
     <tr>
       <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
@@ -86,16 +35,14 @@ td {
   </table>
 </div>
 
-<p class="p1">Submit Your MOD Entry!</p>
-
+<div class="divcenter">
+<h2>MOD Entry Form</h2>
 <form action="backend_off_mod.php" method="post">
-
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
-  <caption style="grid-column: span 5;">Mod Class</caption>
     <tr>
       <th>
         <select name="eventName" id="eventName" required>
-        <option value="">Select event</option>
+        <option value="">Select Event</option>
           <?php
           // Include dropdown data and populate dropdown
           $options = include 'backend_events.php';
@@ -112,7 +59,7 @@ td {
       <td>1st</td>
       <td>
         <select name="twoWDFirst" id="twoWDFirst" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_2wd.php';
@@ -124,7 +71,7 @@ td {
       </td>
       <td>
         <select name="fourWDFirst" id="fourWDFirst" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_4wd.php';
@@ -139,7 +86,7 @@ td {
       <td>2nd</td>
       <td>
         <select name="twoWDSecond" id="twoWDSecond" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_2wd.php';
@@ -151,7 +98,7 @@ td {
       </td>
       <td>
       <select name="fourWDSecond" id="fourWDSecond" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_4wd.php';
@@ -166,7 +113,7 @@ td {
       <td>3rd</td>
       <td>
         <select name="twoWDThird" id="twoWDThird" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_2wd.php';
@@ -178,7 +125,7 @@ td {
       </td>
       <td>
         <select name="fourWDThird" id="fourWDThird" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_4wd.php';
@@ -193,7 +140,7 @@ td {
       <td>4th</td>
       <td>
         <select name="twoWDFourth" id="twoWDFourth" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_2wd.php';
@@ -205,7 +152,7 @@ td {
       </td>
       <td>
         <select name="fourWDFourth" id="fourWDFourth" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_4wd.php';
@@ -220,7 +167,7 @@ td {
       <td>5th</td>
       <td>
       <select name="twoWDFifth" id="twoWDFifth" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_2wd.php';
@@ -232,7 +179,7 @@ td {
       </td>
       <td>
         <select name="fourWDFifth" id="fourWDFifth" required>
-          <option value="">Select 1st</option>
+          <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'driver_mod_4wd.php';
@@ -253,38 +200,36 @@ td {
       <td>Lap/Time Difference 1st - 2nd</td>
       <td>
         <input name="twoWDLap12" type="number" id ="twoWDLap12" min="0" max="1000" step="1" placeholder="Lap" required>
-        <input name="twoWDTime12" type="number" id ="twoWDTime12" min="0" max="1000" step=".01" placeholder="Time" required></td>
+        <input name="twoWDTime12" type="number" id ="twoWDTime12" min="0" max="1000" step=".01" placeholder="00.00" required></td>
       <td>
         <input name="fourWDLap12" type="number" id ="fourWDLap12" min="0" max="1000" step="1" placeholder="Lap" required>
-        <input name="fourWDTime12" type="number" id ="fourWDTime12" min="0" max="1000" step=".01" placeholder="Time" required></td>
+        <input name="fourWDTime12" type="number" id ="fourWDTime12" min="0" max="1000" step=".01" placeholder="00.00" required></td>
     </tr>
 </table>
 <br>
+</div>
+
+<div class="divcenter">
 <table style="width:100%">
   <tr>
     <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
     <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
     <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
     <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+    <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
   </tr>
 </table>
-
-<div class="divcenter">
-  <input type="reset" value="Reset">
-  <!-- Include the PHP file containing the variable $active -->
-  <?php include 'check_activeMod.php'; ?>
-  <!-- Embed PHP code to decide whether to enable or disable the submit button -->
-  <?php if ($active == 1): ?>
-    <button type="submit" value="submit" id="submitButton">Submit</button>
-  <?php else: ?>
-    <button type="submit" value="submit" id="submitButton" disabled>Submit</button>
-  <?php endif; ?>
 </div>
 
-  </form>
-<script src="imageRotation.js">
-
-</script>
-
+<div class="divcenter">
+  <button type="reset">reset</button>
+  <button onclick="checkActiveModStatus();" type="submit" value="submit" id="submitButtonMod" class="buttonRed" disabled>Submit-Disabled</button>
+</div>
+</form>
+<script src="checkModStatus.js"></script>
+<script src="imageRotation.js"></script>
 </body>
 </html>

@@ -1,43 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ADMIN</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-.divcenter {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-    </style>
+    <title>PRO BUGGY</title>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="icon" href="data:, ">
 </head>
 <body>
     <div class="divcenter">
-        <?php
-        session_start();
-        // Check if the user is logged in
-        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-            // If logged in, display logout link
-            echo '<a href="admin_logout.php">Logout</a>';
-        } else {
-            // If not logged in, display login link
-            echo '<a href="admin_login.html">Login</a>';
-        }
-        ?><br>
-        <a href="admin_page.php">Admin Page Return</a>
-
-        <h2>NITRO BUGGY DRIVERS</h2>
+        <h2>PRO NITRO BUGGY DRIVERS</h2>
         <table id="driver-table">
         <thead>
             <tr>
@@ -56,6 +26,23 @@
         <input type="text" id="racer-name" name="racer_name" oninput="this.value = this.value.toUpperCase();"><br><br>
         <input type="submit" value="Add Driver">
     </form>
+    </div>
+
+<div class="divcenter">
+    <?php
+        session_start();
+        // Check if the user is logged in
+        if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+            // If logged in, display logout link
+            echo '<a href="admin_logout.php">Logout</a>';
+        } else {
+            // If not logged in, display login link
+            echo '<a href="admin_login.html">Login</a>';
+        }
+        ?><br>
+        <a href="admin_page.php">Admin Page Return</a>
+</div>
+
 
     <script>
     // Fetch data from PHP script

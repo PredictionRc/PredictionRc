@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Prediction RC</title>
+    <link rel="icon" href="data:, ">
 <style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
 /* Full-width input fields */
 input[type=text], input[type=password] {
   width: 100%;
@@ -15,97 +16,8 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-/* Set a style for all buttons */
-button {
-  background-color: #000000;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
 button:hover {
   opacity: 0.8;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-.divcenter {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-
-
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-img.header {
-  width: 40%;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.adcontainer {
-  height: 100px;
-  width: 100%;
-}
-
-.container {
-  padding: 16px;
-}
-
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  padding-top: 60px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button (x) */
-.close {
-  position: absolute;
-  right: 25px;
-  top: 0;
-  color: #000;
-  font-size: 35px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: red;
-  cursor: pointer;
 }
 
 .bg {
@@ -114,27 +26,6 @@ span.psw {
   /* Full height */
   height: 100%;
   width: 100%;
-
-}
-
-.p1 {
-  font-family: "Fantasy", "Courier New", monospace;
-  font-weight: bold;
-  font-size: 24px;
-  max-width: 100%;
-  margin: 10px;
-  word-wrap: break-word;
-
-}
-
-.responsive {
-  width: 100%;
-  height: 50%;
-}
-
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
 }
 
 input[type=text], select, textarea {
@@ -158,7 +49,6 @@ input[type=email], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
 }
-
 </style>
 </head>
 <body class="bg">
@@ -166,7 +56,7 @@ input[type=email], select, textarea {
     <img src="image/indexLogo.jpg" alt="Avatar"  class="avatar">
   </div>
 
-  <div>
+  <div class="divcenter">
     <table style="width:100%">
       <tr>
        <img src="image/addsale4.png" alt="Advertising space for Rent" class="adcontainer" id="adImage">
@@ -174,123 +64,106 @@ input[type=email], select, textarea {
     </table>
   </div>
 
-<div class="divcenter">
-  <p class="p1">Welcome to Prediction RC.</p>
-  <table style="width:100%">
-    <tr>
-      <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-    </tr>
-  </table>
-  <button onclick="document.getElementById('rules').style.display='block'" style="width:auto;">Rules</button>
-  <button onclick="document.getElementById('contactModal').style.display='block'" style="width:auto;"> Contact Us</button>
+  <div class="divcenter">
+    <h2>At PRC, we're dedicated to to growing the RC Community by bringing a quick fun game to a live steamed event!</h2>
+    <p>
+      <b>
+      Our mission is to unite RC enthusiasts, whether they're seasoned veterans or newcomers, by providing an engaging platform where they can participate in thrilling RC competitions, connect with like-minded individuals, and foster a sense of camaraderie within the community. Through our innovative approach, we aim to enhance the excitement of live-streamed events and contribute to the overall growth and enjoyment of the RC hobby worldwide.
+      Community growth is essential for the vitality and sustainability of any hobby or interest group, including the RC (Remote Control) community.
+      </b>
+    </p>
+  </div>
+
+  <div class="divcenter">
+    <table style="width:100%">
+      <tr>
+        <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="divcenter">
+    <button onclick="document.getElementById('rules').style.display='block'" style="width:auto;">Rules</button>
+    <button onclick="document.getElementById('contactModal').style.display='block'" style="width:auto;"> Contact Us</button>
+    <button onclick="document.getElementById('signUpModal').style.display='block'" style="width:auto;">Sign Up</button>
+  </div>
+
+  <div class="divcenter">
+    <button onclick="document.getElementById('loginModal').style.display='block'" style="width:auto;" class="buttonGreen">Login</button>
+  </div>
+
+<!--RULES POP UP-->
+<div id="rules" class="modal">
+  <form class="modal-content animate" action="login.php" method="post">
+    <div class="divcenter">
+      <h3><u>Free To Play!</u></h3>
+    </div>
+    <ul>
+      <li><b>Sign up for an account - </b>This is the first step to winning a prize!</li> <br>
+      <li><b>Selecting race event - </b>
+      After signing in you will be taken to this race event page. The race events are controlled when events are ready to be predicted. You might see diabled buttons that means its not open for predictions.
+      </li><br>
+      <li><b>Submitting Entry - </b> asd asda sdas</li><br>
+      <li><b>Entry Deadline - </b> asd asda sdas</li><br>
+      <li><b>Prize - </b> asd asda sdas</li><br>
+    </ul>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('rules').style.display='none'" class="buttonGreen">UNDERSTOOD!</button>
+    </div>
+  </form>
 </div>
 
-<div class="divcenter">
-  <button onclick="document.getElementById('signUpModal').style.display='block'" style="width:auto;">Sign Up</button>
-  <button onclick="document.getElementById('loginModal').style.display='block'" style="width:auto;">Login</button>
-</div>
-
-
-
+<!--CONTACT POP UP-->
 <div id="contactModal" class="modal">
   <form class="modal-content animate" action="contact_form.php" method="post">
     <div class="divcenter">
       <span onclick="document.getElementById('contactModal').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
-
     <div class="divcenter">
     <h3>CONTACT US</h3>
     </div>
-
     <div class="container">
     <label for="name"><b>Name:</b></label>
-    <input type="text" id="name" name="name" placeholder="Your name.." required>
-
+    <input type="text" id="name" name="name" placeholder="Your name.." required  autocomplete="on">
     <label for="email"><b>Email:</b></label>
-    <input type="email" id="email" name="email" placeholder="Enter Email" required>
-
+    <input type="email" id="email_contact" name="email" placeholder="Enter Email" required  autocomplete="on">
     <label for="business_name"><b>Business Name</b></label>
     <input type="text" id="business_name" name="business_name" placeholder="Enter Business Name">
-
     <label for="subject"><b>Subject</b></label>
     <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
-
-    <input type="submit" value="Submit">
     </div>
-
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('contactModal').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="submit" value="Submit" class="buttonGreen">Submit</button>
     </div>
   </form>
 </div>
 
-<div id="rules" class="modal">
-  <form class="modal-content animate" action="login.php" method="post">
-    <div class="divcenter">
-      <h3>Free To Play!</h3>
-      <h5>Race Event Choices</h5>
-      <p>Choose which event you want to cast your Predictions on from the dropdown list.</p>
-      <h5>Submitting Entry</h5>
-      <p>You will only have 1 Submission per race event. Please make sure your input is correct before clicking on the submit button.</p>
 
-    </div>
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('rules').style.display='none'" class="cancelbtn">UNDERSTOOD!</button>
-    </div>
-  </form>
-</div>
-
-<div id="loginModal" class="modal">
-  <form class="modal-content animate" action="login.php" method="post">
-    <div class="divcenter">
-      <span onclick="document.getElementById('loginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
-    </div>
-
-    <div class="divcenter">
-      <h3>Let's Predict!</h3>
-    </div>
-
-    <div class="container">
-      <label for="login_email">Email:</label>
-      <input type="email" id="login_email" name="login_email" placeholder="Enter Your Email" required>
-      <label for="login_password">Password:</label>
-      <input type="password" id="login_password" name="login_password" placeholder="Enter Your Password" required>
-      <button type="submit" value="Login">Login</button>
-    </div>
-
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('loginModal').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="forgot_password.php">password?</a></span>
-    </div>
-  </form>
-</div>
-
+<!--SIGNUP POP UP-->
 <div id="signUpModal" class="modal">
   <form class="modal-content" action="register.php" method="post">
     <div class="divcenter">
       <span onclick="document.getElementById('signUpModal').style.display='none'" class="close" title="Close Modal">&times;</span>
     </div>
-
-
     <div class="divcenter">
       <h3>Register</h3>
     </div>
-
     <div class="container">
       <label for="username">First/Last Name:</label>
-      <input type="text" id="username" name="username" placeholder="Enter Name" required>
-
+      <input type="text" id="username" name="username" placeholder="Enter Name" required autocomplete="on">
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" placeholder="Enter Email" required>
-
+      <input type="email" id="email" name="email" placeholder="Enter Email" required autocomplete="on">
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" placeholder="Enter Password" required>
-
       <p>By creating an account you agree to our <a href="#" onclick="return openTermsPrivacy();" style="color:dodgerblue">Terms & Privacy</a>.</p>
-
       <script>
         function openTermsPrivacy() {
             var popup = window.open('', 'Terms & Privacy', 'width=600,height=600');
@@ -306,41 +179,56 @@ input[type=email], select, textarea {
             popup.document.write(content);
             return false; // Prevents the default behavior of the link
         }
-
       </script>
-
-      <div class="clearfix">
-        <button id= "register" type="submit" class="signupbtn" value="Register">Register</button>
+    </div>
+      <div class="container" style="background-color:#f1f1f1">
         <button type="button" onclick="document.getElementById('signUpModal').style.display='none'" class="cancelbtn">Cancel</button>
+        <button id= "register" type="submit" class ="buttonGreen" value="Register">Register</button>
       </div>
+  </form>
+</div>
+
+<!--LOGIN POP UP-->
+<div id="loginModal" class="modal">
+  <form class="modal-content animate" action="login.php" method="post">
+    <div class="divcenter">
+      <span onclick="document.getElementById('loginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="divcenter">
+      <h3>Let's Predict!</h3>
+    </div>
+    <div class="container">
+      <label for="login_email">Email:</label>
+      <input type="email" id="login_email" name="login_email" placeholder="Enter Your Email" required>
+      <label for="login_password">Password:</label>
+      <input type="password" id="login_password" name="login_password" placeholder="Enter Your Password" required>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('loginModal').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="submit" value="Login">Login</button>
+      <span class="psw">Forgot <a href="forgot_password.php">password?</a></span>
     </div>
   </form>
 </div>
 
-
+<!--JAVASCRIPT-->
 <script src="imageRotation.js">
 // Get the modal
 var modal = document.getElementById('loginModal');
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 }
-
 var modal = document.getElementById('signUpModal');
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
-
-
 var modal = document.getElementById('contactModal');
-
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
@@ -348,6 +236,5 @@ window.onclick = function(event) {
   }
 }
 </script>
-
 </body>
 </html>

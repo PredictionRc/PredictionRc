@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ADMIN</title>
-    <style>
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-        th, td {
-            border: 1px solid #dddddd;
-            text-align: left;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-.divcenter {
-  text-align: center;
-  margin: 24px 0 12px 0;
-  position: relative;
-}
-    </style>
+    <title>ENABLE/DISABLE EVENTS</title>
+    <link rel="stylesheet" type="text/css" href="admin.css">
+    <link rel="icon" href="data:, ">
 </head>
 <body>
-    <div class="divcenter">
-        <?php
+<div class="divcenter">
+<h2>Submit Buttons</h2>
+<table id="event-table">
+<thead>
+<tr>
+    <th>ID</th>
+    <th>Button Name</th>
+    <th>Active</th>
+    <th>Last Updated</th>
+    <th>Actions</th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+</div>
+
+<div class="divcenter">
+    <?php
         session_start();
         // Check if the user is logged in
         if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
@@ -36,20 +35,7 @@
         }
         ?><br>
         <a href="admin_page.php">Admin Page Return</a>
-
-        <h2>Submit Buttons</h2>
-        <table id="event-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Button Name</th>
-                <th>Active</th>
-                <th>Last Updated</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+</div>
 
 
     <script>
