@@ -57,7 +57,7 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
                 $mail->send();
 
                 // Redirect to another page
-                echo "<script>alert('You have successfully created a login. Please check your email for verification instructions.');</script>";
+                echo "<script>alert('You have successfully created a login. Email has been sent check your junk box.');</script>";
                 echo "<script>window.location.href = 'index.html'</script>";
                 exit();
             } catch (Exception $e) {
