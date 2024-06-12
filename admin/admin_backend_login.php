@@ -1,16 +1,33 @@
 <?php
 session_start();
-// Adjust the path to include the root directory
-require __DIR__ . "/../vendor/autoload.php";
+// // Adjust the path to include the root directory
+// require __DIR__ . "/../vendor/autoload.php";
 
-// Specify the path to the .env file relative to the root directory
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
-$dotenv->load();
+// // Specify the path to the .env file relative to the root directory
+// $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
+// $dotenv->load();
+
+// Database connection
+$servername = "localhost";
+$username = "root";
+$password = "llamma";
+$dbname = "predictionrc";
+
+
+// Database connection
+// $servername = "localhost";
+// $username = "u188794709_admin";
+// $password = "Teamass0!";
+// $dbname = "u188794709_predictionrc";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Database connection
-    $conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
+    //$conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
     // Check connection
     if ($conn->connect_errno) {
