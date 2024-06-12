@@ -34,17 +34,7 @@
 </div>
 
 <div class="divcenter">
-  <p class="p1"><u>Live Event Information</u></p>
-      <button class="buttonRed" disabled>Future Development</button>
-</div>
-
-<div class="divcenter">
-  <p class="p1"><u>Past Event Top 5</u></p>
-      <button class="buttonRed" disabled>Future Development</button>
-</div>
-
-<div class="divcenter">
-  <p class="p1"><u>Past Event Facility Information</u></p>
+  <p class="p1"><u>Past Event Facility And Top 5</u></p>
   <form action="" class="inline">
       <button class="buttonRed" disabled>Future Development</button>
   </form>
