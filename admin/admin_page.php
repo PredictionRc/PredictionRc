@@ -20,7 +20,9 @@
     <h4>Event List</h4>
     <button onclick="redirectToEventPage()">Update Events</button> <br><br>
     <h4>Enable Disable Submit button</h4>
-    <button onclick="redirectToButtonActivePage()">Event Enabled/Disabled</button>
+    <button onclick="redirectToButtonActivePage()">Event Enabled/Disabled</button><br><br>
+    <h4>Predictor's List</h4>
+    <button onclick="redirectToPredictorPage()">Predictor's</button> <br><br>
 </div>
 
 <div class="divcenter">
@@ -61,6 +63,9 @@
     }
     function redirectToButtonActivePage() {
         window.location.href = 'admin_page_submitButtons.php';
+    }
+    function redirectToPredictorPage() {
+        window.location.href = 'admin_page_users.php';
     }
 </script>
 </html>
