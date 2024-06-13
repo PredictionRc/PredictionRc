@@ -31,4 +31,4 @@ function checkActiveNitroStatus() {
    checkActiveNitroStatus();
 
 // Set interval to call the function every 60 second
-setInterval(checkActiveNitroStatus, 1000);
+setInterval(checkActiveNitroStatus, 30000);
