@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>MOD 2WD</title>
+    <title>Expert 2WD</title>
     <link rel="stylesheet" type="text/css" href="admin.css">
     <link rel="icon" href="data:, ">
 </head>
