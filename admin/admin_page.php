@@ -11,7 +11,9 @@
     <h1><u>Control Panel</u></h1>
     <h4>Off road 1/10th drivers</h4>
     <button onclick="redirectToMod2wdPage()">Update Mod 2wd drivers</button>
-    <button onclick="redirectToMod4wdPage()">Update Mod 4wd drivers</button> <br><br>
+    <button onclick="redirectToMod4wdPage()">Update Mod 4wd drivers</button><br><br>
+    <button onclick="redirectToExpert2wdPage()">Update Expert 2wd drivers</button>
+    <button onclick="redirectToExpert4wdPage()">Update Expert 4wd drivers</button> <br><br>
     <h4>Off road 1/8th drivers</h4>
     <button onclick="redirectToNitroBuggyPage()">Update Pro buggy drivers</button>
     <button onclick="redirectToNitroTruggyPage()">Update Pro truggy drivers</button> <br><br>
@@ -41,6 +43,12 @@
     }
     function redirectToMod4wdPage() {
         window.location.href = 'admin_page_mod4wd.php';
+    }
+    function redirectToExpert2wdPage() {
+        window.location.href = 'admin_page_expert2wd.php';
+    }
+    function redirectToExpert4wdPage() {
+        window.location.href = 'admin_page_expert4wd.php';
     }
     function redirectToNitroBuggyPage() {
         window.location.href = 'admin_page_nitroBuggy.php';

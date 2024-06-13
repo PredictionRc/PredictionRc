@@ -80,6 +80,17 @@
     <button type="submit" value="submit" id="submitButtonNitro" class="buttonRed" disabled>1/10 Mod-Disabled</button>
   <?php endif; ?>
 
+    <!-- This is the button for Expert events -->
+    <?php include 'check_active_expert.php'; ?>
+  <!-- Embed PHP code to decide whether to enable or disable the submit button -->
+  <?php if ($active == 1): ?>
+    <form action="entry_off_expert.php" class="inline">
+      <button type="submit" value="submit" id="submitButtonExpert" class="buttonGreen">1/10 Expert</button>
+    </form>
+  <?php else: ?>
+    <button type="submit" value="submit" id="submitButtonExpert" class="buttonRed" disabled>1/10 Expert-Disabled</button>
+  <?php endif; ?>
+
   <!-- This is the button for onroad events -->
   <?php include 'check_active_onRoad.php'; ?>
   <!-- Embed PHP code to decide whether to enable or disable the submit button -->
