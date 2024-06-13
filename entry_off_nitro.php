@@ -28,14 +28,6 @@
 </div>
 
 <div class="divcenter">
-  <table style="width:100%">
-    <tr>
-      <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
-    </tr>
-  </table>
-</div>
-
-<div class="divcenter">
 <h2>Nitro Entry Form</h2>
 <form action="backend_off_nitro.php" method="post">
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
@@ -209,7 +201,7 @@
 </table>
 <br>
 </div>
-
+<!--
 <div class="divcenter">
 <table style="width:100%" style="length:100%" class="table2">
   <tr>
@@ -223,6 +215,14 @@
     <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
   </tr>
 </table>
+</div> -->
+
+<div class="divcenter">
+  <table style="width:100%">
+    <tr>
+      <img src="image/addsale3.jpg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
+    </tr>
+  </table>
 </div>
 
 <div class="divcenter">
@@ -231,6 +231,6 @@
 </div>
 </form>
 <script src="checkNitroStatus.js"></script>
-<script src="imageRotation.js"></script>
+<!-- <script src="imageRotation.js"></script> -->
 </body>
 </html>

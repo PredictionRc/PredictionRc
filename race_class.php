@@ -26,14 +26,6 @@
   </div>
 
 <div class="divcenter">
-  <table style="width:100%">
-    <tr>
-      <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
-    </tr>
-  </table>
-</div>
-
-<div class="divcenter">
   <p class="p1"><u>Nitro Arena</u></p>
   <!-- This is the button for nitro events -->
   <?php include 'check_active_nitro.php'; ?>
@@ -87,7 +79,7 @@
   </form>
 </div> -->
 
-<div class ="divcenter">
+<!-- <div class ="divcenter">
   <table style="width:100%">
     <tr>
       <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
@@ -100,7 +92,17 @@
       <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
     </tr>
   </table>
+</div> -->
+
+
+<div class="divcenter">
+  <table style="width:100%">
+    <tr>
+      <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
+    </tr>
+  </table>
 </div>
-<script src="imageRotation.js"></script>
+
+<!-- <script src="imageRotation.js"></script> -->
 </body>
 </html>
