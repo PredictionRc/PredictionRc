@@ -28,14 +28,6 @@
 </div>
 
 <div class="divcenter">
-  <table style="width:100%">
-    <tr>
-      <img src="image/addSale.jpg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
-    </tr>
-  </table>
-</div>
-
-<div class="divcenter">
 <h2>Expert Entry Form</h2>
 <form action="backend_off_expert.php" method="post">
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
@@ -209,7 +201,7 @@
 <br>
 </div>
 
-<div class="divcenter">
+<!-- <div class="divcenter">
 <table style="width:100%">
   <tr>
     <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
@@ -222,6 +214,14 @@
     <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
   </tr>
 </table>
+</div> -->
+
+<div class="divcenter">
+  <table style="width:100%">
+    <tr>
+      <img src="image/addsale2.jpg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
+    </tr>
+  </table>
 </div>
 
 <div class="divcenter">
@@ -230,6 +230,6 @@
 </div>
 </form>
 <script src="checkExpertStatus.js"></script>
-<script src="imageRotation.js"></script>
+<!-- <script src="imageRotation.js"></script> -->
 </body>
 </html>
