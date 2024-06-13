@@ -34,28 +34,6 @@
 </div>
 
 <div class="divcenter">
-  <p class="p1"><u>Past Event Facility And Top 5</u></p>
-  <form action="" class="inline">
-      <button class="buttonRed" disabled>Future Development</button>
-  </form>
-</div>
-
-<div class ="divcenter">
-  <table style="width:100%">
-    <tr>
-      <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-      <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
-    </tr>
-  </table>
-</div>
-
-<div class="divcenter">
   <p class="p1"><u>Nitro Arena</u></p>
   <!-- This is the button for nitro events -->
   <?php include 'check_active_nitro.php'; ?>
@@ -101,5 +79,28 @@
     <button type="submit" value="submit" id="submitButtonOnRoad" class="buttonRed" disabled>OnRoad Coming Soon</button>
   <?php endif; ?>
 </div>
+
+<!-- <div class="divcenter">
+  <p class="p1"><u>Past Event Facility And Top 5</u></p>
+  <form action="" class="inline">
+      <button class="buttonRed" disabled>Future Development</button>
+  </form>
+</div> -->
+
+<div class ="divcenter">
+  <table style="width:100%">
+    <tr>
+      <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+      <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+    </tr>
+  </table>
+</div>
+<script src="imageRotation.js"></script>
 </body>
 </html>
