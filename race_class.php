@@ -56,8 +56,7 @@
 </div>
 
 <div class="divcenter">
-  <p class="p1"><u>Choose Your Battle Arena</u></p>
-
+  <p class="p1"><u>Nitro Arena</u></p>
   <!-- This is the button for nitro events -->
   <?php include 'check_active_nitro.php'; ?>
   <!-- Embed PHP code to decide whether to enable or disable the submit button -->
@@ -68,7 +67,7 @@
   <?php else: ?>
     <button type="submit" value="submit" id="submitButtonNitro" class="buttonRed" disabled>1/8 Nitro-Disabled</button>
   <?php endif; ?>
-
+  <p class="p1"><u>1/10 OffRoad Arena</u></p>
   <!-- This is the button for Mod events -->
   <?php include 'check_active_mod.php'; ?>
   <!-- Embed PHP code to decide whether to enable or disable the submit button -->
@@ -90,7 +89,7 @@
   <?php else: ?>
     <button type="submit" value="submit" id="submitButtonExpert" class="buttonRed" disabled>1/10 Expert-Disabled</button>
   <?php endif; ?>
-
+  <p class="p1"><u>OnRoad Arena</u></p>
   <!-- This is the button for onroad events -->
   <?php include 'check_active_onRoad.php'; ?>
   <!-- Embed PHP code to decide whether to enable or disable the submit button -->
