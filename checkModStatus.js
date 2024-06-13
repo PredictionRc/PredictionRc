@@ -30,5 +30,5 @@
   // Call the function initially
   checkActiveModStatus();
 
-  // Set interval to call the function every 60 second
-  setInterval(checkActiveModStatus, 1000);
+  // Set interval to call the function every 30 second
+  setInterval(checkActiveModStatus, 30000);

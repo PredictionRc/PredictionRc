@@ -30,5 +30,5 @@
   // Call the function initially
   checkActiveExpertStatus();
 
-  // Set interval to call the function every 60 second
-  setInterval(checkActiveExpertStatus, 1000);
+  // Set interval to call the function every 30 second
+  setInterval(checkActiveExpertStatus, 30000);
