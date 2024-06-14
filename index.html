@@ -28,6 +28,9 @@
             justify-content: space-between;
             align-items: center;
         }
+        .modalContainer {
+            padding: 16px;
+        }
         .adcenter {
             text-align: center;
             margin: 1px 1px 1px 1px;
@@ -61,7 +64,7 @@
         }
         .burger-menu {
             display: none;
-            background-color: #333;
+            background-image: linear-gradient( #55aef2, #9b25fc); /* Gradient background */
             padding: 10px;
             border-radius: 5px;
             z-index: 1000;
@@ -121,7 +124,7 @@
         text-align: center;
         position: relative;
         height: 100%; /* Set section height to 100% */
-        background-color: rgba(0, 0, 0, 0.5); /* Add background color behind the image */
+        background-color: rgba(0, 0, 0, 0.5);  /* Add background color behind the image */
         background-image: url('images/background.jpeg');
         background-size: contain; /* Adjust background size to contain within the section */
         background-repeat: no-repeat; /* Prevent repeating background */
@@ -179,6 +182,79 @@
                 padding: 70px 0; /* Adjust padding for smaller screens */
             }
         }
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=email], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+    }
+    input[type=text], input[type=password] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+    /* The Modal (background) */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        padding-top: 60px;
+    }
+    /* Modal Content/Box */
+    .modal-content {
+        background-image: linear-gradient( #96cef8, #c382f8); /* Gradient background */
+        margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+        border: 2px solid #0f009b;
+        width: 80%; /* Could be more or less, depending on screen size */
+    }
+    /* Modal submit button */
+    .modalSubmit {
+    background-image: linear-gradient( #55aef2, #9b25fc); /* Gradient background */
+    color: white;
+    padding: 14px 20px;
+    margin: 2px 0px;
+    border: none;
+    cursor: pointer;
+    }
+    .divcenter {
+        text-align: center;
+        margin: 24px 14px 12px 0;
+        position: relative;
+    }
+    /* Extra styles for the cancel button */
+    .modalCancel {
+        background-image: linear-gradient( #f1bcea, #f86df8); /* Gradient background */
+        color: white;
+        padding: 14px 20px;
+        margin: 2px 0;
+        border: none;
+        cursor: pointer;
+        float: left;
+    }
     </style>
 </head>
 <body>
@@ -188,16 +264,16 @@
         <img src="images/logo.jpeg" alt="Logo" class="logo">
         <div class="burger-menu">
             <ul>
-                <li><a href="#">Rules</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
+                <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu();">Contact</a></li>
                 <li><a href="#">SignUp</a></li>
                 <li><a href="#">Login</a></li>
             </ul>
         </div>
         <nav>
             <ul>
-                <li><a href="#">Rules</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
+                <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu()">Contact</a></li>
                 <li><a href="#">SignUp</a></li>
                 <li><a href="#">Login</a></li>
             </ul>
@@ -226,19 +302,83 @@
     </div>
 </section>
 
-
-
 <footer>
     <div class="container">
-        <img src="images/rentad.png" alt="adLogo" class="adlogo"><br>
+        <img src="images/rentad.png" alt="adLogo" class="adlogo">
         &copy; 2024 PredictionRC. All rights reserved. &trade;
     </div>
 </footer>
+
+<!--RULES POP UP-->
+<div id="rules" class="modal">
+    <form class="modal-content animate" action="login.php" method="post">
+      <div class="divcenter">
+        <h3><u>Free To Play!</u></h3>
+      </div>
+      <ul>
+        <li><b>Sign up for an account - </b>This is the first step to winning a prize!</li> <br>
+        <li><b>Selecting race event - </b>
+            After signing in you will be taken to this race event page. The race events are controlled when events are ready to be predicted. You might see diabled buttons that means its not open for predictions.
+        </li><br>
+        <li><b>Submitting Entry - </b> asd asda sdas</li><br>
+        <li><b>Entry Deadline - </b> asd asda sdas</li><br>
+        <li><b>Prize - </b> asd asda sdas</li><br>
+      </ul>
+      <div class="modalContainer" style="background-image:linear-gradient( #e3e2e4, #868686); border-top: 2px solid #0f009b;">
+        <button type="button" onclick="document.getElementById('rules').style.display='none'" class="modalSubmit">UNDERSTOOD!</button>
+      </div>
+    </form>
+  </div>
+
+<!--CONTACT POP UP-->
+<div id="contactModal" class="modal">
+    <form class="modal-content animate" action="contact_form.php" method="post">
+      <div class="divcenter">
+      <h3>CONTACT US</h3>
+      </div>
+      <div class="modalContainer">
+      <label for="name"><b>Name:</b></label>
+      <input type="text" id="name" name="name" placeholder="Your name.." required  autocomplete="on">
+      <label for="email"><b>Email:</b></label>
+      <input type="email" id="email_contact" name="email" placeholder="Enter Email" required  autocomplete="on">
+      <label for="business_name"><b>Business Name</b></label>
+      <input type="text" id="business_name" name="business_name" placeholder="Enter Business Name">
+      <label for="subject"><b>Subject</b></label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+      </div>
+      <div class="modalContainer" style="background-image:linear-gradient( #e3e2e4, #868686); border-top: 2px solid #0f009b;">
+        <button type="button" onclick="document.getElementById('contactModal').style.display='none'" class="modalCancel">Cancel</button>
+        <button type="submit" value="Submit" class="modalSubmit">Submit</button>
+      </div>
+    </form>
+  </div>
 
 <script>
     function toggleBurgerMenu() {
         var menu = document.querySelector('.burger-menu');
         menu.classList.toggle('active');
+    }
+    // Get the modal
+    var modal = document.getElementById('loginModal');
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+    var modal = document.getElementById('signUpModal');
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+    }
+    var modal = document.getElementById('contactModal');
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
     }
 </script>
 
