@@ -236,7 +236,7 @@
     background-image: linear-gradient( #17EAD9, #6078ea); /* Gradient background */
     color: white;
     padding: 14px 20px;
-    margin: 2px 0px;
+    margin: 0px 8px;
     border: none;
     cursor: pointer;
     }
@@ -250,10 +250,15 @@
         background-image: linear-gradient( #facff4, #f87bf8); /* Gradient background */
         color: white;
         padding: 14px 20px;
-        margin: 2px 0;
+        margin: 0px 0;
         border: none;
         cursor: pointer;
         float: left;
+    }
+    .buttonContainer {
+        display: flex;
+        justify-content: flex-end; /* Align buttons to the right */
+        padding: 1px; /* Adjust padding as needed */
     }
     </style>
 </head>
@@ -325,7 +330,9 @@
         <li><b>Prize - </b> asd asda sdas</li><br>
       </ul>
       <div class="modalContainer" style="background-image:linear-gradient( #e3e2e4, #868686); border-top: 2px solid #6078ea;">
-        <button type="button" onclick="document.getElementById('rules').style.display='none'" class="modalSubmit">UNDERSTOOD!</button>
+        <div class="buttonContainer">
+            <button type="button" onclick="document.getElementById('rules').style.display='none'" class="modalSubmit">UNDERSTOOD!</button>
+        </div>
       </div>
     </form>
   </div>
@@ -347,8 +354,10 @@
       <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
       </div>
       <div class="modalContainer" style="background-image:linear-gradient( #e3e2e4, #868686); border-top: 2px solid #6078ea;">
-        <button type="button" onclick="document.getElementById('contactModal').style.display='none'" class="modalCancel">Cancel</button>
-        <button type="submit" value="Submit" class="modalSubmit">Submit</button>
+        <div class="buttonContainer">
+            <button type="button" onclick="document.getElementById('contactModal').style.display='none'" class="modalCancel">Cancel</button>
+            <button type="submit" value="Submit" class="modalSubmit">Submit</button>
+        </div>
       </div>
     </form>
   </div>
