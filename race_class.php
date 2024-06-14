@@ -314,6 +314,7 @@
                 ?>
                 </li>
                 <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
+                <li><a href="promotion.php">Beta Promotion</a></li>
                 <li>
                 <?php
                     // Check if the user is logged in
