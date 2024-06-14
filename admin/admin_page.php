@@ -19,8 +19,9 @@
     <button onclick="redirectToNitroTruggyPage()">Update Pro truggy drivers</button> <br><br>
     <h4>Event List</h4>
     <button onclick="redirectToEventPage()">Update Events</button> <br><br>
-    <h4>Enable Disable Submit button</h4>
-    <button onclick="redirectToButtonActivePage()">Event Enabled/Disabled</button><br><br>
+    <h4>Enable Disable Buttons</h4>
+    <button onclick="redirectToButtonArenaPage()">Arena Entry Access</button><br><br>
+    <button onclick="redirectToButtonActivePage()">Prediction Submission Access</button><br><br>
     <h4>Predictor's List</h4>
     <button onclick="redirectToPredictorPage()">Predictor's</button> <br><br>
 </div>
@@ -66,6 +67,9 @@
     }
     function redirectToPredictorPage() {
         window.location.href = 'admin_page_users.php';
+    }
+    function redirectToButtonArenaPage() {
+        window.location.href = 'admin_page_arenaButtons.php';
     }
 </script>
 </html>

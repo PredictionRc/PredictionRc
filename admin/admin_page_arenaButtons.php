@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ENABLE/DISABLE EVENTS</title>
+    <title>ENABLE/DISABLE Arena</title>
     <link rel="stylesheet" type="text/css" href="admin.css">
     <link rel="icon" href="data:, ">
 </head>
 <body>
 <div class="divcenter">
-<h2>User Prediction access</h2>
+<h2>Arena Access</h2>
 <table id="event-table">
 <thead>
 <tr>
@@ -40,7 +40,7 @@
 
     <script>
 // Fetch data from PHP script
-fetch('admin_display_submitButtons.php')
+fetch('admin_display_arenaButtons.php')
     .then(response => response.json())
     .then(data => {
         // Append data to table
@@ -59,7 +59,7 @@ fetch('admin_display_submitButtons.php')
         const eventId = event.target.dataset.id;
         const isChecked = document.querySelector(`.active-checkbox[data-id="${eventId}"]`).checked;
         // Send AJAX request to update active status
-        fetch(`admin_update_submitButtons.php?id=${eventId}&active=${isChecked ? 1 : 0}`, {
+        fetch(`admin_update_arenaButtons.php?id=${eventId}&active=${isChecked ? 1 : 0}`, {
             method: 'GET'
         })
         .then(response => {

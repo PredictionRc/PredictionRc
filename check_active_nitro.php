@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch active status from the database
-$sql = "SELECT active FROM check_active WHERE field_name = 'nitroEvent'";
+$sql = "SELECT active FROM check_arena WHERE field_name = 'nitroArena'";
 $result = $conn->query($sql);
 
 // Check if record exists

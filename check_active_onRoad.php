@@ -10,7 +10,7 @@ if ($conn->connect_error) {
 }
 
 // Fetch active status from the database
-$sql = "SELECT active FROM check_active WHERE field_name = 'onRoadEvent'";
+$sql = "SELECT active FROM check_arena WHERE field_name = 'onRoadArena'";
 $result = $conn->query($sql);
 
 // Check if record exists
