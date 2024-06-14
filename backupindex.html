@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Prediction RC</title>
+    <link rel="icon" href="data:, ">
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.bg {
+  /* The image used */
+  background-color: #727171;
+  /* Full height */
+  height: 100%;
+  width: 100%;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=email], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+</style>
+</head>
+<body class="bg">
+  <div class="divcenter">
+    <img src="image/indexLogo.jpg" alt="Avatar"  class="avatar">
+  </div>
+
+  <div class="divcenter">
+    <h2>At PRC, we're dedicated to to growing the RC Community by bringing a quick fun game to a live steamed event!</h2>
+    <p>
+      <b>
+      Our mission is to unite RC enthusiasts, whether they're seasoned veterans or newcomers, by providing an engaging platform where they can participate in thrilling RC competitions, connect with like-minded individuals, and foster a sense of camaraderie within the community. Through our innovative approach, we aim to enhance the excitement of live-streamed events and contribute to the overall growth and enjoyment of the RC hobby worldwide.
+      Community growth is essential for the vitality and sustainability of any hobby or interest group, including the RC (Remote Control) community.
+      </b>
+    </p>
+  </div>
+
+  <!-- <div class="divcenter">
+    <table style="width:100%">
+      <tr>
+        <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo1.png" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo2.png" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo3.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+        <td><img src="image/logo4.jpg" alt="Advertising space for Rent" class="adcontainer"></td>
+      </tr>
+    </table>
+  </div> -->
+
+  <div class="divcenter">
+    <table style="width:100%">
+      <tr>
+       <img src="image/addsale4.png" alt="Advertising space for Rent" class="adcontainer" id="adImage">
+      </tr>
+    </table>
+  </div>
+
+  <div class="divcenter">
+    <button onclick="document.getElementById('rules').style.display='block'" style="width:auto;">Rules</button>
+    <button onclick="document.getElementById('contactModal').style.display='block'" style="width:auto;"> Contact Us</button>
+    <button onclick="document.getElementById('signUpModal').style.display='block'" style="width:auto;">Sign Up</button>
+  </div>
+
+  <div class="divcenter">
+    <button onclick="document.getElementById('loginModal').style.display='block'" style="width:auto;" class="buttonGreen">Login</button>
+  </div>
+
+<!--RULES POP UP-->
+<div id="rules" class="modal">
+  <form class="modal-content animate" action="login.php" method="post">
+    <div class="divcenter">
+      <h3><u>Free To Play!</u></h3>
+    </div>
+    <ul>
+      <li><b>Sign up for an account - </b>This is the first step to winning a prize!</li> <br>
+      <li><b>Selecting race event - </b>
+      After signing in you will be taken to this race event page. The race events are controlled when events are ready to be predicted. You might see diabled buttons that means its not open for predictions.
+      </li><br>
+      <li><b>Submitting Entry - </b> asd asda sdas</li><br>
+      <li><b>Entry Deadline - </b> asd asda sdas</li><br>
+      <li><b>Prize - </b> asd asda sdas</li><br>
+    </ul>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('rules').style.display='none'" class="buttonGreen">UNDERSTOOD!</button>
+    </div>
+  </form>
+</div>
+
+<!--CONTACT POP UP-->
+<div id="contactModal" class="modal">
+  <form class="modal-content animate" action="contact_form.php" method="post">
+    <div class="divcenter">
+      <span onclick="document.getElementById('contactModal').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="divcenter">
+    <h3>CONTACT US</h3>
+    </div>
+    <div class="container">
+    <label for="name"><b>Name:</b></label>
+    <input type="text" id="name" name="name" placeholder="Your name.." required  autocomplete="on">
+    <label for="email"><b>Email:</b></label>
+    <input type="email" id="email_contact" name="email" placeholder="Enter Email" required  autocomplete="on">
+    <label for="business_name"><b>Business Name</b></label>
+    <input type="text" id="business_name" name="business_name" placeholder="Enter Business Name">
+    <label for="subject"><b>Subject</b></label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('contactModal').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="submit" value="Submit" class="buttonGreen">Submit</button>
+    </div>
+  </form>
+</div>
+
+
+<!--SIGNUP POP UP-->
+<div id="signUpModal" class="modal">
+  <form class="modal-content" action="register.php" method="post">
+    <div class="divcenter">
+      <span onclick="document.getElementById('signUpModal').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="divcenter">
+      <h3>Register</h3>
+    </div>
+    <div class="container">
+      <label for="username">First/Last Name:</label>
+      <input type="text" id="username" name="username" placeholder="Enter Name" required autocomplete="on">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter Email" required autocomplete="on">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter Password" required>
+      <p>By creating an account you agree to our <a href="#" onclick="return openTermsPrivacy();" style="color:dodgerblue">Terms & Privacy</a>.</p>
+      <script>
+        function openTermsPrivacy() {
+            var popup = window.open('', 'Terms & Privacy', 'width=600,height=600');
+            var content = '<html><head><title>Terms & Privacy</title></head><body>';
+            content += '<h1>Terms & Privacy</h1>';
+            content += "<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern PredictionRC's relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>";
+            content += "<ul><li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li><li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness, or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors, and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li> <li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services, or information available through this website meet your specific requirements.</li><!-- Add more terms as needed --></ul>";
+            content += '<h2>Privacy Policy</h2>';
+            content += '<p>This privacy policy sets out how PredictionRC uses and protects any information that you give PredictionRC when you use this website.</p>';
+            content += '<p>PredictionRC is committed to ensuring that your privacy</p>';
+            content += '<button onclick="window.close()">OK</button>';
+            content += '</body></html>';
+            popup.document.write(content);
+            return false; // Prevents the default behavior of the link
+        }
+      </script>
+    </div>
+      <div class="container" style="background-color:#f1f1f1">
+        <button type="button" onclick="document.getElementById('signUpModal').style.display='none'" class="cancelbtn">Cancel</button>
+        <button id= "register" type="submit" class ="buttonGreen" value="Register">Register</button>
+      </div>
+  </form>
+</div>
+
+<!--LOGIN POP UP-->
+<div id="loginModal" class="modal">
+  <form class="modal-content animate" action="login.php" method="post">
+    <div class="divcenter">
+      <span onclick="document.getElementById('loginModal').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+    <div class="divcenter">
+      <h3>Let's Predict!</h3>
+    </div>
+    <div class="container">
+      <label for="login_email">Email:</label>
+      <input type="email" id="login_email" name="login_email" placeholder="Enter Your Email" required>
+      <label for="login_password">Password:</label>
+      <input type="password" id="login_password" name="login_password" placeholder="Enter Your Password" required>
+    </div>
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('loginModal').style.display='none'" class="cancelbtn">Cancel</button>
+      <button type="submit" value="Login">Login</button>
+      <span class="psw">Forgot <a href="forgot_password.php">password?</a></span>
+    </div>
+  </form>
+</div>
+
+<!--JAVASCRIPT-->
+<script> // src="imageRotation.js">
+// Get the modal
+var modal = document.getElementById('loginModal');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+var modal = document.getElementById('signUpModal');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+var modal = document.getElementById('contactModal');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
