@@ -10,27 +10,28 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* Prevent horizontal scrolling */
+            box-sizing: border-box;
         }
         header, footer {
-            background-color: #000000;
+            background-color: #333;
             color: #fff;
             text-align: center;
             padding: 10px 0;
         }
         .container {
-            max-width: 100%;
+            max-width: 960px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
         .logo {
-            max-width: 150px; /* Set maximum width for the logo */
+            max-width: 150px;
             height: auto;
             display: inline-block;
-            vertical-align: middle;
+            vertical-align: left;
+            margin-right: auto; /* Move the logo to the far left */
         }
         .burger-menu {
             display: none;
@@ -57,7 +58,7 @@
             border: none;
             cursor: pointer;
             padding: 0;
-            display: none;
+            display: none; /* Hide burger icon by default */
         }
         .burger__bun {
             display: block;
@@ -84,39 +85,35 @@
             border-radius: 5px;
         }
         /* Main content style */
-        /* Main content style */
-    /* Main content style */
-    section {
-        padding: 0; /* Remove padding */
-        color: #000000;
-        text-align: center;
-        position: relative;
-        height: 100%; /* Set section height to 100% */
-        background-color: rgba(0, 0, 0, 0.5); /* Add background color behind the image */
-        background-image: url('images/background.jpeg');
-        background-size: contain; /* Adjust background size to contain within the section */
-        background-repeat: no-repeat; /* Prevent repeating background */
-        background-position: center;
-        overflow: hidden; /* Prevents vertical scrolling */
-        position: relative;
-    }
-
-    .overlay-text {
-        position: relative;
-        z-index: 1;
-    }
-
-    /* Add opacity to the background image */
-    section::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity as needed */
-    }
-
+        section {
+            padding: 70px 20px; /* Adjust padding as needed */
+            color: #000000; /* Set text color to black */
+            text-align: center;
+            position: relative;
+            min-height: calc(100vh - 160px); /* Calculate min-height to fit viewport */
+            background-image: url('images/RC10B7D.jpg'); /* Change the path to your image */
+            background-size: cover;
+            background-position: center;
+        }
+        .overlay-text {
+            position: relative;
+            z-index: 1;
+        }
+        .divcenter {
+            text-align: center;
+            margin: 24px 14px 12px 0;
+            position: relative;
+        }
+        /* Add opacity to the background image */
+        section::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity as needed */
+        }
         /* Media Query for mobile devices */
         @media (max-width: 768px) {
             nav ul {
@@ -128,14 +125,11 @@
             .burger-menu.active {
                 display: block;
                 position: absolute;
-                top: 60px;
+                top: 60px; /* Adjust the top position as needed */
                 right: 20px;
             }
             .burger {
-                display: block;
-            }
-            section {
-                padding: 70px 0; /* Adjust padding for smaller screens */
+                display: block; /* Display burger icon only on mobile */
             }
         }
     </style>
@@ -144,7 +138,8 @@
 
 <header>
     <div class="container">
-        <img src="images/logo.jpeg" alt="Logo" class="logo">
+        <img src="images/underContruction.webp" alt="Logo" class="logo">
+        <!-- Dropdown menu for smaller screens -->
         <div class="burger-menu">
             <ul>
                 <li><a href="#">Rules</a></li>
@@ -153,6 +148,7 @@
                 <li><a href="#">Login</a></li>
             </ul>
         </div>
+        <!-- Tabs for the burger menu on web -->
         <nav>
             <ul>
                 <li><a href="#">Rules</a></li>
@@ -161,6 +157,7 @@
                 <li><a href="#">Login</a></li>
             </ul>
         </nav>
+        <!-- Button for burger menu on mobile -->
         <button class="burger block-header__hamburger-menu" title="Menu" onclick="toggleBurgerMenu()">
             <span class="burger__bun"></span>
             <span class="burger__bun"></span>
@@ -171,9 +168,13 @@
 
 <section>
     <div class="overlay-text">
-        <h2>UnderGoing Contruction!</h2>
-        <!-- <h2>At PRC, we're dedicated to growing the RC Community by bringing a quick fun game to a live steamed event!</h2> -->
-        <!-- <p>Our mission is to unite RC enthusiasts, whether they're seasoned veterans or newcomers, by providing an engaging platform where they can participate in thrilling RC competitions, connect with like-minded individuals, and foster a sense of camaraderie within the community. Through our innovative approach, we aim to enhance the excitement of live-streamed events and contribute to the overall growth and enjoyment of the RC hobby worldwide. Community growth is essential for the vitality and sustainability of any hobby or interest group, including the RC (Remote Control) community.</p> -->
+        <!-- Your main content here -->
+        <h2>At PRC, we're dedicated to growing the RC Community by bringing a quick fun game to a live steamed event!</h2>
+        <p>
+            <b>
+                Our mission is to unite RC enthusiasts, whether they're seasoned veterans or newcomers, by providing an engaging platform where they can participate in thrilling RC competitions, connect with like-minded individuals, and foster a sense of camaraderie within the community. Through our innovative approach, we aim to enhance the excitement of live-streamed events and contribute to the overall growth and enjoyment of the RC hobby worldwide. Community growth is essential for the vitality and sustainability of any hobby or interest group, including the RC (Remote Control) community.
+            </b>
+        </p>
     </div>
 </section>
 
