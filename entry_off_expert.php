@@ -393,7 +393,9 @@ table, th, td {
     <div class="overlay-text">
     <div class="divcenter">
 <h2>Expert Entry Form</h2>
-<p><b>Not sure who to pick? Watch <a href="https://coyotehobbiesraceway.liverc.com/live/" target="_blank">LIVE Steaming HERE</a>.</b></p>
+<p><b>Not sure who to pick?</b></p>
+<p><b><a href="https://coyotehobbiesraceway.liverc.com/live/" target="_blank">Live Steam HERE</a></b></p>
+<p><b><a href="https://coyotehobbiesraceway.liverc.com/results/?p=view_event&id=438891" target="_blank">Driver's Statistics HERE</a></b></p>
 <form action="backend_off_expert.php" method="post">
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
     <tr>
