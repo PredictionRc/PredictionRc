@@ -358,7 +358,7 @@
       <div class="divcenter">
       <br><br><img src="images/cash.gif" alt="adLogo" class="contruction"><br>
         <h2>
-        Prize for this beta event is $30 gift certificate to AMainHobbies.com! Follow us on Instagram for an additional $10, and follow us on Facebook for another $10, making it a total of $50 in rewards If you Win!
+        Prize for this beta event is $30 gift certificate to AMainHobbies.com! Follow us on Instagram for an additional $10, and follow us on Facebook for another $10, making it a total of $50 If you Win!
         </h2>
       </div>
     </div>
