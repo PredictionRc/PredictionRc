@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Race Events</title>
+    <title>Beta Launch Prize</title>
     <link rel="icon" href="data:, ">
     <?php
   session_start();
@@ -386,10 +386,12 @@
     <div class="overlay-text">
       <div class="divcenter">
       <br><br><img src="images/cash.gif" alt="adLogo" class="contruction"><br>
-        <h2>
-        Prize for this beta event is $30 gift certificate to AMainHobbies.com! Follow us on Instagram for an additional $10, and follow us on Facebook for another $10, making it a total of $50 If you Win!
-        If you have zelle or venmo we can just send you straight Cash. It doesn't have to be a gift certificate to amainhobbies it can be anywhere that allows me to buy and email to the winner!
-        </h2>
+      <h2>
+    Prize for this beta event: Receive a $50 gift certificate to a place of your choice (where email delivery is possible)! Follow us on Instagram for an additional $25, and on Facebook for another $25, totaling $100 if you win!
+    <br>
+    <span style="font-size: 80%;">*Offer valid for residents of the 50 United States only. We are looking to expand to other country's as we grow but will need community support to achieve this goal.</span>
+</h2>
+
       </div>
     </div>
 </section>
@@ -419,7 +421,7 @@
 
                 </li><br>
                 <li><b>Entry Deadline - </b>Entries must be submitted before the start of the Last B main event. The submission deadline will be enforced based on time, and the submit button will be disabled once entries are no longer accepted.</li><br>
-                <li><b>Prize - </b>The prize amount will be determined by the donations received from companies in exchange for featuring their ads and/or logos on our site. Currently, the prize is fully funded by the owner of this company, covering IT costs and expenses to maintain the site. In the future, prizes will be funded by 100% of the proceeds after deducting IT and Company costs.</li><br>
+                <li><b>Prize - </b>The prize amount will be determined by the donations received from companies in exchange for featuring their ads and/or logos on our site. Currently, the prize is fully funded by the owner of this company, covering IT costs and expenses to maintain the site. In the future, prizes will be funded by 100% of the proceeds after deducting IT and Company costs.<br><span style="font-size: 80%;">*Offer valid for residents of the 50 United States only. We are looking to expand to other country's as we grow but will need community support to achieve this goal.</span></li><br>
             </ul>
             <div class="modalContainer" style="background-image:linear-gradient( #e3e2e4, #868686); border-top: 2px solid #6078ea;">
                 <div class="buttonContainer">
