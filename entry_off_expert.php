@@ -381,11 +381,10 @@ table, th, td {
 </header>
 <header>
     <div class="adcenter">
-        <table style="width:100%">
-            <tr>
-                <img src="images/company1.PNG" alt="Advertising space for Rent" class="adcontainer" id="adImage">
-            </tr>
-        </table>
+    <div class="container">
+        Supported by:
+        <img src="images/company1.PNG" alt="Advertising space for Rent" class="adcontainer" id="adImage">
+    </div>
     </div>
 </header>
 
@@ -576,8 +575,8 @@ table, th, td {
 
 <footer>
     <div class="container">
-        <img src="images/rentad.png" alt="adLogo" class="adlogo">
         &copy; 2024 PredictionRC. All rights reserved. &trade;
+        <img src="images/background.jpeg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
     </div>
 </footer>
 
@@ -612,7 +611,7 @@ table, th, td {
         </div>
     </form>
   </div>
-
+  <script src="imageRotation.js"></script>
 <script>
     function toggleBurgerMenu() {
         var menu = document.querySelector('.burger-menu');
