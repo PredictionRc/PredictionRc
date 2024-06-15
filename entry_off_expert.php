@@ -152,7 +152,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity as needed */
+        background-color: rgba(255, 255, 255, 0.9); /* Adjust opacity as needed */
     }
 
         /* Media Query for mobile devices */
@@ -551,18 +551,18 @@ table, th, td {
     </tr>
     </tr>
     <tr>
-      <td>Lap Difference 1st & 3rd</td>
-      <td><input name="twoWDLap15" type="number" id ="twoWDLap15" min="0" max="1000" step="1" placeholder="Lap" required></td></td>
-      <td><input name="fourWDLap15" type="number" id ="fourWDLap15" min="0" max="1000" step="1" placeholder="Lap" required></td></td>
+      <td>1st & 5th</td>
+      <td><input name="twoWDLap15" type="number" id ="twoWDLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
+      <td><input name="fourWDLap15" type="number" id ="fourWDLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
     </tr>
     <tr>
-      <td>Time Difference 1st & 2nd</td>
+      <td>1st & 2nd</td>
       <td>
-        <!-- <input name="twoWDLap12" type="number" id ="twoWDLap12" min="0" max="1000" step="1" placeholder="Lap" required> -->
-        <input name="twoWDTime12" type="number" id ="twoWDTime12" min="0" max="1000" step=".01" placeholder="00.00" required></td>
+        <input name="twoWDLap12" type="number" id ="twoWDLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
+        <input name="twoWDTime12" type="number" id ="twoWDTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td>
       <td>
-        <!-- <input name="fourWDLap12" type="number" id ="fourWDLap12" min="0" max="1000" step="1" placeholder="Lap" required> -->
-        <input name="fourWDTime12" type="number" id ="fourWDTime12" min="0" max="1000" step=".01" placeholder="00.00" required></td>
+        <input name="fourWDLap12" type="number" id ="fourWDLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
+        <input name="fourWDTime12" type="number" id ="fourWDTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td>
     </tr>
 </table>
 <br>
@@ -594,6 +594,9 @@ table, th, td {
 
                 <li><b>Submitting Entry - </b>
                     <p>From the race arena, select the races you wish to predict in both the 2WD class and 4WD class categories.</p>
+                    <div class="divcenter">
+                      <img src="images/15.png" alt="adLogo" class="adlogo" style="width: 100%; max-width: 600px;">
+                    </div>
                     <p>Additionally, predict the lap difference between the 1st and 3th place finishers. Specify how many laps (if any) the 3rd place racer will trail the leader.</p>
                     <p>For the tiebreaker, predict the closest estimate of the time difference between the 1st and 2nd place finishers. In the event of a tie, a live draw will be conducted with all tied participants spinning a wheel to determine the winner.</p>
 
