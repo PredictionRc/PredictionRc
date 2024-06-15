@@ -386,10 +386,12 @@
     <div class="overlay-text">
       <div class="divcenter">
       <br><br><img src="images/cash.gif" alt="adLogo" class="contruction"><br>
-        <h2>
-        Prize for this beta event is $30 gift certificate to AMainHobbies.com! Follow us on Instagram for an additional $10, and follow us on Facebook for another $10, making it a total of $50 If you Win!
-        If you have zelle or venmo we can just send you straight Cash. It doesn't have to be a gift certificate to amainhobbies it can be anywhere that allows me to buy and email to the winner!
-        </h2>
+      <h2>
+    Prize for this beta event: Receive a $50 gift certificate to a place of your choice (where email delivery is possible)! Follow us on Instagram for an additional $25, and on Facebook for another $25, totaling $100 if you win!
+    <br>
+    <span style="font-size: 80%;">*Offer valid for residents of the 50 United States only. We are looking to expand to other country's as we grow but will need community support to achieve this goal.</span>
+</h2>
+
       </div>
     </div>
 </section>
