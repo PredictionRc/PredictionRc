@@ -61,7 +61,8 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
                 echo "<script>window.location.href = 'index.html'</script>";
                 exit();
             } catch (Exception $e) {
-                echo "Error sending email: {$mail->ErrorInfo}";
+                echo "<script>alert('Your Email is Invalid Error sending email: {$mail->ErrorInfo}');</script>";
+                echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
             }
         } else {
             echo "Error: " . $insert_sql . "<br>" . $conn->error;

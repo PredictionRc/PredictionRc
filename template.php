@@ -380,8 +380,8 @@
 
                 <li><b>Submitting Entry - </b>
                     <p>From the race arena, select the races you wish to predict in both the 2WD class and 4WD class categories.</p>
-                    <p>Additionally, predict the lap difference between the 1st and 5th place finishers. Specify how many laps (if any) the 5th place racer will trail the leader.</p>
-                    <p>For the tiebreaker, predict the closest estimate of the lap and time difference between the 1st and 2nd place finishers. In the event of a tie in predictions, a live draw will be conducted with all tied participants spinning a wheel to determine the winner.</p>
+                    <p>Additionally, predict the lap difference between the 1st and 3th place finishers. Specify how many laps (if any) the 3rd place racer will trail the leader.</p>
+                    <p>For the tiebreaker, predict the closest estimate of the time difference between the 1st and 2nd place finishers. In the event of a tie, a live draw will be conducted with all tied participants spinning a wheel to determine the winner.</p>
 
                 </li><br>
                 <li><b>Entry Deadline - </b>Entries must be submitted before the start of the Last B main event. The submission deadline will be enforced based on time, and the submit button will be disabled once entries are no longer accepted.</li><br>
