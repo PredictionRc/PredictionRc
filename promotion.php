@@ -152,7 +152,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity as needed */
+        background-color: rgba(255, 255, 255, 0.9); /* Adjust opacity as needed */
     }
 
         /* Media Query for mobile devices */
@@ -384,14 +384,14 @@
 
 <section class="sectionimage">
     <div class="overlay-text">
-      <div class="divcenter">
-      <br><br><img src="images/cash.gif" alt="adLogo" class="contruction"><br>
-      <h2>
-    Prize for this beta event: Receive a $50 gift certificate to a place of your choice (where email delivery is possible)! Follow us on Instagram for an additional $25, and on Facebook for another $25, totaling $100 if you win!
-    <br>
-    <span style="font-size: 80%;">*Offer valid for residents of the 50 United States only. We are looking to expand to other country's as we grow but will need community support to achieve this goal.</span>
-</h2>
-
+        <div class="divcenter">
+            <p style="font-size: 2.2em;"><strong>Claim your free entry now! Don't miss out on this opportunity! </strong></p>
+            <h2>
+            Prize for this beta event: Receive a $50 gift certificate to a place of your choice (where email delivery is possible)! Follow us on Instagram for an additional $25, and on Facebook for another $25, totaling $100 if you win!
+            <br>
+            <br>
+            <span style="font-size: 80%;">*Offer valid for residents of the 50 United States only. We are looking to expand to other country's as we grow but will need community support to achieve this goal.</span>
+            </h2>
       </div>
     </div>
 </section>
@@ -416,6 +416,9 @@
 
                 <li><b>Submitting Entry - </b>
                     <p>From the race arena, select the races you wish to predict in both the 2WD class and 4WD class categories.</p>
+                    <div class="divcenter">
+                        <img src="images/15.png" alt="adLogo" class="adlogo" style="width: 100%; max-width: 600px;">
+                    </div>
                     <p>Additionally, predict the lap difference between the 1st and 3th place finishers. Specify how many laps (if any) the 3rd place racer will trail the leader.</p>
                     <p>For the tiebreaker, predict the closest estimate of the time difference between the 1st and 2nd place finishers. In the event of a tie, a live draw will be conducted with all tied participants spinning a wheel to determine the winner.</p>
 
