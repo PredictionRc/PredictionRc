@@ -277,3 +277,8 @@ input[type=text], input[type=password] {
     font-family: "Fantasy", "Courier New", monospace;
     font-weight: bold;
 }
+.p2 {
+    font-family: "Fantasy", "Courier New", monospace;
+    font-weight: bold;
+    color: #ff0000;
+}

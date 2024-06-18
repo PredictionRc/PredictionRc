@@ -6,7 +6,9 @@
     <title>PRC Home</title>
     <link rel="icon" href="data:, ">
     <link rel="stylesheet" href="styles.css">
-
+    <?php
+        session_start();
+    ?>
 </head>
 
 <body>
@@ -17,20 +19,17 @@
             <ul>
                 <li>
                 <?php
-    session_start();
-
-    // Check if the user is logged in
-    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-        // If logged in, display welcome message and username
-        if(isset($_SESSION['username'])) {
-            echo 'Welcome, ' . htmlspecialchars($_SESSION['username']);
-        }
-    } else {
-        // If not logged in, display "Not Logged In"
-        echo 'Not Logged In';
-    }
-?>
-
+                  // Check if the user is logged in
+                  if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                      // If logged in, display logout link and username
+                      if(isset($_SESSION['username'])) {
+                          echo 'Welcome, ' . $_SESSION['username'];
+                      }
+                  } else {
+                      // If not logged in, display login link
+                      echo 'Not Logged In';
+                  }
+                ?>
                 </li>
                 <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
                 <li><a href="#" onclick="document.getElementById('prize').style.display='block'; toggleBurgerMenu();">Prize</a></li>
@@ -44,7 +43,7 @@
                         }
                     } else {
                         // If not logged in, display login link
-                        echo '<a href="index.php">Login</a>';
+                        echo '<a href="index.php">Main Page</a>';
                     }
                 ?>
                 </li>
@@ -83,7 +82,7 @@
         </tr>
         <tr>
             <td><p class="p1">Who is supporting us?</p></td>
-            <td><button class="eventCancel" onclick="window.location.href = ''">Shout out!</button></td>
+            <td><button class="eventCancel" onclick="window.location.href = 'arena.php'">Shout out!</button></td>
         </tr>
         <tr>
             <td><p class="p1">1/10th scale setup</p></td>
