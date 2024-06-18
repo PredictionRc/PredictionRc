@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction RC</title>
+    <title>Prediction RC!</title>
     <link rel="icon" href="data:, ">
     <link rel="stylesheet" href="styles.css">
 </head>
