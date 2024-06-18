@@ -287,4 +287,12 @@ input[type=text], input[type=password] {
         color: #ff0000; /* Adjust color or other styles as needed */
     }
 }
+.psw {
+    text-align: right; /* Aligns the content to the right */
+}
+.psw a {
+    color: #007bff; /* Adjust link color as needed */
+    text-decoration: none; /* Remove underline from the link */
+}
+
 
