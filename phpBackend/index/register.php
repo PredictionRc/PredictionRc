@@ -1,10 +1,12 @@
 <?php
+require __DIR__ . '/../../vendor/autoload.php'; // Adjust this path as necessary
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
-require __DIR__ . "/vendor/autoload.php";
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../..'); // Adjust path to match your project structure
 $dotenv->load();
+
 $conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
 
 // Check connection
@@ -58,11 +60,11 @@ if(isset($_POST['email']) && isset($_POST['username']) && isset($_POST['password
 
                 // Redirect to another page
                 echo "<script>alert('You have successfully created a login. Email has been sent check your junk box.');</script>";
-                echo "<script>window.location.href = 'index.html'</script>";
+                echo "<script>window.location.href = '/../index.php'</script>";
                 exit();
             } catch (Exception $e) {
                 echo "<script>alert('Your Email is Invalid. Please try again or contact us. Error sending email: {$mail->ErrorInfo}');</script>";
-                echo "<script>window.location.href = 'index.html'</script>";
+                echo "<script>window.location.href = '/../index.php'</script>";
             }
         } else {
             echo "Error: " . $insert_sql . "<br>" . $conn->error;

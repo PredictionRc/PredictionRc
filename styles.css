@@ -287,6 +287,16 @@ input[type=text], input[type=password] {
         color: #ff0000; /* Adjust color or other styles as needed */
     }
 }
+.p3 {
+    font-family: "Fantasy", "Courier New", monospace;
+    font-weight: bold;
+    color: #ffffff;
+}
+@media (max-width: 768px) {
+    .p3 {
+        color: #ffffff; /* Adjust color or other styles as needed */
+    }
+}
 .psw {
     text-align: right; /* Aligns the content to the right */
 }

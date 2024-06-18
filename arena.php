@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Race Events</title>
+    <title>PCR Battle Arena</title>
     <link rel="icon" href="data:, ">
     <?php
   session_start();
