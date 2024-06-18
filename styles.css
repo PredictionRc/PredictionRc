@@ -282,3 +282,9 @@ input[type=text], input[type=password] {
     font-weight: bold;
     color: #ff0000;
 }
+@media (max-width: 768px) {
+    .p2 {
+        color: #ff0000; /* Adjust color or other styles as needed */
+    }
+}
+
