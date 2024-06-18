@@ -1,0 +1,25 @@
+<div id="contactModal" class="modal">
+    <form class="modal-content animate" action="contact_form.php" method="post">
+        <div class="modal-overlay">
+            <div class="divcenter">
+                <h3>CONTACT US</h3>
+            </div>
+            <div class="modalContainer">
+                <label for="name"><b>Name:</b></label>
+                <input type="text" id="name" name="name" placeholder="Your name.." required  autocomplete="on">
+                <label for="email_contact"><b>Email:</b></label>
+                <input type="email" id="email_contact" name="email" placeholder="Enter Email" required  autocomplete="on">
+                <label for="business_name"><b>Business Name</b></label>
+                <input type="text" id="business_name" name="business_name" placeholder="Enter Business Name">
+                <label for="subject"><b>Subject</b></label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
+            </div>
+            <div class="modalContainer" style="background-image:linear-gradient( #e3e2e4, #868686); border-top: 2px solid #6078ea;">
+                <div class="buttonContainer">
+                    <button type="button" onclick="document.getElementById('contactModal').style.display='none'" class="modalCancel">Cancel</button>
+                    <button type="submit" value="Submit" class="modalSubmit">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+  </div>

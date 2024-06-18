@@ -1,0 +1,38 @@
+<div id="signUpModal" class="modal">
+    <form class="modal-content" action="register.php" method="post">
+        <div class="modal-overlay">
+            <div class="divcenter">
+                <h3>Register</h3>
+            </div>
+            <div class="modalContainer">
+                <label for="username">First/Last Name:</label>
+                <input type="text" id="username" name="username" placeholder="Enter Name" required autocomplete="on">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter Email" required autocomplete="on">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                <p>By creating an account you agree to our <a href="#" onclick="return openTermsPrivacy();" style="color:rgb(141, 0, 184)">Terms & Privacy</a>.</p>
+                    <script>
+                    function openTermsPrivacy() {
+                        var popup = window.open('', 'Terms & Privacy', 'width=600,height=600');
+                        var content = '<html><head><title>Terms & Privacy</title></head><body>';
+                        content += '<h1>Terms & Privacy</h1>';
+                        content += "<p>Welcome to our website. If you continue to browse and use this website, you are agreeing to comply with and be bound by the following terms and conditions of use, which together with our privacy policy govern PredictionRC's relationship with you in relation to this website. If you disagree with any part of these terms and conditions, please do not use our website.</p>";
+                        content += "<ul><li>The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li><li>Neither we nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness, or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors, and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li> <li>Your use of any information or materials on this website is entirely at your own risk, for which we shall not be liable. It shall be your own responsibility to ensure that any products, services, or information available through this website meet your specific requirements.</li><!-- Add more terms as needed --></ul>";
+                        content += '<h2>Privacy Policy</h2>';
+                        content += '<p>This privacy policy sets out how PredictionRC uses and protects any information that you give PredictionRC when you use this website.</p>';
+                        content += '<p>PredictionRC is committed to ensuring that your privacy</p>';
+                        content += '<button onclick="window.close()" class="modalSubmit">OK</button>';
+                        content += '</body></html>';
+                        popup.document.write(content);
+                        return false; // Prevents the default behavior of the link
+                    }
+                    </script>
+            </div>
+            <div class="modalContainer" style="background-color:#f1f1f1">
+                <button type="button" onclick="document.getElementById('signUpModal').style.display='none'" class="modalCancel">Cancel</button>
+                <button id= "register" type="submit" class ="modalSubmit" value="Register">Register</button>
+            </div>
+        </div>
+    </form>
+  </div>

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Race Events</title>
+    <!-- clone this below -->
+    <title>1/8th Nitro</title>
     <link rel="icon" href="data:, ">
     <?php
   session_start();
@@ -291,6 +292,12 @@
   margin: 10px;
   word-wrap: break-word;
 }
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
 </style>
 </head>
 <body>
@@ -314,8 +321,8 @@
                 ?>
                 </li>
                 <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
-                <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu();">Contact</a></li>
                 <li><a href="promotion.php">Beta Promotion</a></li>
+                <li><a href="race_class.php">Back To Arena</a></li>
                 <li>
                 <?php
                     // Check if the user is logged in
@@ -334,8 +341,7 @@
         </div>
         <nav>
             <ul>
-            <li>
-                <?php
+            <?php
                   // Check if the user is logged in
                   if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
                       // If logged in, display logout link and username
@@ -349,8 +355,8 @@
                 ?>
                 </li>
                 <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
-                <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu();">Contact</a></li>
                 <li><a href="promotion.php">Beta Promotion</a></li>
+                <li><a href="race_class.php">Back To Arena</a></li>
                 <li>
                 <?php
                     // Check if the user is logged in
@@ -385,40 +391,203 @@
 
 <section class="sectionimage">
     <div class="overlay-text">
-      <div class="divcenter">
-        <!-- 1/10th MOD - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u>1/10th Mod Arena</u></p>
-        <?php include 'check_active_mod.php'; ?>
-        <?php if ($active == 1): ?>
-          <form action="entry_off_mod.php" class="inline">
-            <button type="submit" value="submit" id="submitButtonMod" class="eventSubmit">1/10 Mod</button>
-          </form>
-        <?php else: ?>
-          <button type="submit" value="submit" id="submitButtonMod" class="eventCancel" disabled>1/10 Mod-Disabled</button>
-        <?php endif; ?>
-        <!-- Nitro - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u><b>Nitro Pro Arena</b></u></p>
-        <?php include 'check_active_nitro.php'; ?>
-        <?php if ($active == 1): ?>
-          <form action="entry_off_nitro.php" class="inline">
-            <button type="submit" value="submit" id="submitButtonNitro" class="eventSubmit">1/8 Nitro</button>
-          </form>
-        <?php else: ?>
-          <button type="submit" value="submit" id="submitButtonNitro" class="eventCancel" disabled>1/8 Nitro-Disabled</button>
-        <?php endif; ?>
-        <!-- Nitro - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u>OnRoad Arena</u></p>
-        <?php include 'check_active_onRoad.php'; ?>
-        <?php if ($active == 1): ?>
-          <form action="entry_onRoad.php" class="inline">
-            <button type="submit" value="submit" id="submitButtonOnRoad" class="eventSubmit">OnRoad</button>
-          </form>
-        <?php else: ?>
-          <button type="submit" value="submit" id="submitButtonOnRoad" class="eventCancel" disabled>OnRoad Coming Soon</button>
-        <?php endif; ?>
-        </div>
-      </div>
-    </div>
+    <div class="divcenter">
+<!-- clone this below -->
+<h2>Nitro Entry Form</h2>
+<p><b></b></p>
+<p><b>Not sure who to pick? check the <a href="https://coyotehobbiesraceway.liverc.com/live/" target="_blank">Live Steam</a> or
+<a href="https://coyotehobbiesraceway.liverc.com/results/?p=view_event&id=438891" target="_blank">Driver event statistics</a></b></p>
+<p><b></b></p>
+<form action="backend_off_expert.php" method="post">
+<table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
+    <tr>
+      <th>
+      <select name="eventName" id="eventName" required>
+    <?php
+    // Include dropdown data and populate dropdown
+    $options = include 'backend_events.php';
+
+    // Check if options are available
+    if (!empty($options)) {
+        $firstOptionSelected = false; // Flag to track if first option is selected
+        foreach ($options as $key => $option) {
+            // Determine if this is the first option to select it by default
+            $selected = '';
+            if (!$firstOptionSelected) {
+                $selected = 'selected';
+                $firstOptionSelected = true; // Mark first option as selected
+            }
+            echo "<option value='" . $option['id'] . "' $selected>" . $option['name'] . "</option>";
+        }
+    } else {
+        echo "<option value='' disabled>No events available</option>";
+    }
+    ?>
+</select>
+
+
+      </th>
+      <th>Nitro Buggy</th>
+      <th>Nitro Truggy</th>
+    </tr>
+    <tr>
+      <td>1st</td>
+      <td>
+        <select name="twoWDFirst" id="twoWDFirst" required>
+          <option value="">Select Racer</option>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'driver_expert_2wd.php';
+            foreach ($options as $option) {
+                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+            }
+            ?>
+        </select>
+      </td>
+      <td>
+        <select name="fourWDFirst" id="fourWDFirst" required>
+          <option value="">Select Racer</option>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'driver_expert_4wd.php';
+            foreach ($options as $option) {
+                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+            }
+            ?>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>2nd</td>
+      <td>
+        <select name="twoWDSecond" id="twoWDSecond" required>
+          <option value="">Select Racer</option>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'driver_expert_2wd.php';
+            foreach ($options as $option) {
+                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+            }
+            ?>
+        </select>
+      </td>
+      <td>
+      <select name="fourWDSecond" id="fourWDSecond" required>
+          <option value="">Select Racer</option>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'driver_expert_4wd.php';
+            foreach ($options as $option) {
+                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+            }
+            ?>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>3rd</td>
+      <td>
+        <select name="twoWDThird" id="twoWDThird" required>
+          <option value="">Select Racer</option>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'driver_expert_2wd.php';
+            foreach ($options as $option) {
+                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+            }
+            ?>
+        </select>
+      </td>
+      <td>
+        <select name="fourWDThird" id="fourWDThird" required>
+          <option value="">Select Racer</option>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'driver_expert_4wd.php';
+            foreach ($options as $option) {
+                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+            }
+            ?>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>4th</td>
+      <td>
+        <select name="twoWDFourth" id="twoWDFourth" required>
+          <option value="">Select Racer</option>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'driver_expert_2wd.php';
+            foreach ($options as $option) {
+                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+            }
+            ?>
+        </select>
+      </td>
+      <td>
+        <select name="fourWDFourth" id="fourWDFourth" required>
+          <option value="">Select Racer</option>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'driver_expert_4wd.php';
+            foreach ($options as $option) {
+                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+            }
+            ?>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>5th</td>
+      <td>
+      <select name="twoWDFifth" id="twoWDFifth" required>
+          <option value="">Select Racer</option>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'driver_expert_2wd.php';
+            foreach ($options as $option) {
+                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+            }
+            ?>
+        </select>
+      </td>
+      <td>
+        <select name="fourWDFifth" id="fourWDFifth" required>
+          <option value="">Select Racer</option>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'driver_expert_4wd.php';
+            foreach ($options as $option) {
+                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
+            }
+            ?>
+        </select>
+      </td>
+    </tr>
+    </tr>
+    <tr>
+      <td>1st & 5th</td>
+      <td><input name="twoWDLap15" type="number" id ="twoWDLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
+      <td><input name="fourWDLap15" type="number" id ="fourWDLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
+    </tr>
+    <tr>
+      <td>1st & 2nd</td>
+      <td>
+        <input name="twoWDLap12" type="number" id ="twoWDLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
+        <input name="twoWDTime12" type="number" id ="twoWDTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td>
+      <td>
+        <input name="fourWDLap12" type="number" id ="fourWDLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
+        <input name="fourWDTime12" type="number" id ="fourWDTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td>
+    </tr>
+</table>
+<br>
+</div>
+<div class="divcenter">
+  <button type="reset" class="eventCancel">reset</button>
+  <button onclick="checkActiveExpertStatus();" type="submit" value="submit" id="submitButtonExpert" class="eventSubmit" disabled>Submit-Disabled</button>
+</div>
+</form>
 </section>
 
 <footer>
@@ -442,7 +611,7 @@
                 <li><b>Submitting Entry - </b>
                     <p>From the race arena, select the races you wish to predict in both the 2WD class and 4WD class categories.</p>
                     <div class="divcenter">
-                        <img src="images/15.PNG" alt="entryGrid" class="adlogo" style="width: 100%; max-width: 600px;">
+                      <img src="images/15.PNG" alt="entryGrid" class="adlogo" style="width: 100%; max-width: 600px;">
                     </div>
                     <p>Additionally, predict the lap difference between the 1st and 3th place finishers. Specify how many laps (if any) the 3rd place racer will trail the leader.</p>
                     <p>For the tiebreaker, predict the closest estimate of the time difference between the 1st and 2nd place finishers. In the event of a tie, a live draw will be conducted with all tied participants spinning a wheel to determine the winner.</p>
@@ -459,35 +628,7 @@
         </div>
     </form>
   </div>
-
-  <!--CONTACT POP UP-->
-<div id="contactModal" class="modal">
-    <form class="modal-content animate" action="contact_form.php" method="post">
-        <div class="modal-overlay">
-            <div class="divcenter">
-                <h3>CONTACT US</h3>
-            </div>
-            <div class="modalContainer">
-                <label for="name"><b>Name:</b></label>
-                <input type="text" id="name" name="name" placeholder="Your name.." required  autocomplete="on">
-                <label for="email_contact"><b>Email:</b></label>
-                <input type="email" id="email_contact" name="email" placeholder="Enter Email" required  autocomplete="on">
-                <label for="business_name"><b>Business Name</b></label>
-                <input type="text" id="business_name" name="business_name" placeholder="Enter Business Name">
-                <label for="subject"><b>Subject</b></label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
-            </div>
-            <div class="modalContainer" style="background-image:linear-gradient( #e3e2e4, #868686); border-top: 2px solid #6078ea;">
-                <div class="buttonContainer">
-                    <button type="button" onclick="document.getElementById('contactModal').style.display='none'" class="modalCancel">Cancel</button>
-                    <button type="submit" value="Submit" class="modalSubmit">Submit</button>
-                </div>
-            </div>
-        </div>
-    </form>
-  </div>
-
-<script src="imageRotation.js"></script>
+  <script src="imageRotation.js"></script>
 <script>
     function toggleBurgerMenu() {
         var menu = document.querySelector('.burger-menu');
@@ -508,7 +649,17 @@
       localStorage.setItem('previousPage', url);
       document.getElementById('contactModal').style.display='block';
     }
-</script>
 
+    function redirectToPreviousPage() {
+      var previousPage = localStorage.getItem('previousPage');
+      if (previousPage) {
+        window.location.href = previousPage;
+      } else {
+        // If no previous page is stored, redirect to index.html
+        window.location.href = 'index.html';
+      }
+    }
+</script>
+<script src="checkExpertStatus.js"></script>
 </body>
 </html>
