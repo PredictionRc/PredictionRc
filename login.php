@@ -26,7 +26,7 @@ if(isset($_POST['login_email']) && isset($_POST['login_password'])){
             $_SESSION['login_email'] = $_POST['login_email'];
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $row['username']; // Assuming 'username' is the field in your database
-            header("Location: home.php");
+            header("Location: index.php");
         } else {
             echo "<script>alert('Incorrect Password, If you forgot you password Please reset it.');</script>";
             echo "<script>window.location.href = 'index.html'</script>";

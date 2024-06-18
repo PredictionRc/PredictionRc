@@ -1,3 +1,16 @@
+<?php
+session_start(); // Start the session at the beginning
+
+// Function to safely echo session username
+function echoUsername() {
+    if (isset($_SESSION['username'])) {
+        echo 'Welcome, ' . htmlspecialchars($_SESSION['username']);
+    } else {
+        echo '<p class="p2">Not Logged In</p>';
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,18 +27,32 @@
         <img src="images/logo.jpeg" alt="Logo" class="logo">
         <div class="burger-menu">
             <ul>
+                <li><?php echoUsername(); ?></li>
                 <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
                 <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu();">Contact</a></li>
-                <li><a href="#" onclick="document.getElementById('signUpModal').style.display='block'; toggleBurgerMenu();">SignUp</a></li>
-                <li><a href="#" onclick="document.getElementById('loginModal').style.display='block'; toggleBurgerMenu();">Login</a></li>
+                <li><?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                        echo '<a href="logout.php">Logout</a>';
+                    } else {
+                        echo '<li><a href="#" onclick="document.getElementById(\'signUpModal\').style.display=\'block\'; toggleBurgerMenu();">SignUp</a></li>';
+                        echo '<li><a href="#" onclick="document.getElementById(\'loginModal\').style.display=\'block\'; toggleBurgerMenu();">Login</a></li>';
+                    }
+                    ?></li>
             </ul>
         </div>
         <nav>
             <ul>
+                <li><?php echoUsername(); ?></li>
                 <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
-                <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu()">Contact</a></li>
-                <li><a href="#" onclick="document.getElementById('signUpModal').style.display='block'; toggleBurgerMenu();">SignUp</a></li>
-                <li><a href="#" onclick="document.getElementById('loginModal').style.display='block'; toggleBurgerMenu();">Login</a></li>
+                <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu();">Contact</a></li>
+                <li><?php
+                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                        echo '<a href="logout.php">Logout</a>';
+                    } else {
+                        echo '<li><a href="#" onclick="document.getElementById(\'signUpModal\').style.display=\'block\'; toggleBurgerMenu();">SignUp</a></li>';
+                        echo '<li><a href="#" onclick="document.getElementById(\'loginModal\').style.display=\'block\'; toggleBurgerMenu();">Login</a></li>';
+                    }
+                    ?></li>
             </ul>
         </nav>
         <button class="burger block-header__hamburger-menu" title="Menu" onclick="toggleBurgerMenu()">
@@ -72,17 +99,14 @@
         var menu = document.querySelector('.burger-menu');
         menu.classList.toggle('active');
     }
-    // Add event listener to the document
     document.addEventListener('click', function(event) {
-    var burgerMenu = document.querySelector('.burger-menu');
-    var burgerButton = document.querySelector('.burger');
-
-    // Check if the click occurred outside of the burger menu and button
-    if (!burgerMenu.contains(event.target) && !burgerButton.contains(event.target)) {
-        // Close the burger menu
-        burgerMenu.classList.remove('active');
-    }
+        var burgerMenu = document.querySelector('.burger-menu');
+        var burgerButton = document.querySelector('.burger');
+        if (!burgerMenu.contains(event.target) && !burgerButton.contains(event.target)) {
+            burgerMenu.classList.remove('active');
+        }
     });
 </script>
+
 </body>
 </html>

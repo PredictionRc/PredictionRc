@@ -402,30 +402,28 @@ table, th, td {
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
     <tr>
       <th>
-      <select name="eventName" id="eventName" required>
-    <?php
-    // Include dropdown data and populate dropdown
-    $options = include 'backend_events.php';
+        <select name="eventName" id="eventName" required>
+            <?php
+            // Include dropdown data and populate dropdown
+            $options = include 'backend_events.php';
 
-    // Check if options are available
-    if (!empty($options)) {
-        $firstOptionSelected = false; // Flag to track if first option is selected
-        foreach ($options as $key => $option) {
-            // Determine if this is the first option to select it by default
-            $selected = '';
-            if (!$firstOptionSelected) {
-                $selected = 'selected';
-                $firstOptionSelected = true; // Mark first option as selected
+            // Check if options are available
+            if (!empty($options)) {
+                $firstOptionSelected = false; // Flag to track if first option is selected
+                foreach ($options as $key => $option) {
+                    // Determine if this is the first option to select it by default
+                    $selected = '';
+                    if (!$firstOptionSelected) {
+                        $selected = 'selected';
+                        $firstOptionSelected = true; // Mark first option as selected
+                    }
+                    echo "<option value='" . $option['id'] . "' $selected>" . $option['name'] . "</option>";
+                }
+            } else {
+                echo "<option value='' disabled>No events available</option>";
             }
-            echo "<option value='" . $option['id'] . "' $selected>" . $option['name'] . "</option>";
-        }
-    } else {
-        echo "<option value='' disabled>No events available</option>";
-    }
-    ?>
-</select>
-
-
+            ?>
+        </select>
       </th>
       <th>Nitro Buggy</th>
       <th>Nitro Truggy</th>
