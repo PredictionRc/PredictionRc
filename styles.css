@@ -280,6 +280,7 @@ input[type=text], input[type=password] {
 .p2 {
     font-family: "Fantasy", "Courier New", monospace;
     font-weight: bold;
+    font-size: 18px;
     color: #ff0000;
 }
 @media (max-width: 768px) {

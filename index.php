@@ -92,8 +92,7 @@ function echoDisplayName() {
 <section class="sectionimage">
     <div class="overlay-text">
         <p> <?php echoDisplayName(); ?> </p>
-        <p style="color: rgb(255, 0, 0); font-size: 28px;"><i><b>BETA RELEASE - Future Development in progress</b></i></p>
-        <p style="color: rgb(255, 0, 0); font-size: 18px;"><i><b>Testing has only been done via mobile device</b></i></p>
+        <p class="p4"><i><b>BETA RELEASE - Future Development in progress. Testing has only been done via mobile device</b></i></p>
         <h2>At PRC, our mission is to cultivate and expand the RC Community through an exhilarating prediction game complemented by live-streamed events! Get ready for an immersive experience where excitement meets anticipation. Engage with fellow enthusiasts as you make predictions and immerse yourself in the thrill of live RC action. Join us as we redefine the RC experience, bringing you closer to the heart of the action than ever before!</h2>
     </div>
 </section>
