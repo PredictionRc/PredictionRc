@@ -325,7 +325,7 @@
                         }
                     } else {
                         // If not logged in, display login link
-                        echo '<a href="index.html">Main Page</a>';
+                        echo '<a href="index.php">Main Page</a>';
                     }
                 ?>
                 </li>
@@ -408,10 +408,8 @@
       }
     }
 
-    // Load rules modal
+    // Load modals
     loadModal('modals/rules_modal.html', 'rulesModal');
-
-    // Load prize modal
     loadModal('modals/prize_modal.html', 'prizeModal');
 </script>
 
