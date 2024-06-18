@@ -9,6 +9,13 @@ function echoUsername() {
         echo '<p class="p2">Not Logged In</p>';
     }
 }
+function echoDisplayName() {
+    if (isset($_SESSION['username'])) {
+        echo '<p class="p2">Welcome, ' . htmlspecialchars($_SESSION['username']) . ' - Menu items are now activated!</p>';
+    } else {
+        echo '<p class="p2">Please Login to activate more menu items.</p>';
+    }
+}
 ?>
 
 <!DOCTYPE html>
@@ -37,10 +44,10 @@ function echoUsername() {
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
                         echo '<li><p class="p3"><a href="phpBackend/index/logout.php">Logout</a></p></li>';
                     } else {
-                        echo '<li><a href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
-                        echo '<li><a href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
-                        echo '<li><a href="#" onclick="document.getElementById(\'signUpModal\').style.display=\'block\'; toggleBurgerMenu();">SignUp</a></li>';
-                        echo '<li><a href="#" onclick="document.getElementById(\'loginModal\').style.display=\'block\'; toggleBurgerMenu();">Login</a></li>';
+                        echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></p></li>';
+                        echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></p></li>';
+                        echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'signUpModal\').style.display=\'block\'; toggleBurgerMenu();">SignUp</a></p></li>';
+                        echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'loginModal\').style.display=\'block\'; toggleBurgerMenu();">Login</a></p></li>';
                     }
                     ?></li>
             </ul>
@@ -57,10 +64,10 @@ function echoUsername() {
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
                         echo '<li><p class="p3"><a href="phpBackend/index/logout.php">Logout</a></p></li>';
                     } else {
-                        echo '<li><a href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
-                        echo '<li><a href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
-                        echo '<li><a href="#" onclick="document.getElementById(\'signUpModal\').style.display=\'block\'; toggleBurgerMenu();">SignUp</a></li>';
-                        echo '<li><a href="#" onclick="document.getElementById(\'loginModal\').style.display=\'block\'; toggleBurgerMenu();">Login</a></li>';
+                        echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></p></li>';
+                        echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></p></li>';
+                        echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'signUpModal\').style.display=\'block\'; toggleBurgerMenu();">SignUp</a></p></li>';
+                        echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'loginModal\').style.display=\'block\'; toggleBurgerMenu();">Login</a></p></li>';
                     }
                     ?></li>
             </ul>
@@ -84,6 +91,7 @@ function echoUsername() {
 
 <section class="sectionimage">
     <div class="overlay-text">
+        <p> <?php echoDisplayName(); ?> </p>
         <p style="color: rgb(255, 0, 0); font-size: 28px;"><i><b>BETA RELEASE - Future Development in progress</b></i></p>
         <p style="color: rgb(255, 0, 0); font-size: 18px;"><i><b>Testing has only been done via mobile device</b></i></p>
         <h2>At PRC, our mission is to cultivate and expand the RC Community through an exhilarating prediction game complemented by live-streamed events! Get ready for an immersive experience where excitement meets anticipation. Engage with fellow enthusiasts as you make predictions and immerse yourself in the thrill of live RC action. Join us as we redefine the RC experience, bringing you closer to the heart of the action than ever before!</h2>

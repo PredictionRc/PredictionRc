@@ -57,7 +57,7 @@ if ($result->num_rows == 0) {
             // Send email
             $mail->send();
             echo "<script>alert('Password Reset Email Sent. This Will Expire In 10 Minutes.');</script>";
-            echo "<script>window.location.href = 'index.php'</script>";
+            echo "<script>window.location.href = '/../index.php'</script>";
         } catch (Exception $e) {
             echo "Error sending email: {$mail->ErrorInfo}";
         }
@@ -66,7 +66,7 @@ if ($result->num_rows == 0) {
     }
 } else {
     echo "<script>alert('A password reset email has already been sent. Please check your inbox.');</script>";
-    echo "<script>window.location.href = 'index.php'</script>";
+    echo "<script>window.location.href = '/../index.php'</script>";
 }
 
 // Close statement and connection

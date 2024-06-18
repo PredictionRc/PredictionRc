@@ -28,7 +28,7 @@
     <div class="overlay-text">
         <div class="divcenter">
             <h2>Forgot Password</h2>
-            <form action="send_reset_email.php" method="post" class="form-center">
+            <form action="phpBackend/index/send_reset_email.php" method="post" class="form-center">
                 <label for="email">Enter your email address:</label><br>
                 <input type="email" id="email" name="email" placeholder="Enter Email" required autocomplete="on"><br>
                 <button class="eventCancel" onclick="redirectToMainPage()">Cancel</button>
@@ -49,7 +49,7 @@
 <script src="imageRotation.js"></script>
 <script>
     function redirectToMainPage() {
-        window.location.href = 'index.php';
+        window.location.href = '/../index.php';
     }
 </script>
 </body>
