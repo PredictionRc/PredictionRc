@@ -304,6 +304,11 @@ input[type=text], input[type=password] {
     font-size: 18px;
     color: #0004ff;
 }
+@media (max-width: 768px) {
+    .p4 {
+        color: #0004ff; /* Adjust color or other styles as needed */
+    }
+}
 .psw {
     text-align: right; /* Aligns the content to the right */
 }
