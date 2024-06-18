@@ -4,7 +4,7 @@ session_start(); // Start the session at the beginning
 // Function to safely echo session username
 function echoUsername() {
     if (isset($_SESSION['username'])) {
-        echo 'Welcome, ' . htmlspecialchars($_SESSION['username']);
+        echo '<p class="p3">Welcome, ' . htmlspecialchars($_SESSION['username']) . '</p>';
     } else {
         echo '<p class="p2">Not Logged In</p>';
     }
@@ -28,12 +28,17 @@ function echoUsername() {
         <div class="burger-menu">
             <ul>
                 <li><?php echoUsername(); ?></li>
-                <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
-                <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu();">Contact</a></li>
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-                        echo '<a href="logout.php">Logout</a>';
+                        echo '<li><a class="p3" href="arena.php">Arena</a></li>';
+                        echo '<li><a class="p3" href="support.php">Supporters</a></li>';
+                        echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
+                        echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
+                        echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
+                        echo '<li><p class="p3"><a href="phpBackend/index/logout.php">Logout</a></p></li>';
                     } else {
+                        echo '<li><a href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
+                        echo '<li><a href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
                         echo '<li><a href="#" onclick="document.getElementById(\'signUpModal\').style.display=\'block\'; toggleBurgerMenu();">SignUp</a></li>';
                         echo '<li><a href="#" onclick="document.getElementById(\'loginModal\').style.display=\'block\'; toggleBurgerMenu();">Login</a></li>';
                     }
@@ -43,12 +48,17 @@ function echoUsername() {
         <nav>
             <ul>
                 <li><?php echoUsername(); ?></li>
-                <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
-                <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu();">Contact</a></li>
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-                        echo '<a href="logout.php">Logout</a>';
+                        echo '<li><a class="p3" href="arena.php">Arena</a></li>';
+                        echo '<li><a class="p3" href="support.php">Supporters</a></li>';
+                        echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
+                        echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
+                        echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
+                        echo '<li><p class="p3"><a href="phpBackend/index/logout.php">Logout</a></p></li>';
                     } else {
+                        echo '<li><a href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
+                        echo '<li><a href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
                         echo '<li><a href="#" onclick="document.getElementById(\'signUpModal\').style.display=\'block\'; toggleBurgerMenu();">SignUp</a></li>';
                         echo '<li><a href="#" onclick="document.getElementById(\'loginModal\').style.display=\'block\'; toggleBurgerMenu();">Login</a></li>';
                     }

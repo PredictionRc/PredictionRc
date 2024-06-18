@@ -1,8 +1,10 @@
 <?php
 session_start();
-require __DIR__ . "/vendor/autoload.php";
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+require __DIR__ . '/../../vendor/autoload.php'; // Adjust this path as necessary
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../..'); // Adjust path to match your project structure
 $dotenv->load();
+
 $conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
 
 // Check connection
@@ -26,7 +28,7 @@ if(isset($_POST['login_email']) && isset($_POST['login_password'])){
             $_SESSION['login_email'] = $_POST['login_email'];
             $_SESSION['loggedin'] = true;
             $_SESSION['username'] = $row['username']; // Assuming 'username' is the field in your database
-            header("Location: index.php");
+            header("Location: /../index.php");
         } else {
             echo "<script>alert('Incorrect Password, If you forgot you password Please reset it.');</script>";
             echo "<script>window.location.href = 'index.html'</script>";

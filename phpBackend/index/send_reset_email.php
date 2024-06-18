@@ -1,12 +1,12 @@
 <?php
+require __DIR__ . '/../../vendor/autoload.php'; // Adjust this path as necessary
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP; // Import the SMTP class
-require 'vendor/autoload.php';
-
-// Store the hashed token in the database along with the email
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+use PHPMailer\PHPMailer\SMTP;
+use Dotenv\Dotenv;
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../..'); // Adjust path to match your project structure
 $dotenv->load();
+
 $conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
 $user = $_ENV['SMTP_USERNAME'];
 $pass = $_ENV['SMTP_PASSWORD'];
