@@ -297,6 +297,12 @@ input[type=text], input[type=password] {
         color: #ffffff; /* Adjust color or other styles as needed */
     }
 }
+.p4 {
+    font-family: "Fantasy", "Courier New", monospace;
+    font-weight: bold;
+    font-size: 18px;
+    color: #0004ff;
+}
 .psw {
     text-align: right; /* Aligns the content to the right */
 }

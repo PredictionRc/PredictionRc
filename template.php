@@ -93,37 +93,6 @@ function echoDisplayName() {
     <div class="overlay-text">
       <div class="divcenter">
       <p> <?php echoDisplayName(); ?> </p>
-        <!-- 1/10th MOD - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u>1/10th Mod Arena</u></p>
-        <?php include 'phpBackend/arena/check_active_mod.php'; ?>
-        <?php if ($active == 1): ?>
-          <form action="entry_off_mod.php" class="inline">
-            <button type="submit" value="submit" id="submitButtonMod" class="eventSubmit">1/10 Mod</button>
-          </form>
-        <?php else: ?>
-          <button type="submit" value="submit" id="submitButtonMod" class="eventCancel" disabled>1/10 Mod-Disabled</button>
-        <?php endif; ?>
-        <!-- Nitro - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u><b>Nitro Pro Arena</b></u></p>
-        <?php include 'phpBackend/arena/check_active_nitro.php'; ?>
-        <?php if ($active == 1): ?>
-          <form action="entry_nitro.php" class="inline">
-            <button type="submit" value="submit" id="submitButtonNitro" class="eventSubmit">1/8 Nitro</button>
-          </form>
-        <?php else: ?>
-          <button type="submit" value="submit" id="submitButtonNitro" class="eventCancel" disabled>1/8 Nitro-Disabled</button>
-        <?php endif; ?>
-        <!-- Nitro - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u>OnRoad Arena</u></p>
-        <?php include 'phpBackend/arena/check_active_onRoad.php'; ?>
-        <?php if ($active == 1): ?>
-          <form action="entry_onRoad.php" class="inline">
-            <button type="submit" value="submit" id="submitButtonOnRoad" class="eventSubmit">OnRoad</button>
-          </form>
-        <?php else: ?>
-          <button type="submit" value="submit" id="submitButtonOnRoad" class="eventCancel" disabled>OnRoad Coming Soon</button>
-        <?php endif; ?>
-        </div>
       </div>
     </div>
 </section>
