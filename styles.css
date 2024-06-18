@@ -294,5 +294,11 @@ input[type=text], input[type=password] {
     color: #007bff; /* Adjust link color as needed */
     text-decoration: none; /* Remove underline from the link */
 }
+.form-center {
+    text-align: center; /* Center-aligns the form elements */
+    margin: 0 auto; /* Centers the form horizontally */
+    max-width: 300px; /* Optional: Adjust maximum width as needed */
+}
+
 
 
