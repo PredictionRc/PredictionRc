@@ -15,6 +15,6 @@ header("Expires: 0");
 
 
 // Redirect to login page
-header("Location: index.html");
+header("Location: index.php");
 exit();
 ?>
