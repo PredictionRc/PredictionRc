@@ -396,6 +396,16 @@
         <?php else: ?>
           <button type="submit" value="submit" id="submitButtonMod" class="eventCancel" disabled>1/10 Mod-Disabled</button>
         <?php endif; ?>
+        <!-- 1/10th Expert - Embed PHP code to decide whether to enable or disable the submit button -->
+        <p class="p1"><u>1/10th Expert Arena</u></p>
+        <?php include 'check_active_expert.php'; ?>
+        <?php if ($active == 1): ?>
+          <form action="entry_off_expert.php" class="inline">
+            <button type="submit" value="submit" id="submitButtonExpert" class="eventSubmit">1/10 Expert</button>
+          </form>
+        <?php else: ?>
+          <button type="submit" value="submit" id="submitButtonExpert" class="eventCancel" disabled>1/10 Expert-Disabled</button>
+        <?php endif; ?>
         <!-- Nitro - Embed PHP code to decide whether to enable or disable the submit button -->
         <p class="p1"><u><b>Nitro Pro Arena</b></u></p>
         <?php include 'check_active_nitro.php'; ?>
@@ -459,35 +469,7 @@
         </div>
     </form>
   </div>
-
-  <!--CONTACT POP UP-->
-<div id="contactModal" class="modal">
-    <form class="modal-content animate" action="contact_form.php" method="post">
-        <div class="modal-overlay">
-            <div class="divcenter">
-                <h3>CONTACT US</h3>
-            </div>
-            <div class="modalContainer">
-                <label for="name"><b>Name:</b></label>
-                <input type="text" id="name" name="name" placeholder="Your name.." required  autocomplete="on">
-                <label for="email_contact"><b>Email:</b></label>
-                <input type="email" id="email_contact" name="email" placeholder="Enter Email" required  autocomplete="on">
-                <label for="business_name"><b>Business Name</b></label>
-                <input type="text" id="business_name" name="business_name" placeholder="Enter Business Name">
-                <label for="subject"><b>Subject</b></label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
-            </div>
-            <div class="modalContainer" style="background-image:linear-gradient( #e3e2e4, #868686); border-top: 2px solid #6078ea;">
-                <div class="buttonContainer">
-                    <button type="button" onclick="document.getElementById('contactModal').style.display='none'" class="modalCancel">Cancel</button>
-                    <button type="submit" value="Submit" class="modalSubmit">Submit</button>
-                </div>
-            </div>
-        </div>
-    </form>
-  </div>
-
-<script src="imageRotation.js"></script>
+  <script src="imageRotation.js"></script>
 <script>
     function toggleBurgerMenu() {
         var menu = document.querySelector('.burger-menu');
@@ -507,6 +489,16 @@
     function openContactForm(url) {
       localStorage.setItem('previousPage', url);
       document.getElementById('contactModal').style.display='block';
+    }
+
+    function redirectToPreviousPage() {
+      var previousPage = localStorage.getItem('previousPage');
+      if (previousPage) {
+        window.location.href = previousPage;
+      } else {
+        // If no previous page is stored, redirect to index.html
+        window.location.href = 'index.html';
+      }
     }
 </script>
 

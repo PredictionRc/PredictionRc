@@ -314,8 +314,7 @@
                 ?>
                 </li>
                 <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
-                <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu();">Contact</a></li>
-                <li><a href="promotion.php">Beta Promotion</a></li>
+                <li><a href="#" onclick="document.getElementById('prize').style.display='block'; toggleBurgerMenu();">Prize</a></li>
                 <li>
                 <?php
                     // Check if the user is logged in
@@ -334,37 +333,8 @@
         </div>
         <nav>
             <ul>
-            <li>
-                <?php
-                  // Check if the user is logged in
-                  if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-                      // If logged in, display logout link and username
-                      if(isset($_SESSION['username'])) {
-                          echo 'Welcome, ' . $_SESSION['username'];
-                      }
-                  } else {
-                      // If not logged in, display login link
-                      echo 'Not Logged In';
-                  }
-                ?>
-                </li>
                 <li><a href="#" onclick="document.getElementById('rules').style.display='block'; toggleBurgerMenu();">Rules</a></li>
-                <li><a href="#" onclick="document.getElementById('contactModal').style.display='block'; toggleBurgerMenu();">Contact</a></li>
-                <li><a href="promotion.php">Beta Promotion</a></li>
-                <li>
-                <?php
-                    // Check if the user is logged in
-                    if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-                        // If logged in, display logout link and username
-                        if(isset($_SESSION['username'])) {
-                            echo '<br><a href="logout.php">Logout</a>';
-                        }
-                    } else {
-                        // If not logged in, display login link
-                        echo '<a href="index.html">Main Page</a>';
-                    }
-                ?>
-                </li>
+                <li><a href="#" onclick="document.getElementById('prize').style.display='block'; toggleBurgerMenu();">Prize</a></li>
             </ul>
         </nav>
         <button class="burger block-header__hamburger-menu" title="Menu" onclick="toggleBurgerMenu()">
@@ -386,37 +356,7 @@
 <section class="sectionimage">
     <div class="overlay-text">
       <div class="divcenter">
-        <!-- 1/10th MOD - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u>1/10th Mod Arena</u></p>
-        <?php include 'check_active_mod.php'; ?>
-        <?php if ($active == 1): ?>
-          <form action="entry_off_mod.php" class="inline">
-            <button type="submit" value="submit" id="submitButtonMod" class="eventSubmit">1/10 Mod</button>
-          </form>
-        <?php else: ?>
-          <button type="submit" value="submit" id="submitButtonMod" class="eventCancel" disabled>1/10 Mod-Disabled</button>
-        <?php endif; ?>
-        <!-- Nitro - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u><b>Nitro Pro Arena</b></u></p>
-        <?php include 'check_active_nitro.php'; ?>
-        <?php if ($active == 1): ?>
-          <form action="entry_off_nitro.php" class="inline">
-            <button type="submit" value="submit" id="submitButtonNitro" class="eventSubmit">1/8 Nitro</button>
-          </form>
-        <?php else: ?>
-          <button type="submit" value="submit" id="submitButtonNitro" class="eventCancel" disabled>1/8 Nitro-Disabled</button>
-        <?php endif; ?>
-        <!-- Nitro - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u>OnRoad Arena</u></p>
-        <?php include 'check_active_onRoad.php'; ?>
-        <?php if ($active == 1): ?>
-          <form action="entry_onRoad.php" class="inline">
-            <button type="submit" value="submit" id="submitButtonOnRoad" class="eventSubmit">OnRoad</button>
-          </form>
-        <?php else: ?>
-          <button type="submit" value="submit" id="submitButtonOnRoad" class="eventCancel" disabled>OnRoad Coming Soon</button>
-        <?php endif; ?>
-        </div>
+
       </div>
     </div>
 </section>
@@ -428,71 +368,19 @@
     </div>
 </footer>
 
-<!--RULES POP UP-->
-<div id="rules" class="modal">
-    <form class="modal-content animate" action="login.php" method="post">
-        <div class="modal-overlay">
-            <div class="divcenter">
-                <h3><u>Free To Play!</u></h3>
-            </div>
-            <ul>
-                <li><b>Sign up for an account - </b>This is the first step to winning a prize!</li> <br>
-                <li><strong>Selecting a Race Event:</strong> After signing in, you will be directed to the race arena. Race events are managed dynamically, and disabled buttons indicate events not yet open for predictions.</li><br>
 
-                <li><b>Submitting Entry - </b>
-                    <p>From the race arena, select the races you wish to predict in both the 2WD class and 4WD class categories.</p>
-                    <div class="divcenter">
-                        <img src="images/15.PNG" alt="entryGrid" class="adlogo" style="width: 100%; max-width: 600px;">
-                    </div>
-                    <p>Additionally, predict the lap difference between the 1st and 3th place finishers. Specify how many laps (if any) the 3rd place racer will trail the leader.</p>
-                    <p>For the tiebreaker, predict the closest estimate of the time difference between the 1st and 2nd place finishers. In the event of a tie, a live draw will be conducted with all tied participants spinning a wheel to determine the winner.</p>
 
-                </li><br>
-                <li><b>Entry Deadline - </b>Entries must be submitted before the start of the Last B main event. The submission deadline will be enforced based on time, and the submit button will be disabled once entries are no longer accepted.</li><br>
-                <li><b>Prize - </b>The prize amount will be determined by the donations received from companies in exchange for featuring their ads and/or logos on our site. Currently, the prize is fully funded by the owner of this company, covering IT costs and expenses to maintain the site. In the future, prizes will be funded by 100% of the proceeds after deducting IT and Company costs.<br><span style="font-size: 80%;">*Offer valid for residents of the 50 United States only. We are looking to expand to other country's as we grow but will need community support to achieve this goal.</span></li><br>
-            </ul>
-            <div class="modalContainer" style="background-image:linear-gradient( #e3e2e4, #868686); border-top: 2px solid #6078ea;">
-                <div class="buttonContainer">
-                    <button type="button" onclick="document.getElementById('rules').style.display='none'" class="modalSubmit">UNDERSTOOD!</button>
-                </div>
-            </div>
-        </div>
-    </form>
-  </div>
+<!-- Include modals -->
+<?php include 'modals/rules_modal.html'; ?>
+<?php include 'modals/prize_modal.html'; ?>
 
-  <!--CONTACT POP UP-->
-<div id="contactModal" class="modal">
-    <form class="modal-content animate" action="contact_form.php" method="post">
-        <div class="modal-overlay">
-            <div class="divcenter">
-                <h3>CONTACT US</h3>
-            </div>
-            <div class="modalContainer">
-                <label for="name"><b>Name:</b></label>
-                <input type="text" id="name" name="name" placeholder="Your name.." required  autocomplete="on">
-                <label for="email_contact"><b>Email:</b></label>
-                <input type="email" id="email_contact" name="email" placeholder="Enter Email" required  autocomplete="on">
-                <label for="business_name"><b>Business Name</b></label>
-                <input type="text" id="business_name" name="business_name" placeholder="Enter Business Name">
-                <label for="subject"><b>Subject</b></label>
-                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
-            </div>
-            <div class="modalContainer" style="background-image:linear-gradient( #e3e2e4, #868686); border-top: 2px solid #6078ea;">
-                <div class="buttonContainer">
-                    <button type="button" onclick="document.getElementById('contactModal').style.display='none'" class="modalCancel">Cancel</button>
-                    <button type="submit" value="Submit" class="modalSubmit">Submit</button>
-                </div>
-            </div>
-        </div>
-    </form>
-  </div>
-
-<script src="imageRotation.js"></script>
+  <script src="imageRotation.js"></script>
 <script>
     function toggleBurgerMenu() {
         var menu = document.querySelector('.burger-menu');
         menu.classList.toggle('active');
     }
+
     // Add event listener to the document
     document.addEventListener('click', function(event) {
     var burgerMenu = document.querySelector('.burger-menu');
@@ -504,10 +392,27 @@
         burgerMenu.classList.remove('active');
         }
     });
+
     function openContactForm(url) {
       localStorage.setItem('previousPage', url);
       document.getElementById('contactModal').style.display='block';
     }
+
+    function redirectToPreviousPage() {
+      var previousPage = localStorage.getItem('previousPage');
+      if (previousPage) {
+        window.location.href = previousPage;
+      } else {
+        // If no previous page is stored, redirect to index.html
+        window.location.href = 'index.html';
+      }
+    }
+
+    // Load rules modal
+    loadModal('modals/rules_modal.html', 'rulesModal');
+
+    // Load prize modal
+    loadModal('modals/prize_modal.html', 'prizeModal');
 </script>
 
 </body>
