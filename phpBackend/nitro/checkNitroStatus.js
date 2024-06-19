@@ -1,7 +1,7 @@
   // Function to fetch the active status using AJAX
   function checkNitroStatus() {
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "phpbackend/nitro/check_entry_nitro.php", true);
+    xhr.open("GET", "phpBackend/nitro/check_entry_nitro.php", true);
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         var activeStr = xhr.responseText.trim(); // Remove whitespace
