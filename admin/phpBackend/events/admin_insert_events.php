@@ -1,5 +1,5 @@
 <?php
-session_start(); // Start session
+session_start();
 require __DIR__ . '/../../../vendor/autoload.php'; // Adjust this path as necessary
 use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable(__DIR__ . '/../../..'); // Adjust path to match your project structure
@@ -19,25 +19,25 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     exit(); // Ensure script execution stops after redirection
 }
 
-// Check if racer name already exists
-$racer_name = $_POST['racer_name'];
-$sql_check = "SELECT COUNT(*) AS count FROM driver_nitro_buggy WHERE racer_name = ?";
+// Check if event name already exists
+$event_name = $_POST['event_name'];
+$sql_check = "SELECT COUNT(*) AS count FROM events WHERE event_name = ?";
 $stmt_check = $conn->prepare($sql_check);
-$stmt_check->bind_param("s", $racer_name);
+$stmt_check->bind_param("s", $event_name);
 $stmt_check->execute();
 $result_check = $stmt_check->get_result();
 $count = $result_check->fetch_assoc()['count'];
 
 if ($count > 0) {
-    // Racer name already exists, return error message
+    // event name already exists, return error message
     header('Content-Type: application/json');
-    echo json_encode(['message' => 'Racer name already exists']);
+    echo json_encode(['message' => 'Event name already exists']);
     exit; // Stop further execution
 }
 
 // Prepare and bind parameters
-$stmt_insert = $conn->prepare("INSERT INTO driver_nitro_buggy (racer_name) VALUES (?)");
-$stmt_insert->bind_param("s", $racer_name);
+$stmt_insert = $conn->prepare("INSERT INTO events (event_name) VALUES (?)");
+$stmt_insert->bind_param("s", $event_name);
 
 // Execute insert statement
 $stmt_insert->execute();
@@ -49,5 +49,5 @@ $conn->close();
 
 // Send JSON response
 header('Content-Type: application/json');
-echo json_encode(['message' => 'Driver added successfully']);
+echo json_encode(['message' => 'Event added successfully']);
 ?>

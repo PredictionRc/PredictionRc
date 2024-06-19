@@ -1,8 +1,8 @@
 <?php
 session_start();
-require __DIR__ . '/../../../vendor/autoload.php'; // Adjust this path as necessary
+require __DIR__ . '/../../../../vendor/autoload.php'; // Adjust this path as necessary
 use Dotenv\Dotenv;
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../../..'); // Adjust path to match your project structure
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../../..'); // Adjust path to match your project structure
 $dotenv->load();
 
 // Check if the user is logged in
@@ -22,7 +22,7 @@ if (isset($_GET['id']) && isset($_GET['active'])) {
     }
 
     // Prepare and bind parameters
-    $stmt_update = $conn->prepare("UPDATE driver_nitro_buggy SET active = ? WHERE id = ?");
+    $stmt_update = $conn->prepare("UPDATE driver_nitro_truggy SET active = ? WHERE id = ?");
     $stmt_update->bind_param("ii", $active, $driver_id);
 
     // Set parameters
