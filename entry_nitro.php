@@ -108,8 +108,8 @@ function echoDisplayName() {
 <!-- clone this below -->
 <h2>Nitro Entry Form</h2>
 
-<p><b>Not sure who to pick? check the <a href="https://coyotehobbiesraceway.liverc.com/live/" target="_blank">Live Steam</a> or
-<a href="https://coyotehobbiesraceway.liverc.com/results/?p=view_event&id=438891" target="_blank">Driver event statistics</a></b></p>
+<!-- <p><b>Not sure who to pick? check the <a href="https://coyotehobbiesraceway.liverc.com/live/" target="_blank">Live Steam</a> or
+<a href="https://coyotehobbiesraceway.liverc.com/results/?p=view_event&id=438891" target="_blank">Driver event statistics</a></b></p> -->
 
 <form action="phpBackend/nitro/backend_off_nitro.php" method="post">
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
