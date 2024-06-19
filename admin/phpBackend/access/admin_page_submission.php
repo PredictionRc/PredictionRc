@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nitro Buggy</title>
+    <title>Entry Submission</title>
     <link rel="icon" href="data:, ">
     <link rel="stylesheet" href="/../styles.css">
         <style>
@@ -34,7 +34,7 @@
             echo '<a href="admin_login.html">Login</a>';
         }
         ?><br>
-        <a href="admin_page.php">ControlPanel</a>
+        <a href="/../admin/admin_page.php">ControlPanel</a>
 </div>
         </div>
     </div>
@@ -43,24 +43,18 @@
 <section class="sectionimage">
     <div class="overlay-text">
         <div class="divcenter">
-        <h1><u>Nitro Buggy Drivers</u></h1>
-            <table id="driver-table">
+        <h1><u>Entry Page Submission</u></h1>
+            <table id="event-table">
                 <thead>
                     <tr>
-                        <th>ID</th>
-                        <th>Racer Name</th>
-                        <th>Active</th>
-                        <th>Actions</th>
+                    <th>ID</th>
+                    <th>Button Name</th>
+                    <th>Active</th>
+                    <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody></tbody>
             </table>
-        <h2>Add Driver</h2>
-            <form id="add-driver-form">
-                <label for="racer-name">Racer Name:</label>
-                <input type="text" id="racer-name" name="racer_name" oninput="this.value = this.value.toUpperCase();" class="form-center"><br><br>
-                <input type="submit" value="Add Driver" class="eventSubmit">
-            </form>
         </div>
     </div>
 </section>
@@ -71,56 +65,29 @@
         <img src="/../images/background.jpeg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
     </div>
 </footer>
+
 <script>
-    // Fetch data from PHP script
-    fetch('phpBackend/nitro/admin_display_nitroBuggy.php')
-        .then(response => response.json())
-        .then(data => {
+// Fetch data from PHP script
+fetch('admin_display_submitButtons.php')
+    .then(response => response.json())
+    .then(data => {
         // Append data to table
-        const tableBody = document.querySelector('#driver-table tbody');
+        const tableBody = document.querySelector('#event-table tbody');
         data.forEach(row => {
             const tr = document.createElement('tr');
-            tr.innerHTML = `<td>${row.id}</td><td>${row.racer_name}</td><td><input type="checkbox" class="active-checkbox" data-id="${row.id}" ${row.active == 1 ? 'checked' : ''}></td><td><button class="update-button" data-id="${row.id}">Update</button></td>`;
+            tr.innerHTML = `<td>${row.id}</td><td>${row.field_name}</td><td><input type="checkbox" class="active-checkbox" data-id="${row.id}" ${row.active == 1 ? 'checked' : ''}></td><td><button class="update-button" data-id="${row.id}">Update</button></td>`;
             tableBody.appendChild(tr);
         });
     })
     .catch(error => console.error('Error:', error));
 
-
-
-    // Handle form submission
-    document.getElementById('add-driver-form').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent default form submission
-        const formData = new FormData(this); // Create FormData object from form data
-        // Send form data to PHP script using Fetch API
-        fetch('phpBackend/nitro/admin_insert_nitroBuggy.php', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            alert(data.message); // Display success message
-            // Refresh the page to update the table
-            location.reload();
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('An error occurred. Please try again.');
-        });
-    });
-
     // Handle update button click
     document.addEventListener('click', function(event) {
     if (event.target.classList.contains('update-button')) {
-        const driverId = event.target.dataset.id;
-        const isChecked = document.querySelector(`.active-checkbox[data-id="${driverId}"]`).checked;
+        const eventId = event.target.dataset.id;
+        const isChecked = document.querySelector(`.active-checkbox[data-id="${eventId}"]`).checked;
         // Send AJAX request to update active status
-        fetch(`phpBackend/nitro/admin_update_nitroBuggy.php?id=${driverId}&active=${isChecked ? 1 : 0}`, {
+        fetch(`admin_update_submitButtons.php?id=${eventId}&active=${isChecked ? 1 : 0}`, {
             method: 'GET'
         })
         .then(response => {
@@ -132,7 +99,7 @@
         .then(data => {
             // If active status is 0, uncheck the checkbox
             if (data.active === 0) {
-                document.querySelector(`.active-checkbox[data-id="${driverId}"]`).checked = false;
+                document.querySelector(`.active-checkbox[data-id="${eventId}"]`).checked = false;
             }
             alert(data.message); // Display success message
             // Refresh the page to update the table
@@ -145,5 +112,6 @@
     }
 });
 </script>
+
 </body>
 </html>

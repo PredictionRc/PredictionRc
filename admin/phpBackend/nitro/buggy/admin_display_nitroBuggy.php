@@ -1,8 +1,9 @@
 <?php
-require __DIR__ . '/../../../vendor/autoload.php'; // Adjust this path as necessary
+require __DIR__ . '/../../../../vendor/autoload.php'; // Adjust this path as necessary
 use Dotenv\Dotenv;
-$dotenv = Dotenv::createImmutable(__DIR__ . '/../../..'); // Adjust path to match your project structure
+$dotenv = Dotenv::createImmutable(__DIR__ . '/../../../..'); // Adjust path to match your project structure
 $dotenv->load();
+
 $conn = new mysqli($_ENV["DATABASE_HOSTNAME"], $_ENV["DATABASE_USERNAME"], $_ENV["DATABASE_PASSWORD"], $_ENV["DATABASE_NAME"]);
 
 // Check connection

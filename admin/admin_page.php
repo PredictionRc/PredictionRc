@@ -37,17 +37,17 @@
         <h1><u>Control Panel</u></h1>
         <h4>Off road 1/8th drivers</h4>
             <button class="eventSubmit" onclick="redirectToNitroBuggyPage()">Update Pro buggy drivers</button>
-            <button onclick="redirectToNitroTruggyPage()">Update Pro truggy drivers</button> <br><br>
+            <button class="eventSubmit" onclick="redirectToNitroTruggyPage()">Update Pro truggy drivers</button> <br><br>
         <h4>Off road 1/10th drivers</h4>
             <button onclick="redirectToMod2wdPage()">Update Mod 2wd drivers</button>
             <button onclick="redirectToMod4wdPage()">Update Mod 4wd drivers</button><br><br>
         <h4>Event List</h4>
-            <button onclick="redirectToEventPage()">Update Events</button> <br><br>
+            <button class="eventSubmit" onclick="redirectToEventPage()">Update Events</button> <br><br>
         <h4>Enable Disable Buttons</h4>
-            <button onclick="redirectToButtonArenaPage()">Arena Entry Access</button><br><br>
-            <button onclick="redirectToButtonActivePage()">Prediction Submission Access</button><br><br>
+            <button class="eventSubmit" onclick="redirectToButtonArenaPage()">Arena Entry Access</button><br><br>
+            <button class="eventSubmit" onclick="redirectToButtonActivePage()">Prediction Submission Access</button><br><br>
         <h4>Predictor's List</h4>
-            <button onclick="redirectToPredictorPage()">Predictor's</button> <br><br>
+            <button class="eventSubmit" onclick="redirectToPredictorPage()">Predictor's</button> <br><br>
         </div>
     </div>
 </section>
@@ -60,7 +60,22 @@
 </footer>
 <script>
     function redirectToNitroBuggyPage() {
-        window.location.href = 'admin_page_nitroBuggy.php';
+        window.location.href = 'phpBackend/nitro/buggy/admin_page_nitroBuggy.php';
+    }
+    function redirectToNitroTruggyPage() {
+        window.location.href = 'phpBackend/nitro/truggy/admin_page_nitroTruggy.php';
+    }
+    function redirectToEventPage() {
+        window.location.href = 'phpBackend/events/admin_page_events.php';
+    }
+    function redirectToPredictorPage() {
+        window.location.href = 'phpBackend/predictors/admin_page_predictors.php';
+    }
+    function redirectToButtonArenaPage() {
+        window.location.href = 'phpBackend/access/admin_page_arena.php';
+    }
+    function redirectToButtonActivePage() {
+        window.location.href = 'phpBackend/access/admin_page_submission.php';
     }
 </script>
 </body>
