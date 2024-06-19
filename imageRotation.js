@@ -2,9 +2,9 @@
 
 // Arrays of image URLs
 var images = [
-    "images/sticky.PNG",
-    "images/pulse.PNG",
-    "images/company1.PNG",
+    "/../images/sticky.PNG",
+    "/../images/pulse.PNG",
+    "/../images/company1.PNG",
     // Add more image URLs as needed for set 1
   ];
 

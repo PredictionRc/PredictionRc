@@ -11,7 +11,7 @@ function echoUsername() {
 }
 function echoDisplayName() {
     if (isset($_SESSION['username'])) {
-        echo '<p class="p4">' . htmlspecialchars($_SESSION['username']) . ' pick your arena!</p>';
+        echo '<p class="p4">' . htmlspecialchars($_SESSION['username']) . ', transparency for other\'s entry!</p>';
     } else {
         echo '<p class="p2">You are not logged in.</p>';
     }
@@ -23,26 +23,42 @@ function echoDisplayName() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Battle Arena</title>
+    <title>Predictor's Entry</title>
     <link rel="icon" href="data:, ">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/../styles.css">
 </head>
+<style>
+div[style*="overflow-x: auto;"] {
+    max-height: 400px; /* Adjust the height as per your design */
+    overflow-y: auto;
+}
+table {
+    width: 100%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center; /* Adjust alignment as needed */
+}
+</style>
 <body>
 
 <header>
     <div class="container">
-        <img src="images/logo.jpeg" alt="Logo" class="logo">
+        <img src="/../images/logo.jpeg" alt="Logo" class="logo">
         <div class="burger-menu">
             <ul>
                 <li><?php echoUsername(); ?></li>
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                        echo '<li><a class="p3" href="index.php">Home</a></li>';
                         echo '<li><a class="p3" href="arena.php">Arena</a></li>';
+                        echo '<li><a class="p3" href="entry_nitro.php">Nitro Entry</a></li>';
                         echo '<li><a class="p3" href="support.php">Supporters</a></li>';
                         echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
-                        echo '<li><p class="p3"><a href="phpBackend/index/logout.php">Logout</a></p></li>';
+                        echo '<li><p class="p3"><a href="/../phpBackend/index/logout.php">Logout</a></p></li>';
                     } else {
                         echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></p></li>';
                         echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></p></li>';
@@ -57,7 +73,9 @@ function echoDisplayName() {
                 <li><?php echoUsername(); ?></li>
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                        echo '<li><a class="p3" href="index.php">Home</a></li>';
                         echo '<li><a class="p3" href="arena.php">Arena</a></li>';
+                        echo '<li><a class="p3" href="entry_nitro.php">Nitro Entry</a></li>';
                         echo '<li><a class="p3" href="support.php">Supporters</a></li>';
                         echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
@@ -84,29 +102,56 @@ function echoDisplayName() {
     <div class="adcenter">
     <div class="container">
         Supported by:
-        <img src="images/company1.PNG" alt="Advertising space for Rent" class="adcontainer" id="adImage">
+        <img src="/../images/company1.PNG" alt="Advertising space for Rent" class="adcontainer" id="adImage">
     </div>
     </div>
 </header>
 
 <section class="sectionimage">
     <div class="overlay-text">
-      <div class="divcenter">
-      <p> <?php echoDisplayName(); ?> </p>
-      </div>
+        <div class="divcenter">
+        <h1><u>Other Predictor's Entry</u></h1>
+            <div style="overflow-x: auto;">
+                <table id="entry-table">
+                    <thead>
+                        <tr>
+                            <th>username</th>
+                            <th>Buggy 1st</th>
+                            <th>Buggy 2nd</th>
+                            <th>Buggy 3rd</th>
+                            <th>Buggy 4th</th>
+                            <th>Buggy 5th</th>
+                            <th>Truggy 1st</th>
+                            <th>Truggy 2nd</th>
+                            <th>Truggy 3rd</th>
+                            <th>Truggy 4th</th>
+                            <th>Truggy 5th</th>
+                            <th>Lap 1-5 buggy</th>
+                            <th>Lap 1-2 buggy</th>
+                            <th>Time 1-2 buggy</th>
+                            <th>Lap 1-5 truggy</th>
+                            <th>Lap 1-2 truggy</th>
+                            <th>Time 1-2 truggy</th>
+
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
     </div>
 </section>
 
 <footer>
     <div class="container">
         &copy; 2024 PredictionRC. All rights reserved. &trade;
-        <img src="images/background.jpeg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
+        <img src="/../images/background.jpeg" alt="Advertising space for Rent" class="adcontainer" id="adImage">
     </div>
 </footer>
 
 <!-- Include modals -->
-<?php include 'modals/rules_modal.html'; ?>
-<?php include 'modals/contact_modal.html'; ?>
+<?php include __DIR__ . '/modals/rules_modal.html'; ?>
+<?php include __DIR__ . '/modals/contact_modal.html'; ?>
 
 <script src="imageRotation.js"></script>
 <script>
@@ -121,6 +166,19 @@ function echoDisplayName() {
             burgerMenu.classList.remove('active');
         }
     });
+        // Fetch data from PHP script
+        fetch('/phpBackend/entrys/display_entrys.php')
+        .then(response => response.json())
+        .then(data => {
+        // Append data to table
+        const tableBody = document.querySelector('#entry-table tbody');
+        data.forEach(row => {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `<td>${row.username}</td><td>${row.nbFirst}</td><td>${row.nbSecond}</td><td>${row.nbThird}</td><td>${row.nbFourth}</td><td>${row.nbFifth}</td><td>${row.ntFirst}</td><td>${row.ntSecond}</td><td>${row.ntThird}</td><td>${row.ntFourth}</td><td>${row.ntFifth}</td><td>${row.nbLap15}</td><td>${row.nbLap12}</td><td>${row.nbTime12}</td><td>${row.ntLap15}</td><td>${row.ntLap12}</td><td>${row.ntTime12}</td>`;
+            tableBody.appendChild(tr);
+        });
+    })
+    .catch(error => console.error('Error:', error));
 </script>
 
 </body>

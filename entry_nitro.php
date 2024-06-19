@@ -45,7 +45,9 @@ function echoDisplayName() {
                 <li><?php echoUsername(); ?></li>
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                        echo '<li><a class="p3" href="index.php">Home</a></li>';
                         echo '<li><a class="p3" href="arena.php">Arena</a></li>';
+                        echo '<li><a class="p3" href="result_nitro.php">Other\'s Entry</a></li>';
                         echo '<li><a class="p3" href="support.php">Supporters</a></li>';
                         echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
@@ -65,7 +67,9 @@ function echoDisplayName() {
                 <li><?php echoUsername(); ?></li>
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                      echo '<li><a class="p3" href="index.php">Home</a></li>';
                         echo '<li><a class="p3" href="arena.php">Arena</a></li>';
+                        echo '<li><a class="p3" href="result_nitro.php">Other\'s Entry</a></li>';
                         echo '<li><a class="p3" href="support.php">Supporters</a></li>';
                         echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';

@@ -22,6 +22,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 // Check if email submission already exists for this user and event
 $user_email = $_SESSION['login_email'];
+$user_name = $_SESSION['username'];
 $event_name = $_POST["eventName"];
 $check_query = "SELECT * FROM entry_off_nitro WHERE login_email=? AND event_name=? LIMIT 1";
 $check_stmt = $conn->prepare($check_query);
@@ -60,12 +61,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     $ntTime12 = $_POST['ntTime12'];
 
     // Prepare SQL statement
-    $sql = "INSERT INTO entry_off_nitro (login_email, event_Name, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, ntFirst, ntSecond, ntThird, ntFourth, ntFifth, nbLap15, ntLap15, nbLap12, nbTime12, ntLap12, ntTime12, submission_time) VALUES ('$login_email', '$event_name', '$nbFirst', '$nbSecond', '$nbThird', '$nbFourth', '$nbFifth', '$ntFirst', '$ntSecond', '$ntThird', '$ntFourth', '$ntFifth', '$nbLap15', '$ntLap15', '$nbLap12', '$nbTime12', '$ntLap12', '$ntTime12', CURRENT_TIMESTAMP)";
+    $sql = "INSERT INTO entry_off_nitro (username, login_email, event_Name, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, ntFirst, ntSecond, ntThird, ntFourth, ntFifth, nbLap15, ntLap15, nbLap12, nbTime12, ntLap12, ntTime12, submission_time) VALUES ('$user_name', '$login_email', '$event_name', '$nbFirst', '$nbSecond', '$nbThird', '$nbFourth', '$nbFifth', '$ntFirst', '$ntSecond', '$ntThird', '$ntFourth', '$ntFifth', '$nbLap15', '$ntLap15', '$nbLap12', '$nbTime12', '$ntLap12', '$ntTime12', CURRENT_TIMESTAMP)";
 
 // Execute SQL statement
 if ($conn->query($sql) === TRUE) {
     echo "<script>alert('Your Prediction has been submitted. GOOD LUCK!');</script>";
-    echo "<script>window.location.href = '/../arena.php'</script>";
+    echo "<script>window.location.href = '/../result_nitro.php'</script>";
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
     echo "<br><a href='javascript:history.go(-1)'>Go back</a>";
