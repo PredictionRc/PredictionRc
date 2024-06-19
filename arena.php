@@ -38,7 +38,7 @@ function echoDisplayName() {
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
                         echo '<li><a class="p3" href="index.php">Home</a></li>';
-                        echo '<li><a class="p3" href="support.php">Supporters</a></li>';
+                        echo '<li><a class="p3" href="supporters.php">Supporters</a></li>';
                         echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
@@ -58,7 +58,7 @@ function echoDisplayName() {
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
                         echo '<li><a class="p3" href="index.php">Home</a></li>';
-                        echo '<li><a class="p3" href="support.php">Supporters</a></li>';
+                        echo '<li><a class="p3" href="supporters.php">Supporters</a></li>';
                         echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';

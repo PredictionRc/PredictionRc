@@ -11,9 +11,9 @@ function echoUsername() {
 }
 function echoDisplayName() {
     if (isset($_SESSION['username'])) {
-        echo '<p class="p4">Welcome, ' . htmlspecialchars($_SESSION['username']) . ' - Menu items are now activated!</p>';
+        echo '<p class="p4">' . htmlspecialchars($_SESSION['username']) . ', Check out PCR\'s supporters site!</p>';
     } else {
-        echo '<p class="p2">Login to activate more menu items.</p>';
+        echo '<p class="p2">You are not logged in.</p>';
     }
 }
 ?>
@@ -23,10 +23,19 @@ function echoDisplayName() {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prediction RC!</title>
+    <title>PCR Shout Out's</title>
     <link rel="icon" href="data:, ">
     <link rel="stylesheet" href="styles.css">
 </head>
+<style>
+        .contruction {
+            max-width: 1000px; /* Set maximum width for the logo */
+            height: 100%;
+            width: 100%;
+            display: inline-block;
+            vertical-align: middle;
+        }
+</style>
 <body>
 
 <header>
@@ -37,8 +46,8 @@ function echoDisplayName() {
                 <li><?php echoUsername(); ?></li>
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                        echo '<li><a class="p3" href="index.php">Home</a></li>';
                         echo '<li><a class="p3" href="arena.php">Arena</a></li>';
-                        echo '<li><a class="p3" href="supporters.php">Supporters</a></li>';
                         echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
@@ -57,8 +66,8 @@ function echoDisplayName() {
                 <li><?php echoUsername(); ?></li>
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
+                        echo '<li><a class="p3" href="index.php">Home</a></li>';
                         echo '<li><a class="p3" href="arena.php">Arena</a></li>';
-                        echo '<li><a class="p3" href="supporters.php">Supporters</a></li>';
                         echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
@@ -91,11 +100,10 @@ function echoDisplayName() {
 
 <section class="sectionimage">
     <div class="overlay-text">
-    <div class="divcenter">
-        <p> <?php echoDisplayName(); ?> </p>
-        <p class="p2"><i><b>BETA RELEASE - Future Development in progress. Testing has only been done via mobile device</b></i></p>
-        <h2>At PRC, our mission is to cultivate and expand the RC Community through an exhilarating prediction game complemented by live-streamed events! Get ready for an immersive experience where excitement meets anticipation. Engage with fellow enthusiasts as you make predictions and immerse yourself in the thrill of live RC action. Join us as we redefine the RC experience, bringing you closer to the heart of the action than ever before!</h2>
-    </div>
+      <div class="divcenter">
+      <p> <?php echoDisplayName(); ?> </p>
+      <img src="images/underContruction.webp" class="contruction">
+      </div>
     </div>
 </section>
 
@@ -109,8 +117,6 @@ function echoDisplayName() {
 <!-- Include modals -->
 <?php include 'modals/rules_modal.html'; ?>
 <?php include 'modals/contact_modal.html'; ?>
-<?php include 'modals/signUp_modal.html'; ?>
-<?php include 'modals/login_modal.html'; ?>
 
 <script src="imageRotation.js"></script>
 <script>
