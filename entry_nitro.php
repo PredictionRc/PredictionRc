@@ -103,11 +103,11 @@ function echoDisplayName() {
       <p> <?php echoDisplayName(); ?> </p>
 <!-- clone this below -->
 <h2>Nitro Entry Form</h2>
-<p><b></b></p>
+
 <p><b>Not sure who to pick? check the <a href="https://coyotehobbiesraceway.liverc.com/live/" target="_blank">Live Steam</a> or
 <a href="https://coyotehobbiesraceway.liverc.com/results/?p=view_event&id=438891" target="_blank">Driver event statistics</a></b></p>
-<p><b></b></p>
-<form action="backend_off_expert.php" method="post">
+
+<form action="phpBackend/nitro/backend_off_nitro.php" method="post">
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
     <tr>
       <th>
@@ -140,11 +140,11 @@ function echoDisplayName() {
     <tr>
       <td>1st</td>
       <td>
-        <select name="twoWDFirst" id="twoWDFirst" required>
+        <select name="nbFirst" id="nbFirst" required>
           <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'driver_expert_2wd.php';
+            $options = include 'phpBackend/nitro/driver_nitro_buggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -152,11 +152,11 @@ function echoDisplayName() {
         </select>
       </td>
       <td>
-        <select name="fourWDFirst" id="fourWDFirst" required>
+        <select name="ntFirst" id="ntFirst" required>
           <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'driver_expert_4wd.php';
+            $options = include 'phpBackend/nitro/driver_nitro_truggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -167,11 +167,11 @@ function echoDisplayName() {
     <tr>
       <td>2nd</td>
       <td>
-        <select name="twoWDSecond" id="twoWDSecond" required>
+        <select name="nbSecond" id="nbSecond" required>
           <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'driver_expert_2wd.php';
+            $options = include 'phpBackend/nitro/driver_nitro_buggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -179,11 +179,11 @@ function echoDisplayName() {
         </select>
       </td>
       <td>
-      <select name="fourWDSecond" id="fourWDSecond" required>
+      <select name="ntSecond" id="ntSecond" required>
           <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'driver_expert_4wd.php';
+            $options = include 'phpBackend/nitro/driver_nitro_truggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -194,11 +194,11 @@ function echoDisplayName() {
     <tr>
       <td>3rd</td>
       <td>
-        <select name="twoWDThird" id="twoWDThird" required>
+        <select name="nbThird" id="nbThird" required>
           <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'driver_expert_2wd.php';
+            $options = include 'phpBackend/nitro/driver_nitro_buggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -206,11 +206,11 @@ function echoDisplayName() {
         </select>
       </td>
       <td>
-        <select name="fourWDThird" id="fourWDThird" required>
+        <select name="ntThird" id="ntThird" required>
           <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'driver_expert_4wd.php';
+            $options = include 'phpBackend/nitro/driver_nitro_truggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -221,11 +221,11 @@ function echoDisplayName() {
     <tr>
       <td>4th</td>
       <td>
-        <select name="twoWDFourth" id="twoWDFourth" required>
+        <select name="nbFourth" id="nbFourth" required>
           <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'driver_expert_2wd.php';
+            $options = include 'phpBackend/nitro/driver_nitro_buggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -233,11 +233,11 @@ function echoDisplayName() {
         </select>
       </td>
       <td>
-        <select name="fourWDFourth" id="fourWDFourth" required>
+        <select name="ntFourth" id="ntFourth" required>
           <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'driver_expert_4wd.php';
+            $options = include 'phpBackend/nitro/driver_nitro_truggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -248,11 +248,11 @@ function echoDisplayName() {
     <tr>
       <td>5th</td>
       <td>
-      <select name="twoWDFifth" id="twoWDFifth" required>
+      <select name="nbFifth" id="nbFifth" required>
           <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'driver_expert_2wd.php';
+            $options = include 'phpBackend/nitro/driver_nitro_buggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -260,11 +260,11 @@ function echoDisplayName() {
         </select>
       </td>
       <td>
-        <select name="fourWDFifth" id="fourWDFifth" required>
+        <select name="ntFifth" id="ntFifth" required>
           <option value="">Select Racer</option>
             <?php
             // Include dropdown data and populate dropdown
-            $options = include 'driver_expert_4wd.php';
+            $options = include 'phpBackend/nitro/driver_nitro_truggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -275,24 +275,24 @@ function echoDisplayName() {
     </tr>
     <tr>
       <td>1st & 5th</td>
-      <td><input name="twoWDLap15" type="number" id ="twoWDLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
-      <td><input name="fourWDLap15" type="number" id ="fourWDLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
+      <td><input name="nbLap15" type="number" id ="nbLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
+      <td><input name="ntLap15" type="number" id ="ntLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
     </tr>
     <tr>
       <td>1st & 2nd</td>
       <td>
-        <input name="twoWDLap12" type="number" id ="twoWDLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
-        <input name="twoWDTime12" type="number" id ="twoWDTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td>
+        <input name="nbLap12" type="number" id ="nbLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
+        <input name="nbTime12" type="number" id ="nbTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td>
       <td>
-        <input name="fourWDLap12" type="number" id ="fourWDLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
-        <input name="fourWDTime12" type="number" id ="fourWDTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td>
+        <input name="ntLap12" type="number" id ="ntLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
+        <input name="ntTime12" type="number" id ="ntTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td>
     </tr>
 </table>
 <br>
 </div>
 <div class="divcenter">
   <button type="reset" class="eventCancel">reset</button>
-  <button onclick="checkActiveExpertStatus();" type="submit" value="submit" id="submitButtonExpert" class="eventSubmit" disabled>Submit-Disabled</button>
+  <button onclick="checkNitroStatus();" type="submit" value="submit" id="submitButtonNitro" class="eventSubmit" disabled>Submit-Disabled</button>
 </div>
 </form>
 </section>
@@ -311,6 +311,7 @@ function echoDisplayName() {
 <?php include 'modals/login_modal.html'; ?>
 
 <script src="imageRotation.js"></script>
+<script src="phpBackend/nitro/checkNitroStatus.js"></script>
 <script>
     function toggleBurgerMenu() {
         var menu = document.querySelector('.burger-menu');
