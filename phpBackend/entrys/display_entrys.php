@@ -12,7 +12,10 @@ if ($conn->connect_error) {
 }
 
 // Query to fetch data from the table, including the active field
-$sql = "SELECT username, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, ntFirst, ntSecond, ntThird, ntFourth, ntFifth, nbLap15, nbLap12, nbTime12, ntLap15, ntLap12, ntTime12 FROM entry_off_nitro ORDER BY username asc";
+$sql = "SELECT eon.username, eon.nbFirst, eon.nbSecond, eon.nbThird, eon.nbFourth, eon.nbFifth, eon.ntFirst, eon.ntSecond, eon.ntThird, eon.ntFourth, eon.ntFifth, eon.nbLap15, eon.nbLap12, eon.nbTime12, eon.ntLap15, eon.ntLap12, eon.ntTime12
+        FROM entry_off_nitro eon
+        INNER JOIN events ot ON eon.event_name = ot.event_name
+        WHERE ot.active = 1 ORDER BY eon.username asc";
 $result = $conn->query($sql);
 
 // Close the connection
