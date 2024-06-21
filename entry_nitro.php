@@ -116,7 +116,8 @@ function echoDisplayName() {
 <form action="phpBackend/nitro/backend_off_nitro.php" method="post">
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
     <tr>
-      <th>
+    <th>Event:</th>
+      <td colspan="2">
         <select name="eventName" id="eventName" required>
             <?php
             // Include dropdown data and populate dropdown
@@ -139,12 +140,15 @@ function echoDisplayName() {
             }
             ?>
         </select>
-      </th>
+      </td>
+    </tr>
+    <tr>
+      <th>Podium</th>
       <th>Nitro Buggy</th>
       <th>Nitro Truggy</th>
     </tr>
     <tr>
-      <td>1st</td>
+      <th>1st</th>
       <td>
         <select name="nbFirst" id="nbFirst" required>
           <option value="">Select Racer</option>
@@ -171,7 +175,7 @@ function echoDisplayName() {
       </td>
     </tr>
     <tr>
-      <td>2nd</td>
+      <th>2nd</th>
       <td>
         <select name="nbSecond" id="nbSecond" required>
           <option value="">Select Racer</option>
@@ -198,7 +202,7 @@ function echoDisplayName() {
       </td>
     </tr>
     <tr>
-      <td>3rd</td>
+      <th>3rd</th>
       <td>
         <select name="nbThird" id="nbThird" required>
           <option value="">Select Racer</option>
@@ -225,7 +229,7 @@ function echoDisplayName() {
       </td>
     </tr>
     <tr>
-      <td>4th</td>
+      <th>4th</th>
       <td>
         <select name="nbFourth" id="nbFourth" required>
           <option value="">Select Racer</option>
@@ -252,7 +256,7 @@ function echoDisplayName() {
       </td>
     </tr>
     <tr>
-      <td>5th</td>
+      <th>5th</th>
       <td>
       <select name="nbFifth" id="nbFifth" required>
           <option value="">Select Racer</option>
@@ -280,18 +284,34 @@ function echoDisplayName() {
     </tr>
     </tr>
     <tr>
-      <td>1st & 5th</td>
+      <th colspan="3">Lap Difference</th>
+    </tr>
+    <tr>
+    <tr>
+      <th>1st & 5th</th>
       <td><input name="nbLap15" type="number" id ="nbLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
       <td><input name="ntLap15" type="number" id ="ntLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
     </tr>
     <tr>
-      <td>1st & 2nd</td>
+    <th colspan="3">Tie Breaker - Nitro Buggy</th>
+    </tr>
+    <tr>
+    <th rowspan="2">
+      1st & 2nd
+    </th>
+      <th>Lap Diff.</th>
+      <th>Time Diff.</th>
+    </tr>
+    <tr>
       <td>
         <input name="nbLap12" type="number" id ="nbLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
-        <input name="nbTime12" type="number" id ="nbTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td>
+      </td>
       <td>
+        <input name="nbTime12" type="number" id ="nbTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required>
+      </td>
+      <!-- <td>
         <input name="ntLap12" type="number" id ="ntLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
-        <input name="ntTime12" type="number" id ="ntTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td>
+        <input name="ntTime12" type="number" id ="ntTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td> -->
     </tr>
 </table>
 <br>
