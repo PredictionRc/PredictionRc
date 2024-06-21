@@ -97,7 +97,7 @@ function echoDisplayName() {
     <div class="overlay-text">
     <div class="divcenter">
         <p> <?php echoDisplayName(); ?> </p>
-        <p class="p2"><i><b>BETA RELEASE #2 - Future Development in progress. Testing has only been done via mobile device</b></i></p>
+        <p class="p2"><i><b>BETA RELEASE #2 - Testing has only been done via mobile device</b></i></p>
         <h2>At PRC, our mission is to cultivate and expand the RC Community through an exhilarating prediction game complemented by live-streamed events! Get ready for an immersive experience where excitement meets anticipation. Engage with fellow enthusiasts as you make predictions and immerse yourself in the thrill of live RC action. Join us as we redefine the RC experience, bringing you closer to the heart of the action than ever before!</h2>
     </div>
     </div>
