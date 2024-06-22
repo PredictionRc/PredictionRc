@@ -100,14 +100,16 @@ table, th, td {
     </div>
 </header>
 
+<a href="supporters.php" target="_blank">
 <header>
     <div class="adcenter">
     <div class="container">
         Supported by:
-        <img src="/../images/company1.PNG" alt="Advertising space for Rent" class="adcontainer" id="adImage">
+        <img src="images/company1.PNG" alt="Advertising space for Rent" class="adcontainer" id="adImage">
     </div>
     </div>
 </header>
+</a>
 
 <section class="sectionimage">
     <div class="overlay-text">
