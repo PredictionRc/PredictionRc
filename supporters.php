@@ -11,7 +11,7 @@ function echoUsername() {
 }
 function echoDisplayName() {
     if (isset($_SESSION['username'])) {
-        echo '<p class="p4">' . htmlspecialchars($_SESSION['username']) . ', Check out PCR\'s supporters site!</p>';
+        echo '<p class="p4">' . htmlspecialchars($_SESSION['username']) . ', CLICK ON THE COMPANY LOGO FOR MORE INFO!</p>';
     } else {
         echo '<p class="p2">You are not logged in.</p>';
     }
@@ -140,10 +140,12 @@ function echoDisplayName() {
 <section class="sectionimage">
     <div class="overlay-text">
         <div class="divcenter">
-            <h2>The Sticky Kicks Team is comprised of Dedicated R/C Racers looking to bring you Maximum Traction for all types of R/C Racing!</h2>         
+            <?php echoDisplayname(); ?>
+            <hr class="rounded">
+            <h4>The Sticky Kicks Team is comprised of Dedicated R/C Racers looking to bring you Maximum Traction for all types of R/C Racing!</h4>         
             <a href="https://www.stickykicksrc.com/" target="_blank" rel="noopener noreferrer"><img src="images/sticky.PNG" class="construction" alt="Sticky Image"></a><br>
             <hr class="rounded">
-            <h2>Pit boards, Apparel and Pit accessories!</h2> 
+            <h4>Pit boards, Apparel and Pit accessories!</h4> 
             <a href="https://www.pulsercmedia.com/" target="_blank" rel="noopener noreferrer"><img src="images/pulse.PNG" class="construction" alt="Sticky Image"></a><br>
             <hr class="rounded">
         </div>
