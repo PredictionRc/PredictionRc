@@ -94,6 +94,7 @@ function echoDisplayName() {
     </div>
 </header>
 
+<a href="supporters.php" target="_blank">
 <header>
     <div class="adcenter">
     <div class="container">
@@ -102,6 +103,7 @@ function echoDisplayName() {
     </div>
     </div>
 </header>
+</a>
 
 <section class="sectionimage">
     <div class="overlay-text">
