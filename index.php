@@ -40,11 +40,13 @@ function echoDisplayName() {
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'prize\').style.display=\'block\'; toggleBurgerMenu();">Prize</a></li>';
                         echo '<li><a class="p3" href="arena.php">Arena</a></li>';
                         echo '<li><a class="p3" href="supporters.php">Supporters</a></li>';
-                        echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
+                        echo '<li><a class="p3" href="setup.php">Dialed</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
                         echo '<li><p class="p3"><a href="phpBackend/index/logout.php">Logout</a></p></li>';
                     } else {
+                        echo '<li><a class="p3" href="supporters.php">Supporters</a></li>';
+                        echo '<li><a class="p3" href="setup.php">Dialed</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'prize\').style.display=\'block\'; toggleBurgerMenu();">Prize</a></li>';
                         echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></p></li>';
                         echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></p></li>';
@@ -62,11 +64,13 @@ function echoDisplayName() {
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'prize\').style.display=\'block\'; toggleBurgerMenu();">Prize</a></li>';
                         echo '<li><a class="p3" href="arena.php">Arena</a></li>';
                         echo '<li><a class="p3" href="supporters.php">Supporters</a></li>';
-                        echo '<li><a class="p3" href="setup.php">SetUp</a></li>';
+                        echo '<li><a class="p3" href="setup.php">Dialed</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></li>';
                         echo '<li><p class="p3"><a href="phpBackend/index/logout.php">Logout</a></p></li>';
                     } else {
+                        echo '<li><a class="p3" href="supporters.php">Supporters</a></li>';
+                        echo '<li><a class="p3" href="setup.php">Dialed</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'prize\').style.display=\'block\'; toggleBurgerMenu();">Prize</a></li>';
                         echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></p></li>';
                         echo '<li><p class="p3"><a href="#" onclick="document.getElementById(\'contactModal\').style.display=\'block\'; toggleBurgerMenu();">Contact</a></p></li>';
