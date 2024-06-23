@@ -112,6 +112,8 @@ function echoDisplayName() {
 <!-- clone this below -->
 <h3>2024 ROAR Fuel Nationals, Live steam -</h3>
 <a href="https://www.youtube.com/@LiveRCvideos" target="_blank" rel="noopener noreferrer"><img src="images/youtube.png"></a>
+<h3>2024 ROAR Fuel Nationals, Live RC Rankings -</h3>
+<a href="https://roar.liverc.com/results/?p=view_heat_sheet&id=8191049" target="_blank" rel="noopener noreferrer"><img src="images/liverc.png"></a>
 <h2><u>Nitro Entry Form</u></h2>
 <form action="phpBackend/nitro/backend_off_nitro.php" method="post">
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
