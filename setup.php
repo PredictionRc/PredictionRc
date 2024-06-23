@@ -142,7 +142,7 @@ function echoDisplayName() {
       <div class="divcenter">
       <p> <?php echoDisplayName(); ?> </p>
         <hr class="rounded">
-            <a href="/dialed/ae/ae.php" target="_blank" rel="noopener noreferrer"><img src="images/setup/ae/ae.PNG" class="construction" alt="Team associated"></a><br>
+            <a href="ae.php" target="_blank" rel="noopener noreferrer"><img src="images/setup/ae/ae.PNG" class="construction" alt="Team associated"></a><br>
         <hr class="rounded">
       </div>
     </div>

@@ -81,7 +81,7 @@ function echoDisplayName() {
                 <li><?php echoUsername(); ?></li>
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-                        echo '<li><a class="p3" href="index.php">Home</a></li>';
+                        echo '<li><a class="p3" href="/../../index.php">Home</a></li>';
                         echo '<li><a class="p3" href="arena.php">Arena</a></li>';
                         echo '<li><a class="p3" href="supporters.php">Supporters</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
@@ -102,7 +102,7 @@ function echoDisplayName() {
                 <li><?php echoUsername(); ?></li>
                 <li><?php
                     if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-                        echo '<li><a class="p3" href="index.php">Home</a></li>';
+                        echo '<li><a class="p3" href="/../../index.php">Home</a></li>';
                         echo '<li><a class="p3" href="arena.php">Arena</a></li>';
                         echo '<li><a class="p3" href="supporters.php">Supporters</a></li>';
                         echo '<li><a class="p3" href="#" onclick="document.getElementById(\'rules\').style.display=\'block\'; toggleBurgerMenu();">Rules</a></li>';
@@ -142,7 +142,17 @@ function echoDisplayName() {
       <div class="divcenter">
       <p> <?php echoDisplayName(); ?> </p>
         <hr class="rounded">
-            <a href="" target="_blank" rel="noopener noreferrer"><img src="images/setup/ae/ae.PNG" class="construction" alt="Team associated"></a><br>
+            <a href="" target="_blank" rel="noopener noreferrer"><img src="dialed/ae/b7.PNG" class="construction" alt="Team associated"></a><br>
+        <hr class="rounded">
+        <a href="" target="_blank" rel="noopener noreferrer"><img src="dialed/ae/b74_2.PNG" class="construction" alt="Team associated"></a><br>
+        <hr class="rounded">
+        <a href="" target="_blank" rel="noopener noreferrer"><img src="dialed/ae/sc6_4.PNG" class="construction" alt="Team associated"></a><br>
+        <hr class="rounded">
+        <a href="" target="_blank" rel="noopener noreferrer"><img src="dialed/ae/t6_4.PNG" class="construction" alt="Team associated"></a><br>
+        <hr class="rounded">
+        <a href="" target="_blank" rel="noopener noreferrer"><img src="dialed/ae/b4_1.PNG" class="construction" alt="Team associated"></a><br>
+        <hr class="rounded">
+        <a href="" target="_blank" rel="noopener noreferrer"><img src="dialed/ae/t4.PNG" class="construction" alt="Team associated"></a><br>
         <hr class="rounded">
       </div>
     </div>
