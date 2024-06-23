@@ -47,21 +47,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" ) {
     $nbThird = $_POST['nbThird'];
     $nbFourth = $_POST['nbFourth'];
     $nbFifth = $_POST['nbFifth'];
-    $ntFirst = $_POST['ntFirst'];
-    $ntSecond = $_POST['ntSecond'];
-    $ntThird = $_POST['ntThird'];
-    $ntFourth = $_POST['ntFourth'];
-    $ntFifth = $_POST['ntFifth'];
     $nbLap15 = $_POST['nbLap15'];
-    $ntLap15 = $_POST['ntLap15'];
-
     $nbLap12 = $_POST['nbLap12'];
     $nbTime12 = $_POST['nbTime12'];
-    $ntLap12 = $_POST['ntLap12'];
-    $ntTime12 = $_POST['ntTime12'];
 
     // Prepare SQL statement
-    $sql = "INSERT INTO entry_off_nitro (username, login_email, event_Name, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, ntFirst, ntSecond, ntThird, ntFourth, ntFifth, nbLap15, ntLap15, nbLap12, nbTime12, ntLap12, ntTime12, submission_time) VALUES ('$user_name', '$login_email', '$event_name', '$nbFirst', '$nbSecond', '$nbThird', '$nbFourth', '$nbFifth', '$ntFirst', '$ntSecond', '$ntThird', '$ntFourth', '$ntFifth', '$nbLap15', '$ntLap15', '$nbLap12', '$nbTime12', '$ntLap12', '$ntTime12', CURRENT_TIMESTAMP)";
+    $sql = "INSERT INTO entry_off_nitro (username, login_email, event_Name, nbFirst, nbSecond, nbThird, nbFourth, nbFifth, nbLap15, nbLap12, nbTime12, submission_time) VALUES ('$user_name', '$login_email', '$event_name', '$nbFirst', '$nbSecond', '$nbThird', '$nbFourth', '$nbFifth', '$nbLap15', '$nbLap12', '$nbTime12', CURRENT_TIMESTAMP)";
 
 // Execute SQL statement
 if ($conn->query($sql) === TRUE) {

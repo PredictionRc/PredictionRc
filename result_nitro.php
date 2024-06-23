@@ -125,18 +125,9 @@ table, th, td {
                             <th>Buggy 3rd</th>
                             <th>Buggy 4th</th>
                             <th>Buggy 5th</th>
-                            <th>Truggy 1st</th>
-                            <th>Truggy 2nd</th>
-                            <th>Truggy 3rd</th>
-                            <th>Truggy 4th</th>
-                            <th>Truggy 5th</th>
                             <th>Lap 1-5 buggy</th>
                             <th>Lap 1-2 buggy</th>
                             <th>Time 1-2 buggy</th>
-                            <th>Lap 1-5 truggy</th>
-                            <th>Lap 1-2 truggy</th>
-                            <th>Time 1-2 truggy</th>
-
                         </tr>
                     </thead>
                     <tbody></tbody>
@@ -178,7 +169,7 @@ table, th, td {
         const tableBody = document.querySelector('#entry-table tbody');
         data.forEach(row => {
             const tr = document.createElement('tr');
-            tr.innerHTML = `<td>${row.username}</td><td>${row.nbFirst}</td><td>${row.nbSecond}</td><td>${row.nbThird}</td><td>${row.nbFourth}</td><td>${row.nbFifth}</td><td>${row.ntFirst}</td><td>${row.ntSecond}</td><td>${row.ntThird}</td><td>${row.ntFourth}</td><td>${row.ntFifth}</td><td>${row.nbLap15}</td><td>${row.nbLap12}</td><td>${row.nbTime12}</td><td>${row.ntLap15}</td><td>${row.ntLap12}</td><td>${row.ntTime12}</td>`;
+            tr.innerHTML = `<td>${row.username}</td><td>${row.nbFirst}</td><td>${row.nbSecond}</td><td>${row.nbThird}</td><td>${row.nbFourth}</td><td>${row.nbFifth}</td><td>${row.nbLap15}</td><td>${row.nbLap12}</td><td>${row.nbTime12}</td>`;
             tableBody.appendChild(tr);
         });
     })
