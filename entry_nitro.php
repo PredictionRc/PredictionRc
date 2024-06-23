@@ -117,7 +117,7 @@ function echoDisplayName() {
 <table xmlns="http://www.w3.org/1999/xhtml" style="grid-template-columns: 33% 33% 33%; width:80%">
     <tr>
     <th>Event:</th>
-      <td colspan="2">
+      <td>
         <select name="eventName" id="eventName" required>
             <?php
             // Include dropdown data and populate dropdown
@@ -145,7 +145,6 @@ function echoDisplayName() {
     <tr>
       <th>Podium</th>
       <th>Nitro Buggy</th>
-      <th>Nitro Truggy</th>
     </tr>
     <tr>
       <th>1st</th>
@@ -155,18 +154,6 @@ function echoDisplayName() {
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'phpBackend/nitro/driver_nitro_buggy.php';
-            foreach ($options as $option) {
-                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
-            }
-            ?>
-        </select>
-      </td>
-      <td>
-        <select name="ntFirst" id="ntFirst" required>
-          <option value="">Select Racer</option>
-            <?php
-            // Include dropdown data and populate dropdown
-            $options = include 'phpBackend/nitro/driver_nitro_truggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -188,18 +175,6 @@ function echoDisplayName() {
             ?>
         </select>
       </td>
-      <td>
-      <select name="ntSecond" id="ntSecond" required>
-          <option value="">Select Racer</option>
-            <?php
-            // Include dropdown data and populate dropdown
-            $options = include 'phpBackend/nitro/driver_nitro_truggy.php';
-            foreach ($options as $option) {
-                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
-            }
-            ?>
-        </select>
-      </td>
     </tr>
     <tr>
       <th>3rd</th>
@@ -209,18 +184,6 @@ function echoDisplayName() {
             <?php
             // Include dropdown data and populate dropdown
             $options = include 'phpBackend/nitro/driver_nitro_buggy.php';
-            foreach ($options as $option) {
-                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
-            }
-            ?>
-        </select>
-      </td>
-      <td>
-        <select name="ntThird" id="ntThird" required>
-          <option value="">Select Racer</option>
-            <?php
-            // Include dropdown data and populate dropdown
-            $options = include 'phpBackend/nitro/driver_nitro_truggy.php';
             foreach ($options as $option) {
                 echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
             }
@@ -242,18 +205,6 @@ function echoDisplayName() {
             ?>
         </select>
       </td>
-      <td>
-        <select name="ntFourth" id="ntFourth" required>
-          <option value="">Select Racer</option>
-            <?php
-            // Include dropdown data and populate dropdown
-            $options = include 'phpBackend/nitro/driver_nitro_truggy.php';
-            foreach ($options as $option) {
-                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
-            }
-            ?>
-        </select>
-      </td>
     </tr>
     <tr>
       <th>5th</th>
@@ -269,49 +220,27 @@ function echoDisplayName() {
             ?>
         </select>
       </td>
-      <td>
-        <select name="ntFifth" id="ntFifth" required>
-          <option value="">Select Racer</option>
-            <?php
-            // Include dropdown data and populate dropdown
-            $options = include 'phpBackend/nitro/driver_nitro_truggy.php';
-            foreach ($options as $option) {
-                echo "<option value='" . $option['id'] . "'>" . $option['name'] . "</option>";
-            }
-            ?>
-        </select>
-      </td>
     </tr>
     </tr>
     <tr>
-      <th colspan="3">Lap Difference</th>
+      <th colspan="2">Lap Difference between 1st and 5th</th>
     </tr>
     <tr>
     <tr>
-      <th>1st & 5th</th>
-      <td><input name="nbLap15" type="number" id ="nbLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
-      <td><input name="ntLap15" type="number" id ="ntLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
+      <td colspan="2"><input name="nbLap15" type="number" id ="nbLap15" min="0" max="10000000" step="1" placeholder="Lap Difference" required></td></td>
     </tr>
     <tr>
-    <th colspan="3">Tie Breaker - Nitro Buggy</th>
+    <th colspan="3">Tie Breaker - Nitro Buggy Between 1st and 2nd</th>
     </tr>
     <tr>
-    <th rowspan="2">
-      1st & 2nd
-    </th>
-      <th>Lap Diff.</th>
-      <th>Time Diff.</th>
-    </tr>
-    <tr>
-      <td>
+      <td colspan="2">
         <input name="nbLap12" type="number" id ="nbLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
       </td>
-      <td>
+    </tr>
+    <tr>
+      <td colspan="2">
         <input name="nbTime12" type="number" id ="nbTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required>
       </td>
-      <!-- <td>
-        <input name="ntLap12" type="number" id ="ntLap12" min="0" max="10000000" step="1" placeholder="Lap Difference" required>
-        <input name="ntTime12" type="number" id ="ntTime12" min="0" max="10000000" step=".01" placeholder="Time Diiference" required></td> -->
     </tr>
 </table>
 <br>

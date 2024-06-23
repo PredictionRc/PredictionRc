@@ -100,7 +100,7 @@ function echoDisplayName() {
         <!-- 1/10th MOD - Embed PHP code to decide whether to enable or disable the submit button -->
         <h3>2024 ROAR Fuel Nationals, Live steam -</h3>
         <a href="https://www.youtube.com/@LiveRCvideos" target="_blank" rel="noopener noreferrer"><img src="images/youtube.png"></a>
-        <p class="p1"><u>1/10th Mod Arena</u></p>
+        <p class="p1"><u>1/10th Mod Buggy</u></p>
         <?php include 'phpBackend/arena/check_active_mod.php'; ?>
         <?php if ($active == 1): ?>
           <form action="entry_off_mod.php" class="inline">
@@ -110,7 +110,7 @@ function echoDisplayName() {
           <button type="submit" value="submit" id="submitButtonMod" class="eventCancel" disabled>1/10 Mod-Disabled</button>
         <?php endif; ?>
         <!-- Nitro - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u><b>Nitro Pro Arena</b></u></p>
+        <p class="p1"><u><b>Nitro Pro Buggy</b></u></p>
         <?php include 'phpBackend/arena/check_active_nitro.php'; ?>
         <?php if ($active == 1): ?>
           <form action="entry_nitro.php" class="inline">
@@ -120,7 +120,7 @@ function echoDisplayName() {
           <button type="submit" value="submit" id="submitButtonNitro" class="eventCancel" disabled>1/8 Nitro-Disabled</button>
         <?php endif; ?>
         <!-- Nitro - Embed PHP code to decide whether to enable or disable the submit button -->
-        <p class="p1"><u>OnRoad Arena</u></p>
+        <p class="p1"><u>OnRoad MOD Touring</u></p>
         <?php include 'phpBackend/arena/check_active_onRoad.php'; ?>
         <?php if ($active == 1): ?>
           <form action="entry_onRoad.php" class="inline">
